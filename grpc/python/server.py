@@ -16,14 +16,14 @@ class UserRecommendService(rec_pb2_grpc.UserRecommendServicer):
         article_num = request.article_num
         time_stamp = request.time_stamp
 
-        response = reco_pb2.ArticleResponse()
+        response = rec_pb2.ArticleResponse()
 
         # 手动构造推荐结果，后续对接真实推荐代码
         response.exposure = 'exposure param'
         response.time_stamp = round(time.time() * 1000)
         recommends = []
         for i in range(article_num):
-            article = reco_pb2.Article()
+            article = rec_pb2.Article()
             article.track.click = 'click param {}'.format(i + 1)
             article.track.collect = 'collect param {}'.format(i + 1)
             article.track.share = 'share param {}'.format(i + 1)

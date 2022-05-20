@@ -8,6 +8,11 @@
 
 
 ## Python
+
+### requerments
+`pip install grpcio-tools`
+
+### run
 0. `cd python`
 1. 编译proto文件：`python -m grpc_tools.protoc -I=./ --python_out=./ --grpc_python_out=./ ./proto/rec.proto`
 2. `python server.py`
