@@ -53,44 +53,44 @@ struct TableStruct_proto_2frec_2eproto {
   static const ::PROTOBUF_NAMESPACE_ID::uint32 offsets[];
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_proto_2frec_2eproto;
-class Article;
-class ArticleDefaultTypeInternal;
-extern ArticleDefaultTypeInternal _Article_default_instance_;
-class ArticleResponse;
-class ArticleResponseDefaultTypeInternal;
-extern ArticleResponseDefaultTypeInternal _ArticleResponse_default_instance_;
-class Track;
-class TrackDefaultTypeInternal;
-extern TrackDefaultTypeInternal _Track_default_instance_;
-class UserRequest;
-class UserRequestDefaultTypeInternal;
-extern UserRequestDefaultTypeInternal _UserRequest_default_instance_;
+class Meta;
+class MetaDefaultTypeInternal;
+extern MetaDefaultTypeInternal _Meta_default_instance_;
+class Video;
+class VideoDefaultTypeInternal;
+extern VideoDefaultTypeInternal _Video_default_instance_;
+class VideoResponse;
+class VideoResponseDefaultTypeInternal;
+extern VideoResponseDefaultTypeInternal _VideoResponse_default_instance_;
+class request;
+class requestDefaultTypeInternal;
+extern requestDefaultTypeInternal _request_default_instance_;
 PROTOBUF_NAMESPACE_OPEN
-template<> ::Article* Arena::CreateMaybeMessage<::Article>(Arena*);
-template<> ::ArticleResponse* Arena::CreateMaybeMessage<::ArticleResponse>(Arena*);
-template<> ::Track* Arena::CreateMaybeMessage<::Track>(Arena*);
-template<> ::UserRequest* Arena::CreateMaybeMessage<::UserRequest>(Arena*);
+template<> ::Meta* Arena::CreateMaybeMessage<::Meta>(Arena*);
+template<> ::Video* Arena::CreateMaybeMessage<::Video>(Arena*);
+template<> ::VideoResponse* Arena::CreateMaybeMessage<::VideoResponse>(Arena*);
+template<> ::request* Arena::CreateMaybeMessage<::request>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 
 // ===================================================================
 
-class UserRequest PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:UserRequest) */ {
+class request PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:request) */ {
  public:
-  inline UserRequest() : UserRequest(nullptr) {}
-  virtual ~UserRequest();
+  inline request() : request(nullptr) {}
+  virtual ~request();
 
-  UserRequest(const UserRequest& from);
-  UserRequest(UserRequest&& from) noexcept
-    : UserRequest() {
+  request(const request& from);
+  request(request&& from) noexcept
+    : request() {
     *this = ::std::move(from);
   }
 
-  inline UserRequest& operator=(const UserRequest& from) {
+  inline request& operator=(const request& from) {
     CopyFrom(from);
     return *this;
   }
-  inline UserRequest& operator=(UserRequest&& from) noexcept {
+  inline request& operator=(request&& from) noexcept {
     if (GetArena() == from.GetArena()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -108,19 +108,19 @@ class UserRequest PROTOBUF_FINAL :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const UserRequest& default_instance();
+  static const request& default_instance();
 
-  static inline const UserRequest* internal_default_instance() {
-    return reinterpret_cast<const UserRequest*>(
-               &_UserRequest_default_instance_);
+  static inline const request* internal_default_instance() {
+    return reinterpret_cast<const request*>(
+               &_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     0;
 
-  friend void swap(UserRequest& a, UserRequest& b) {
+  friend void swap(request& a, request& b) {
     a.Swap(&b);
   }
-  inline void Swap(UserRequest* other) {
+  inline void Swap(request* other) {
     if (other == this) return;
     if (GetArena() == other->GetArena()) {
       InternalSwap(other);
@@ -128,7 +128,7 @@ class UserRequest PROTOBUF_FINAL :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(UserRequest* other) {
+  void UnsafeArenaSwap(request* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -136,17 +136,17 @@ class UserRequest PROTOBUF_FINAL :
 
   // implements Message ----------------------------------------------
 
-  inline UserRequest* New() const final {
-    return CreateMaybeMessage<UserRequest>(nullptr);
+  inline request* New() const final {
+    return CreateMaybeMessage<request>(nullptr);
   }
 
-  UserRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<UserRequest>(arena);
+  request* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<request>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const UserRequest& from);
-  void MergeFrom(const UserRequest& from);
+  void CopyFrom(const request& from);
+  void MergeFrom(const request& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -160,13 +160,13 @@ class UserRequest PROTOBUF_FINAL :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(UserRequest* other);
+  void InternalSwap(request* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "UserRequest";
+    return "request";
   }
   protected:
-  explicit UserRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  explicit request(::PROTOBUF_NAMESPACE_ID::Arena* arena);
   private:
   static void ArenaDtor(void* object);
   inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -187,9 +187,10 @@ class UserRequest PROTOBUF_FINAL :
 
   enum : int {
     kUserIdFieldNumber = 1,
-    kChannelIdFieldNumber = 2,
-    kArticleNumFieldNumber = 3,
-    kTimeStampFieldNumber = 4,
+    kAgeFieldNumber = 2,
+    kGenderFieldNumber = 3,
+    kPlatformFieldNumber = 4,
+    kVideoNumsFieldNumber = 5,
   };
   // string user_id = 1;
   void clear_user_id();
@@ -207,34 +208,43 @@ class UserRequest PROTOBUF_FINAL :
   std::string* _internal_mutable_user_id();
   public:
 
-  // int32 channel_id = 2;
-  void clear_channel_id();
-  ::PROTOBUF_NAMESPACE_ID::int32 channel_id() const;
-  void set_channel_id(::PROTOBUF_NAMESPACE_ID::int32 value);
+  // int32 age = 2;
+  void clear_age();
+  ::PROTOBUF_NAMESPACE_ID::int32 age() const;
+  void set_age(::PROTOBUF_NAMESPACE_ID::int32 value);
   private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_channel_id() const;
-  void _internal_set_channel_id(::PROTOBUF_NAMESPACE_ID::int32 value);
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_age() const;
+  void _internal_set_age(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // int32 article_num = 3;
-  void clear_article_num();
-  ::PROTOBUF_NAMESPACE_ID::int32 article_num() const;
-  void set_article_num(::PROTOBUF_NAMESPACE_ID::int32 value);
+  // int32 gender = 3;
+  void clear_gender();
+  ::PROTOBUF_NAMESPACE_ID::int32 gender() const;
+  void set_gender(::PROTOBUF_NAMESPACE_ID::int32 value);
   private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_article_num() const;
-  void _internal_set_article_num(::PROTOBUF_NAMESPACE_ID::int32 value);
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_gender() const;
+  void _internal_set_gender(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // int64 time_stamp = 4;
-  void clear_time_stamp();
-  ::PROTOBUF_NAMESPACE_ID::int64 time_stamp() const;
-  void set_time_stamp(::PROTOBUF_NAMESPACE_ID::int64 value);
+  // int32 platform = 4;
+  void clear_platform();
+  ::PROTOBUF_NAMESPACE_ID::int32 platform() const;
+  void set_platform(::PROTOBUF_NAMESPACE_ID::int32 value);
   private:
-  ::PROTOBUF_NAMESPACE_ID::int64 _internal_time_stamp() const;
-  void _internal_set_time_stamp(::PROTOBUF_NAMESPACE_ID::int64 value);
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_platform() const;
+  void _internal_set_platform(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:UserRequest)
+  // int32 video_nums = 5;
+  void clear_video_nums();
+  ::PROTOBUF_NAMESPACE_ID::int32 video_nums() const;
+  void set_video_nums(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_video_nums() const;
+  void _internal_set_video_nums(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:request)
  private:
   class _Internal;
 
@@ -242,31 +252,32 @@ class UserRequest PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr user_id_;
-  ::PROTOBUF_NAMESPACE_ID::int32 channel_id_;
-  ::PROTOBUF_NAMESPACE_ID::int32 article_num_;
-  ::PROTOBUF_NAMESPACE_ID::int64 time_stamp_;
+  ::PROTOBUF_NAMESPACE_ID::int32 age_;
+  ::PROTOBUF_NAMESPACE_ID::int32 gender_;
+  ::PROTOBUF_NAMESPACE_ID::int32 platform_;
+  ::PROTOBUF_NAMESPACE_ID::int32 video_nums_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_proto_2frec_2eproto;
 };
 // -------------------------------------------------------------------
 
-class Track PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Track) */ {
+class Meta PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Meta) */ {
  public:
-  inline Track() : Track(nullptr) {}
-  virtual ~Track();
+  inline Meta() : Meta(nullptr) {}
+  virtual ~Meta();
 
-  Track(const Track& from);
-  Track(Track&& from) noexcept
-    : Track() {
+  Meta(const Meta& from);
+  Meta(Meta&& from) noexcept
+    : Meta() {
     *this = ::std::move(from);
   }
 
-  inline Track& operator=(const Track& from) {
+  inline Meta& operator=(const Meta& from) {
     CopyFrom(from);
     return *this;
   }
-  inline Track& operator=(Track&& from) noexcept {
+  inline Meta& operator=(Meta&& from) noexcept {
     if (GetArena() == from.GetArena()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -284,19 +295,19 @@ class Track PROTOBUF_FINAL :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const Track& default_instance();
+  static const Meta& default_instance();
 
-  static inline const Track* internal_default_instance() {
-    return reinterpret_cast<const Track*>(
-               &_Track_default_instance_);
+  static inline const Meta* internal_default_instance() {
+    return reinterpret_cast<const Meta*>(
+               &_Meta_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     1;
 
-  friend void swap(Track& a, Track& b) {
+  friend void swap(Meta& a, Meta& b) {
     a.Swap(&b);
   }
-  inline void Swap(Track* other) {
+  inline void Swap(Meta* other) {
     if (other == this) return;
     if (GetArena() == other->GetArena()) {
       InternalSwap(other);
@@ -304,7 +315,7 @@ class Track PROTOBUF_FINAL :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(Track* other) {
+  void UnsafeArenaSwap(Meta* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -312,17 +323,17 @@ class Track PROTOBUF_FINAL :
 
   // implements Message ----------------------------------------------
 
-  inline Track* New() const final {
-    return CreateMaybeMessage<Track>(nullptr);
+  inline Meta* New() const final {
+    return CreateMaybeMessage<Meta>(nullptr);
   }
 
-  Track* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<Track>(arena);
+  Meta* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Meta>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const Track& from);
-  void MergeFrom(const Track& from);
+  void CopyFrom(const Meta& from);
+  void MergeFrom(const Meta& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -336,13 +347,13 @@ class Track PROTOBUF_FINAL :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(Track* other);
+  void InternalSwap(Meta* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "Track";
+    return "Meta";
   }
   protected:
-  explicit Track(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  explicit Meta(::PROTOBUF_NAMESPACE_ID::Arena* arena);
   private:
   static void ArenaDtor(void* object);
   inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -362,108 +373,108 @@ class Track PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kClickFieldNumber = 1,
-    kCollectFieldNumber = 2,
-    kShareFieldNumber = 3,
-    kReadFieldNumber = 4,
+    kCoverFieldNumber = 1,
+    kTitleFieldNumber = 2,
+    kUpFieldNumber = 3,
+    kTagFieldNumber = 4,
   };
-  // string click = 1;
-  void clear_click();
-  const std::string& click() const;
-  void set_click(const std::string& value);
-  void set_click(std::string&& value);
-  void set_click(const char* value);
-  void set_click(const char* value, size_t size);
-  std::string* mutable_click();
-  std::string* release_click();
-  void set_allocated_click(std::string* click);
+  // string cover = 1;
+  void clear_cover();
+  const std::string& cover() const;
+  void set_cover(const std::string& value);
+  void set_cover(std::string&& value);
+  void set_cover(const char* value);
+  void set_cover(const char* value, size_t size);
+  std::string* mutable_cover();
+  std::string* release_cover();
+  void set_allocated_cover(std::string* cover);
   private:
-  const std::string& _internal_click() const;
-  void _internal_set_click(const std::string& value);
-  std::string* _internal_mutable_click();
+  const std::string& _internal_cover() const;
+  void _internal_set_cover(const std::string& value);
+  std::string* _internal_mutable_cover();
   public:
 
-  // string collect = 2;
-  void clear_collect();
-  const std::string& collect() const;
-  void set_collect(const std::string& value);
-  void set_collect(std::string&& value);
-  void set_collect(const char* value);
-  void set_collect(const char* value, size_t size);
-  std::string* mutable_collect();
-  std::string* release_collect();
-  void set_allocated_collect(std::string* collect);
+  // string title = 2;
+  void clear_title();
+  const std::string& title() const;
+  void set_title(const std::string& value);
+  void set_title(std::string&& value);
+  void set_title(const char* value);
+  void set_title(const char* value, size_t size);
+  std::string* mutable_title();
+  std::string* release_title();
+  void set_allocated_title(std::string* title);
   private:
-  const std::string& _internal_collect() const;
-  void _internal_set_collect(const std::string& value);
-  std::string* _internal_mutable_collect();
+  const std::string& _internal_title() const;
+  void _internal_set_title(const std::string& value);
+  std::string* _internal_mutable_title();
   public:
 
-  // string share = 3;
-  void clear_share();
-  const std::string& share() const;
-  void set_share(const std::string& value);
-  void set_share(std::string&& value);
-  void set_share(const char* value);
-  void set_share(const char* value, size_t size);
-  std::string* mutable_share();
-  std::string* release_share();
-  void set_allocated_share(std::string* share);
+  // string up = 3;
+  void clear_up();
+  const std::string& up() const;
+  void set_up(const std::string& value);
+  void set_up(std::string&& value);
+  void set_up(const char* value);
+  void set_up(const char* value, size_t size);
+  std::string* mutable_up();
+  std::string* release_up();
+  void set_allocated_up(std::string* up);
   private:
-  const std::string& _internal_share() const;
-  void _internal_set_share(const std::string& value);
-  std::string* _internal_mutable_share();
+  const std::string& _internal_up() const;
+  void _internal_set_up(const std::string& value);
+  std::string* _internal_mutable_up();
   public:
 
-  // string read = 4;
-  void clear_read();
-  const std::string& read() const;
-  void set_read(const std::string& value);
-  void set_read(std::string&& value);
-  void set_read(const char* value);
-  void set_read(const char* value, size_t size);
-  std::string* mutable_read();
-  std::string* release_read();
-  void set_allocated_read(std::string* read);
+  // string tag = 4;
+  void clear_tag();
+  const std::string& tag() const;
+  void set_tag(const std::string& value);
+  void set_tag(std::string&& value);
+  void set_tag(const char* value);
+  void set_tag(const char* value, size_t size);
+  std::string* mutable_tag();
+  std::string* release_tag();
+  void set_allocated_tag(std::string* tag);
   private:
-  const std::string& _internal_read() const;
-  void _internal_set_read(const std::string& value);
-  std::string* _internal_mutable_read();
+  const std::string& _internal_tag() const;
+  void _internal_set_tag(const std::string& value);
+  std::string* _internal_mutable_tag();
   public:
 
-  // @@protoc_insertion_point(class_scope:Track)
+  // @@protoc_insertion_point(class_scope:Meta)
  private:
   class _Internal;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr click_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr collect_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr share_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr read_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr cover_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr title_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr up_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr tag_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_proto_2frec_2eproto;
 };
 // -------------------------------------------------------------------
 
-class Article PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Article) */ {
+class Video PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Video) */ {
  public:
-  inline Article() : Article(nullptr) {}
-  virtual ~Article();
+  inline Video() : Video(nullptr) {}
+  virtual ~Video();
 
-  Article(const Article& from);
-  Article(Article&& from) noexcept
-    : Article() {
+  Video(const Video& from);
+  Video(Video&& from) noexcept
+    : Video() {
     *this = ::std::move(from);
   }
 
-  inline Article& operator=(const Article& from) {
+  inline Video& operator=(const Video& from) {
     CopyFrom(from);
     return *this;
   }
-  inline Article& operator=(Article&& from) noexcept {
+  inline Video& operator=(Video&& from) noexcept {
     if (GetArena() == from.GetArena()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -481,19 +492,19 @@ class Article PROTOBUF_FINAL :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const Article& default_instance();
+  static const Video& default_instance();
 
-  static inline const Article* internal_default_instance() {
-    return reinterpret_cast<const Article*>(
-               &_Article_default_instance_);
+  static inline const Video* internal_default_instance() {
+    return reinterpret_cast<const Video*>(
+               &_Video_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     2;
 
-  friend void swap(Article& a, Article& b) {
+  friend void swap(Video& a, Video& b) {
     a.Swap(&b);
   }
-  inline void Swap(Article* other) {
+  inline void Swap(Video* other) {
     if (other == this) return;
     if (GetArena() == other->GetArena()) {
       InternalSwap(other);
@@ -501,7 +512,7 @@ class Article PROTOBUF_FINAL :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(Article* other) {
+  void UnsafeArenaSwap(Video* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -509,17 +520,17 @@ class Article PROTOBUF_FINAL :
 
   // implements Message ----------------------------------------------
 
-  inline Article* New() const final {
-    return CreateMaybeMessage<Article>(nullptr);
+  inline Video* New() const final {
+    return CreateMaybeMessage<Video>(nullptr);
   }
 
-  Article* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<Article>(arena);
+  Video* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Video>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const Article& from);
-  void MergeFrom(const Article& from);
+  void CopyFrom(const Video& from);
+  void MergeFrom(const Video& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -533,13 +544,13 @@ class Article PROTOBUF_FINAL :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(Article* other);
+  void InternalSwap(Video* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "Article";
+    return "Video";
   }
   protected:
-  explicit Article(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  explicit Video(::PROTOBUF_NAMESPACE_ID::Arena* arena);
   private:
   static void ArenaDtor(void* object);
   inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -559,67 +570,67 @@ class Article PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kTrackFieldNumber = 2,
-    kArticleIdFieldNumber = 1,
+    kMetaFieldNumber = 2,
+    kVideoIdFieldNumber = 1,
   };
-  // .Track track = 2;
-  bool has_track() const;
+  // .Meta Meta = 2;
+  bool has_meta() const;
   private:
-  bool _internal_has_track() const;
+  bool _internal_has_meta() const;
   public:
-  void clear_track();
-  const ::Track& track() const;
-  ::Track* release_track();
-  ::Track* mutable_track();
-  void set_allocated_track(::Track* track);
+  void clear_meta();
+  const ::Meta& meta() const;
+  ::Meta* release_meta();
+  ::Meta* mutable_meta();
+  void set_allocated_meta(::Meta* meta);
   private:
-  const ::Track& _internal_track() const;
-  ::Track* _internal_mutable_track();
+  const ::Meta& _internal_meta() const;
+  ::Meta* _internal_mutable_meta();
   public:
-  void unsafe_arena_set_allocated_track(
-      ::Track* track);
-  ::Track* unsafe_arena_release_track();
+  void unsafe_arena_set_allocated_meta(
+      ::Meta* meta);
+  ::Meta* unsafe_arena_release_meta();
 
-  // int64 article_id = 1;
-  void clear_article_id();
-  ::PROTOBUF_NAMESPACE_ID::int64 article_id() const;
-  void set_article_id(::PROTOBUF_NAMESPACE_ID::int64 value);
+  // int64 video_id = 1;
+  void clear_video_id();
+  ::PROTOBUF_NAMESPACE_ID::int64 video_id() const;
+  void set_video_id(::PROTOBUF_NAMESPACE_ID::int64 value);
   private:
-  ::PROTOBUF_NAMESPACE_ID::int64 _internal_article_id() const;
-  void _internal_set_article_id(::PROTOBUF_NAMESPACE_ID::int64 value);
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_video_id() const;
+  void _internal_set_video_id(::PROTOBUF_NAMESPACE_ID::int64 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:Article)
+  // @@protoc_insertion_point(class_scope:Video)
  private:
   class _Internal;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::Track* track_;
-  ::PROTOBUF_NAMESPACE_ID::int64 article_id_;
+  ::Meta* meta_;
+  ::PROTOBUF_NAMESPACE_ID::int64 video_id_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_proto_2frec_2eproto;
 };
 // -------------------------------------------------------------------
 
-class ArticleResponse PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ArticleResponse) */ {
+class VideoResponse PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VideoResponse) */ {
  public:
-  inline ArticleResponse() : ArticleResponse(nullptr) {}
-  virtual ~ArticleResponse();
+  inline VideoResponse() : VideoResponse(nullptr) {}
+  virtual ~VideoResponse();
 
-  ArticleResponse(const ArticleResponse& from);
-  ArticleResponse(ArticleResponse&& from) noexcept
-    : ArticleResponse() {
+  VideoResponse(const VideoResponse& from);
+  VideoResponse(VideoResponse&& from) noexcept
+    : VideoResponse() {
     *this = ::std::move(from);
   }
 
-  inline ArticleResponse& operator=(const ArticleResponse& from) {
+  inline VideoResponse& operator=(const VideoResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline ArticleResponse& operator=(ArticleResponse&& from) noexcept {
+  inline VideoResponse& operator=(VideoResponse&& from) noexcept {
     if (GetArena() == from.GetArena()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -637,19 +648,19 @@ class ArticleResponse PROTOBUF_FINAL :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const ArticleResponse& default_instance();
+  static const VideoResponse& default_instance();
 
-  static inline const ArticleResponse* internal_default_instance() {
-    return reinterpret_cast<const ArticleResponse*>(
-               &_ArticleResponse_default_instance_);
+  static inline const VideoResponse* internal_default_instance() {
+    return reinterpret_cast<const VideoResponse*>(
+               &_VideoResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     3;
 
-  friend void swap(ArticleResponse& a, ArticleResponse& b) {
+  friend void swap(VideoResponse& a, VideoResponse& b) {
     a.Swap(&b);
   }
-  inline void Swap(ArticleResponse* other) {
+  inline void Swap(VideoResponse* other) {
     if (other == this) return;
     if (GetArena() == other->GetArena()) {
       InternalSwap(other);
@@ -657,7 +668,7 @@ class ArticleResponse PROTOBUF_FINAL :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(ArticleResponse* other) {
+  void UnsafeArenaSwap(VideoResponse* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -665,17 +676,17 @@ class ArticleResponse PROTOBUF_FINAL :
 
   // implements Message ----------------------------------------------
 
-  inline ArticleResponse* New() const final {
-    return CreateMaybeMessage<ArticleResponse>(nullptr);
+  inline VideoResponse* New() const final {
+    return CreateMaybeMessage<VideoResponse>(nullptr);
   }
 
-  ArticleResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<ArticleResponse>(arena);
+  VideoResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<VideoResponse>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const ArticleResponse& from);
-  void MergeFrom(const ArticleResponse& from);
+  void CopyFrom(const VideoResponse& from);
+  void MergeFrom(const VideoResponse& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -689,13 +700,13 @@ class ArticleResponse PROTOBUF_FINAL :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(ArticleResponse* other);
+  void InternalSwap(VideoResponse* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ArticleResponse";
+    return "VideoResponse";
   }
   protected:
-  explicit ArticleResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  explicit VideoResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena);
   private:
   static void ArenaDtor(void* object);
   inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -715,42 +726,42 @@ class ArticleResponse PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRecommendsFieldNumber = 3,
-    kExposureFieldNumber = 1,
+    kRecAlgoFieldNumber = 3,
+    kImpressionFieldNumber = 1,
     kTimeStampFieldNumber = 2,
   };
-  // repeated .Article recommends = 3;
-  int recommends_size() const;
+  // repeated .Video rec_algo = 3;
+  int rec_algo_size() const;
   private:
-  int _internal_recommends_size() const;
+  int _internal_rec_algo_size() const;
   public:
-  void clear_recommends();
-  ::Article* mutable_recommends(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Article >*
-      mutable_recommends();
+  void clear_rec_algo();
+  ::Video* mutable_rec_algo(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Video >*
+      mutable_rec_algo();
   private:
-  const ::Article& _internal_recommends(int index) const;
-  ::Article* _internal_add_recommends();
+  const ::Video& _internal_rec_algo(int index) const;
+  ::Video* _internal_add_rec_algo();
   public:
-  const ::Article& recommends(int index) const;
-  ::Article* add_recommends();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Article >&
-      recommends() const;
+  const ::Video& rec_algo(int index) const;
+  ::Video* add_rec_algo();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Video >&
+      rec_algo() const;
 
-  // string exposure = 1;
-  void clear_exposure();
-  const std::string& exposure() const;
-  void set_exposure(const std::string& value);
-  void set_exposure(std::string&& value);
-  void set_exposure(const char* value);
-  void set_exposure(const char* value, size_t size);
-  std::string* mutable_exposure();
-  std::string* release_exposure();
-  void set_allocated_exposure(std::string* exposure);
+  // string impression = 1;
+  void clear_impression();
+  const std::string& impression() const;
+  void set_impression(const std::string& value);
+  void set_impression(std::string&& value);
+  void set_impression(const char* value);
+  void set_impression(const char* value, size_t size);
+  std::string* mutable_impression();
+  std::string* release_impression();
+  void set_allocated_impression(std::string* impression);
   private:
-  const std::string& _internal_exposure() const;
-  void _internal_set_exposure(const std::string& value);
-  std::string* _internal_mutable_exposure();
+  const std::string& _internal_impression() const;
+  void _internal_set_impression(const std::string& value);
+  std::string* _internal_mutable_impression();
   public:
 
   // int64 time_stamp = 2;
@@ -762,15 +773,15 @@ class ArticleResponse PROTOBUF_FINAL :
   void _internal_set_time_stamp(::PROTOBUF_NAMESPACE_ID::int64 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:ArticleResponse)
+  // @@protoc_insertion_point(class_scope:VideoResponse)
  private:
   class _Internal;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Article > recommends_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr exposure_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Video > rec_algo_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr impression_;
   ::PROTOBUF_NAMESPACE_ID::int64 time_stamp_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_proto_2frec_2eproto;
@@ -784,59 +795,59 @@ class ArticleResponse PROTOBUF_FINAL :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// UserRequest
+// request
 
 // string user_id = 1;
-inline void UserRequest::clear_user_id() {
+inline void request::clear_user_id() {
   user_id_.ClearToEmpty();
 }
-inline const std::string& UserRequest::user_id() const {
-  // @@protoc_insertion_point(field_get:UserRequest.user_id)
+inline const std::string& request::user_id() const {
+  // @@protoc_insertion_point(field_get:request.user_id)
   return _internal_user_id();
 }
-inline void UserRequest::set_user_id(const std::string& value) {
+inline void request::set_user_id(const std::string& value) {
   _internal_set_user_id(value);
-  // @@protoc_insertion_point(field_set:UserRequest.user_id)
+  // @@protoc_insertion_point(field_set:request.user_id)
 }
-inline std::string* UserRequest::mutable_user_id() {
-  // @@protoc_insertion_point(field_mutable:UserRequest.user_id)
+inline std::string* request::mutable_user_id() {
+  // @@protoc_insertion_point(field_mutable:request.user_id)
   return _internal_mutable_user_id();
 }
-inline const std::string& UserRequest::_internal_user_id() const {
+inline const std::string& request::_internal_user_id() const {
   return user_id_.Get();
 }
-inline void UserRequest::_internal_set_user_id(const std::string& value) {
+inline void request::_internal_set_user_id(const std::string& value) {
   
   user_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
 }
-inline void UserRequest::set_user_id(std::string&& value) {
+inline void request::set_user_id(std::string&& value) {
   
   user_id_.Set(
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:UserRequest.user_id)
+  // @@protoc_insertion_point(field_set_rvalue:request.user_id)
 }
-inline void UserRequest::set_user_id(const char* value) {
+inline void request::set_user_id(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   user_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:UserRequest.user_id)
+  // @@protoc_insertion_point(field_set_char:request.user_id)
 }
-inline void UserRequest::set_user_id(const char* value,
+inline void request::set_user_id(const char* value,
     size_t size) {
   
   user_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:UserRequest.user_id)
+  // @@protoc_insertion_point(field_set_pointer:request.user_id)
 }
-inline std::string* UserRequest::_internal_mutable_user_id() {
+inline std::string* request::_internal_mutable_user_id() {
   
   return user_id_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
 }
-inline std::string* UserRequest::release_user_id() {
-  // @@protoc_insertion_point(field_release:UserRequest.user_id)
+inline std::string* request::release_user_id() {
+  // @@protoc_insertion_point(field_release:request.user_id)
   return user_id_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline void UserRequest::set_allocated_user_id(std::string* user_id) {
+inline void request::set_allocated_user_id(std::string* user_id) {
   if (user_id != nullptr) {
     
   } else {
@@ -844,546 +855,566 @@ inline void UserRequest::set_allocated_user_id(std::string* user_id) {
   }
   user_id_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), user_id,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:UserRequest.user_id)
+  // @@protoc_insertion_point(field_set_allocated:request.user_id)
 }
 
-// int32 channel_id = 2;
-inline void UserRequest::clear_channel_id() {
-  channel_id_ = 0;
+// int32 age = 2;
+inline void request::clear_age() {
+  age_ = 0;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 UserRequest::_internal_channel_id() const {
-  return channel_id_;
+inline ::PROTOBUF_NAMESPACE_ID::int32 request::_internal_age() const {
+  return age_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 UserRequest::channel_id() const {
-  // @@protoc_insertion_point(field_get:UserRequest.channel_id)
-  return _internal_channel_id();
+inline ::PROTOBUF_NAMESPACE_ID::int32 request::age() const {
+  // @@protoc_insertion_point(field_get:request.age)
+  return _internal_age();
 }
-inline void UserRequest::_internal_set_channel_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void request::_internal_set_age(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
-  channel_id_ = value;
+  age_ = value;
 }
-inline void UserRequest::set_channel_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_channel_id(value);
-  // @@protoc_insertion_point(field_set:UserRequest.channel_id)
+inline void request::set_age(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_age(value);
+  // @@protoc_insertion_point(field_set:request.age)
 }
 
-// int32 article_num = 3;
-inline void UserRequest::clear_article_num() {
-  article_num_ = 0;
+// int32 gender = 3;
+inline void request::clear_gender() {
+  gender_ = 0;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 UserRequest::_internal_article_num() const {
-  return article_num_;
+inline ::PROTOBUF_NAMESPACE_ID::int32 request::_internal_gender() const {
+  return gender_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 UserRequest::article_num() const {
-  // @@protoc_insertion_point(field_get:UserRequest.article_num)
-  return _internal_article_num();
+inline ::PROTOBUF_NAMESPACE_ID::int32 request::gender() const {
+  // @@protoc_insertion_point(field_get:request.gender)
+  return _internal_gender();
 }
-inline void UserRequest::_internal_set_article_num(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void request::_internal_set_gender(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
-  article_num_ = value;
+  gender_ = value;
 }
-inline void UserRequest::set_article_num(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_article_num(value);
-  // @@protoc_insertion_point(field_set:UserRequest.article_num)
+inline void request::set_gender(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_gender(value);
+  // @@protoc_insertion_point(field_set:request.gender)
 }
 
-// int64 time_stamp = 4;
-inline void UserRequest::clear_time_stamp() {
-  time_stamp_ = PROTOBUF_LONGLONG(0);
+// int32 platform = 4;
+inline void request::clear_platform() {
+  platform_ = 0;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int64 UserRequest::_internal_time_stamp() const {
-  return time_stamp_;
+inline ::PROTOBUF_NAMESPACE_ID::int32 request::_internal_platform() const {
+  return platform_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int64 UserRequest::time_stamp() const {
-  // @@protoc_insertion_point(field_get:UserRequest.time_stamp)
-  return _internal_time_stamp();
+inline ::PROTOBUF_NAMESPACE_ID::int32 request::platform() const {
+  // @@protoc_insertion_point(field_get:request.platform)
+  return _internal_platform();
 }
-inline void UserRequest::_internal_set_time_stamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
+inline void request::_internal_set_platform(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
-  time_stamp_ = value;
+  platform_ = value;
 }
-inline void UserRequest::set_time_stamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
-  _internal_set_time_stamp(value);
-  // @@protoc_insertion_point(field_set:UserRequest.time_stamp)
+inline void request::set_platform(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_platform(value);
+  // @@protoc_insertion_point(field_set:request.platform)
 }
 
-// -------------------------------------------------------------------
-
-// Track
-
-// string click = 1;
-inline void Track::clear_click() {
-  click_.ClearToEmpty();
+// int32 video_nums = 5;
+inline void request::clear_video_nums() {
+  video_nums_ = 0;
 }
-inline const std::string& Track::click() const {
-  // @@protoc_insertion_point(field_get:Track.click)
-  return _internal_click();
+inline ::PROTOBUF_NAMESPACE_ID::int32 request::_internal_video_nums() const {
+  return video_nums_;
 }
-inline void Track::set_click(const std::string& value) {
-  _internal_set_click(value);
-  // @@protoc_insertion_point(field_set:Track.click)
+inline ::PROTOBUF_NAMESPACE_ID::int32 request::video_nums() const {
+  // @@protoc_insertion_point(field_get:request.video_nums)
+  return _internal_video_nums();
 }
-inline std::string* Track::mutable_click() {
-  // @@protoc_insertion_point(field_mutable:Track.click)
-  return _internal_mutable_click();
-}
-inline const std::string& Track::_internal_click() const {
-  return click_.Get();
-}
-inline void Track::_internal_set_click(const std::string& value) {
+inline void request::_internal_set_video_nums(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
-  click_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+  video_nums_ = value;
 }
-inline void Track::set_click(std::string&& value) {
-  
-  click_.Set(
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:Track.click)
-}
-inline void Track::set_click(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  click_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:Track.click)
-}
-inline void Track::set_click(const char* value,
-    size_t size) {
-  
-  click_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:Track.click)
-}
-inline std::string* Track::_internal_mutable_click() {
-  
-  return click_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
-}
-inline std::string* Track::release_click() {
-  // @@protoc_insertion_point(field_release:Track.click)
-  return click_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void Track::set_allocated_click(std::string* click) {
-  if (click != nullptr) {
-    
-  } else {
-    
-  }
-  click_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), click,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:Track.click)
-}
-
-// string collect = 2;
-inline void Track::clear_collect() {
-  collect_.ClearToEmpty();
-}
-inline const std::string& Track::collect() const {
-  // @@protoc_insertion_point(field_get:Track.collect)
-  return _internal_collect();
-}
-inline void Track::set_collect(const std::string& value) {
-  _internal_set_collect(value);
-  // @@protoc_insertion_point(field_set:Track.collect)
-}
-inline std::string* Track::mutable_collect() {
-  // @@protoc_insertion_point(field_mutable:Track.collect)
-  return _internal_mutable_collect();
-}
-inline const std::string& Track::_internal_collect() const {
-  return collect_.Get();
-}
-inline void Track::_internal_set_collect(const std::string& value) {
-  
-  collect_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
-}
-inline void Track::set_collect(std::string&& value) {
-  
-  collect_.Set(
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:Track.collect)
-}
-inline void Track::set_collect(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  collect_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:Track.collect)
-}
-inline void Track::set_collect(const char* value,
-    size_t size) {
-  
-  collect_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:Track.collect)
-}
-inline std::string* Track::_internal_mutable_collect() {
-  
-  return collect_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
-}
-inline std::string* Track::release_collect() {
-  // @@protoc_insertion_point(field_release:Track.collect)
-  return collect_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void Track::set_allocated_collect(std::string* collect) {
-  if (collect != nullptr) {
-    
-  } else {
-    
-  }
-  collect_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), collect,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:Track.collect)
-}
-
-// string share = 3;
-inline void Track::clear_share() {
-  share_.ClearToEmpty();
-}
-inline const std::string& Track::share() const {
-  // @@protoc_insertion_point(field_get:Track.share)
-  return _internal_share();
-}
-inline void Track::set_share(const std::string& value) {
-  _internal_set_share(value);
-  // @@protoc_insertion_point(field_set:Track.share)
-}
-inline std::string* Track::mutable_share() {
-  // @@protoc_insertion_point(field_mutable:Track.share)
-  return _internal_mutable_share();
-}
-inline const std::string& Track::_internal_share() const {
-  return share_.Get();
-}
-inline void Track::_internal_set_share(const std::string& value) {
-  
-  share_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
-}
-inline void Track::set_share(std::string&& value) {
-  
-  share_.Set(
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:Track.share)
-}
-inline void Track::set_share(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  share_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:Track.share)
-}
-inline void Track::set_share(const char* value,
-    size_t size) {
-  
-  share_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:Track.share)
-}
-inline std::string* Track::_internal_mutable_share() {
-  
-  return share_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
-}
-inline std::string* Track::release_share() {
-  // @@protoc_insertion_point(field_release:Track.share)
-  return share_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void Track::set_allocated_share(std::string* share) {
-  if (share != nullptr) {
-    
-  } else {
-    
-  }
-  share_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), share,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:Track.share)
-}
-
-// string read = 4;
-inline void Track::clear_read() {
-  read_.ClearToEmpty();
-}
-inline const std::string& Track::read() const {
-  // @@protoc_insertion_point(field_get:Track.read)
-  return _internal_read();
-}
-inline void Track::set_read(const std::string& value) {
-  _internal_set_read(value);
-  // @@protoc_insertion_point(field_set:Track.read)
-}
-inline std::string* Track::mutable_read() {
-  // @@protoc_insertion_point(field_mutable:Track.read)
-  return _internal_mutable_read();
-}
-inline const std::string& Track::_internal_read() const {
-  return read_.Get();
-}
-inline void Track::_internal_set_read(const std::string& value) {
-  
-  read_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
-}
-inline void Track::set_read(std::string&& value) {
-  
-  read_.Set(
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:Track.read)
-}
-inline void Track::set_read(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  read_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:Track.read)
-}
-inline void Track::set_read(const char* value,
-    size_t size) {
-  
-  read_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:Track.read)
-}
-inline std::string* Track::_internal_mutable_read() {
-  
-  return read_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
-}
-inline std::string* Track::release_read() {
-  // @@protoc_insertion_point(field_release:Track.read)
-  return read_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void Track::set_allocated_read(std::string* read) {
-  if (read != nullptr) {
-    
-  } else {
-    
-  }
-  read_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), read,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:Track.read)
+inline void request::set_video_nums(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_video_nums(value);
+  // @@protoc_insertion_point(field_set:request.video_nums)
 }
 
 // -------------------------------------------------------------------
 
-// Article
+// Meta
 
-// int64 article_id = 1;
-inline void Article::clear_article_id() {
-  article_id_ = PROTOBUF_LONGLONG(0);
+// string cover = 1;
+inline void Meta::clear_cover() {
+  cover_.ClearToEmpty();
 }
-inline ::PROTOBUF_NAMESPACE_ID::int64 Article::_internal_article_id() const {
-  return article_id_;
+inline const std::string& Meta::cover() const {
+  // @@protoc_insertion_point(field_get:Meta.cover)
+  return _internal_cover();
 }
-inline ::PROTOBUF_NAMESPACE_ID::int64 Article::article_id() const {
-  // @@protoc_insertion_point(field_get:Article.article_id)
-  return _internal_article_id();
+inline void Meta::set_cover(const std::string& value) {
+  _internal_set_cover(value);
+  // @@protoc_insertion_point(field_set:Meta.cover)
 }
-inline void Article::_internal_set_article_id(::PROTOBUF_NAMESPACE_ID::int64 value) {
+inline std::string* Meta::mutable_cover() {
+  // @@protoc_insertion_point(field_mutable:Meta.cover)
+  return _internal_mutable_cover();
+}
+inline const std::string& Meta::_internal_cover() const {
+  return cover_.Get();
+}
+inline void Meta::_internal_set_cover(const std::string& value) {
   
-  article_id_ = value;
+  cover_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
 }
-inline void Article::set_article_id(::PROTOBUF_NAMESPACE_ID::int64 value) {
-  _internal_set_article_id(value);
-  // @@protoc_insertion_point(field_set:Article.article_id)
+inline void Meta::set_cover(std::string&& value) {
+  
+  cover_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:Meta.cover)
+}
+inline void Meta::set_cover(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  cover_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:Meta.cover)
+}
+inline void Meta::set_cover(const char* value,
+    size_t size) {
+  
+  cover_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:Meta.cover)
+}
+inline std::string* Meta::_internal_mutable_cover() {
+  
+  return cover_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* Meta::release_cover() {
+  // @@protoc_insertion_point(field_release:Meta.cover)
+  return cover_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void Meta::set_allocated_cover(std::string* cover) {
+  if (cover != nullptr) {
+    
+  } else {
+    
+  }
+  cover_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), cover,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:Meta.cover)
 }
 
-// .Track track = 2;
-inline bool Article::_internal_has_track() const {
-  return this != internal_default_instance() && track_ != nullptr;
+// string title = 2;
+inline void Meta::clear_title() {
+  title_.ClearToEmpty();
 }
-inline bool Article::has_track() const {
-  return _internal_has_track();
+inline const std::string& Meta::title() const {
+  // @@protoc_insertion_point(field_get:Meta.title)
+  return _internal_title();
 }
-inline void Article::clear_track() {
-  if (GetArena() == nullptr && track_ != nullptr) {
-    delete track_;
+inline void Meta::set_title(const std::string& value) {
+  _internal_set_title(value);
+  // @@protoc_insertion_point(field_set:Meta.title)
+}
+inline std::string* Meta::mutable_title() {
+  // @@protoc_insertion_point(field_mutable:Meta.title)
+  return _internal_mutable_title();
+}
+inline const std::string& Meta::_internal_title() const {
+  return title_.Get();
+}
+inline void Meta::_internal_set_title(const std::string& value) {
+  
+  title_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void Meta::set_title(std::string&& value) {
+  
+  title_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:Meta.title)
+}
+inline void Meta::set_title(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  title_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:Meta.title)
+}
+inline void Meta::set_title(const char* value,
+    size_t size) {
+  
+  title_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:Meta.title)
+}
+inline std::string* Meta::_internal_mutable_title() {
+  
+  return title_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* Meta::release_title() {
+  // @@protoc_insertion_point(field_release:Meta.title)
+  return title_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void Meta::set_allocated_title(std::string* title) {
+  if (title != nullptr) {
+    
+  } else {
+    
   }
-  track_ = nullptr;
+  title_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), title,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:Meta.title)
 }
-inline const ::Track& Article::_internal_track() const {
-  const ::Track* p = track_;
-  return p != nullptr ? *p : reinterpret_cast<const ::Track&>(
-      ::_Track_default_instance_);
+
+// string up = 3;
+inline void Meta::clear_up() {
+  up_.ClearToEmpty();
 }
-inline const ::Track& Article::track() const {
-  // @@protoc_insertion_point(field_get:Article.track)
-  return _internal_track();
+inline const std::string& Meta::up() const {
+  // @@protoc_insertion_point(field_get:Meta.up)
+  return _internal_up();
 }
-inline void Article::unsafe_arena_set_allocated_track(
-    ::Track* track) {
+inline void Meta::set_up(const std::string& value) {
+  _internal_set_up(value);
+  // @@protoc_insertion_point(field_set:Meta.up)
+}
+inline std::string* Meta::mutable_up() {
+  // @@protoc_insertion_point(field_mutable:Meta.up)
+  return _internal_mutable_up();
+}
+inline const std::string& Meta::_internal_up() const {
+  return up_.Get();
+}
+inline void Meta::_internal_set_up(const std::string& value) {
+  
+  up_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void Meta::set_up(std::string&& value) {
+  
+  up_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:Meta.up)
+}
+inline void Meta::set_up(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  up_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:Meta.up)
+}
+inline void Meta::set_up(const char* value,
+    size_t size) {
+  
+  up_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:Meta.up)
+}
+inline std::string* Meta::_internal_mutable_up() {
+  
+  return up_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* Meta::release_up() {
+  // @@protoc_insertion_point(field_release:Meta.up)
+  return up_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void Meta::set_allocated_up(std::string* up) {
+  if (up != nullptr) {
+    
+  } else {
+    
+  }
+  up_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), up,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:Meta.up)
+}
+
+// string tag = 4;
+inline void Meta::clear_tag() {
+  tag_.ClearToEmpty();
+}
+inline const std::string& Meta::tag() const {
+  // @@protoc_insertion_point(field_get:Meta.tag)
+  return _internal_tag();
+}
+inline void Meta::set_tag(const std::string& value) {
+  _internal_set_tag(value);
+  // @@protoc_insertion_point(field_set:Meta.tag)
+}
+inline std::string* Meta::mutable_tag() {
+  // @@protoc_insertion_point(field_mutable:Meta.tag)
+  return _internal_mutable_tag();
+}
+inline const std::string& Meta::_internal_tag() const {
+  return tag_.Get();
+}
+inline void Meta::_internal_set_tag(const std::string& value) {
+  
+  tag_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void Meta::set_tag(std::string&& value) {
+  
+  tag_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:Meta.tag)
+}
+inline void Meta::set_tag(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  tag_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:Meta.tag)
+}
+inline void Meta::set_tag(const char* value,
+    size_t size) {
+  
+  tag_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:Meta.tag)
+}
+inline std::string* Meta::_internal_mutable_tag() {
+  
+  return tag_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* Meta::release_tag() {
+  // @@protoc_insertion_point(field_release:Meta.tag)
+  return tag_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void Meta::set_allocated_tag(std::string* tag) {
+  if (tag != nullptr) {
+    
+  } else {
+    
+  }
+  tag_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), tag,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:Meta.tag)
+}
+
+// -------------------------------------------------------------------
+
+// Video
+
+// int64 video_id = 1;
+inline void Video::clear_video_id() {
+  video_id_ = PROTOBUF_LONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 Video::_internal_video_id() const {
+  return video_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 Video::video_id() const {
+  // @@protoc_insertion_point(field_get:Video.video_id)
+  return _internal_video_id();
+}
+inline void Video::_internal_set_video_id(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  
+  video_id_ = value;
+}
+inline void Video::set_video_id(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _internal_set_video_id(value);
+  // @@protoc_insertion_point(field_set:Video.video_id)
+}
+
+// .Meta Meta = 2;
+inline bool Video::_internal_has_meta() const {
+  return this != internal_default_instance() && meta_ != nullptr;
+}
+inline bool Video::has_meta() const {
+  return _internal_has_meta();
+}
+inline void Video::clear_meta() {
+  if (GetArena() == nullptr && meta_ != nullptr) {
+    delete meta_;
+  }
+  meta_ = nullptr;
+}
+inline const ::Meta& Video::_internal_meta() const {
+  const ::Meta* p = meta_;
+  return p != nullptr ? *p : reinterpret_cast<const ::Meta&>(
+      ::_Meta_default_instance_);
+}
+inline const ::Meta& Video::meta() const {
+  // @@protoc_insertion_point(field_get:Video.Meta)
+  return _internal_meta();
+}
+inline void Video::unsafe_arena_set_allocated_meta(
+    ::Meta* meta) {
   if (GetArena() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(track_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(meta_);
   }
-  track_ = track;
-  if (track) {
+  meta_ = meta;
+  if (meta) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Article.track)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Video.Meta)
 }
-inline ::Track* Article::release_track() {
+inline ::Meta* Video::release_meta() {
   
-  ::Track* temp = track_;
-  track_ = nullptr;
+  ::Meta* temp = meta_;
+  meta_ = nullptr;
   if (GetArena() != nullptr) {
     temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
   return temp;
 }
-inline ::Track* Article::unsafe_arena_release_track() {
-  // @@protoc_insertion_point(field_release:Article.track)
+inline ::Meta* Video::unsafe_arena_release_meta() {
+  // @@protoc_insertion_point(field_release:Video.Meta)
   
-  ::Track* temp = track_;
-  track_ = nullptr;
+  ::Meta* temp = meta_;
+  meta_ = nullptr;
   return temp;
 }
-inline ::Track* Article::_internal_mutable_track() {
+inline ::Meta* Video::_internal_mutable_meta() {
   
-  if (track_ == nullptr) {
-    auto* p = CreateMaybeMessage<::Track>(GetArena());
-    track_ = p;
+  if (meta_ == nullptr) {
+    auto* p = CreateMaybeMessage<::Meta>(GetArena());
+    meta_ = p;
   }
-  return track_;
+  return meta_;
 }
-inline ::Track* Article::mutable_track() {
-  // @@protoc_insertion_point(field_mutable:Article.track)
-  return _internal_mutable_track();
+inline ::Meta* Video::mutable_meta() {
+  // @@protoc_insertion_point(field_mutable:Video.Meta)
+  return _internal_mutable_meta();
 }
-inline void Article::set_allocated_track(::Track* track) {
+inline void Video::set_allocated_meta(::Meta* meta) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   if (message_arena == nullptr) {
-    delete track_;
+    delete meta_;
   }
-  if (track) {
+  if (meta) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(track);
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(meta);
     if (message_arena != submessage_arena) {
-      track = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, track, submessage_arena);
+      meta = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, meta, submessage_arena);
     }
     
   } else {
     
   }
-  track_ = track;
-  // @@protoc_insertion_point(field_set_allocated:Article.track)
+  meta_ = meta;
+  // @@protoc_insertion_point(field_set_allocated:Video.Meta)
 }
 
 // -------------------------------------------------------------------
 
-// ArticleResponse
+// VideoResponse
 
-// string exposure = 1;
-inline void ArticleResponse::clear_exposure() {
-  exposure_.ClearToEmpty();
+// string impression = 1;
+inline void VideoResponse::clear_impression() {
+  impression_.ClearToEmpty();
 }
-inline const std::string& ArticleResponse::exposure() const {
-  // @@protoc_insertion_point(field_get:ArticleResponse.exposure)
-  return _internal_exposure();
+inline const std::string& VideoResponse::impression() const {
+  // @@protoc_insertion_point(field_get:VideoResponse.impression)
+  return _internal_impression();
 }
-inline void ArticleResponse::set_exposure(const std::string& value) {
-  _internal_set_exposure(value);
-  // @@protoc_insertion_point(field_set:ArticleResponse.exposure)
+inline void VideoResponse::set_impression(const std::string& value) {
+  _internal_set_impression(value);
+  // @@protoc_insertion_point(field_set:VideoResponse.impression)
 }
-inline std::string* ArticleResponse::mutable_exposure() {
-  // @@protoc_insertion_point(field_mutable:ArticleResponse.exposure)
-  return _internal_mutable_exposure();
+inline std::string* VideoResponse::mutable_impression() {
+  // @@protoc_insertion_point(field_mutable:VideoResponse.impression)
+  return _internal_mutable_impression();
 }
-inline const std::string& ArticleResponse::_internal_exposure() const {
-  return exposure_.Get();
+inline const std::string& VideoResponse::_internal_impression() const {
+  return impression_.Get();
 }
-inline void ArticleResponse::_internal_set_exposure(const std::string& value) {
+inline void VideoResponse::_internal_set_impression(const std::string& value) {
   
-  exposure_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+  impression_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
 }
-inline void ArticleResponse::set_exposure(std::string&& value) {
+inline void VideoResponse::set_impression(std::string&& value) {
   
-  exposure_.Set(
+  impression_.Set(
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ArticleResponse.exposure)
+  // @@protoc_insertion_point(field_set_rvalue:VideoResponse.impression)
 }
-inline void ArticleResponse::set_exposure(const char* value) {
+inline void VideoResponse::set_impression(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  exposure_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:ArticleResponse.exposure)
+  impression_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:VideoResponse.impression)
 }
-inline void ArticleResponse::set_exposure(const char* value,
+inline void VideoResponse::set_impression(const char* value,
     size_t size) {
   
-  exposure_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+  impression_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ArticleResponse.exposure)
+  // @@protoc_insertion_point(field_set_pointer:VideoResponse.impression)
 }
-inline std::string* ArticleResponse::_internal_mutable_exposure() {
+inline std::string* VideoResponse::_internal_mutable_impression() {
   
-  return exposure_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+  return impression_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
 }
-inline std::string* ArticleResponse::release_exposure() {
-  // @@protoc_insertion_point(field_release:ArticleResponse.exposure)
-  return exposure_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+inline std::string* VideoResponse::release_impression() {
+  // @@protoc_insertion_point(field_release:VideoResponse.impression)
+  return impression_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline void ArticleResponse::set_allocated_exposure(std::string* exposure) {
-  if (exposure != nullptr) {
+inline void VideoResponse::set_allocated_impression(std::string* impression) {
+  if (impression != nullptr) {
     
   } else {
     
   }
-  exposure_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), exposure,
+  impression_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), impression,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ArticleResponse.exposure)
+  // @@protoc_insertion_point(field_set_allocated:VideoResponse.impression)
 }
 
 // int64 time_stamp = 2;
-inline void ArticleResponse::clear_time_stamp() {
+inline void VideoResponse::clear_time_stamp() {
   time_stamp_ = PROTOBUF_LONGLONG(0);
 }
-inline ::PROTOBUF_NAMESPACE_ID::int64 ArticleResponse::_internal_time_stamp() const {
+inline ::PROTOBUF_NAMESPACE_ID::int64 VideoResponse::_internal_time_stamp() const {
   return time_stamp_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int64 ArticleResponse::time_stamp() const {
-  // @@protoc_insertion_point(field_get:ArticleResponse.time_stamp)
+inline ::PROTOBUF_NAMESPACE_ID::int64 VideoResponse::time_stamp() const {
+  // @@protoc_insertion_point(field_get:VideoResponse.time_stamp)
   return _internal_time_stamp();
 }
-inline void ArticleResponse::_internal_set_time_stamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
+inline void VideoResponse::_internal_set_time_stamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
   
   time_stamp_ = value;
 }
-inline void ArticleResponse::set_time_stamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
+inline void VideoResponse::set_time_stamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
   _internal_set_time_stamp(value);
-  // @@protoc_insertion_point(field_set:ArticleResponse.time_stamp)
+  // @@protoc_insertion_point(field_set:VideoResponse.time_stamp)
 }
 
-// repeated .Article recommends = 3;
-inline int ArticleResponse::_internal_recommends_size() const {
-  return recommends_.size();
+// repeated .Video rec_algo = 3;
+inline int VideoResponse::_internal_rec_algo_size() const {
+  return rec_algo_.size();
 }
-inline int ArticleResponse::recommends_size() const {
-  return _internal_recommends_size();
+inline int VideoResponse::rec_algo_size() const {
+  return _internal_rec_algo_size();
 }
-inline void ArticleResponse::clear_recommends() {
-  recommends_.Clear();
+inline void VideoResponse::clear_rec_algo() {
+  rec_algo_.Clear();
 }
-inline ::Article* ArticleResponse::mutable_recommends(int index) {
-  // @@protoc_insertion_point(field_mutable:ArticleResponse.recommends)
-  return recommends_.Mutable(index);
+inline ::Video* VideoResponse::mutable_rec_algo(int index) {
+  // @@protoc_insertion_point(field_mutable:VideoResponse.rec_algo)
+  return rec_algo_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Article >*
-ArticleResponse::mutable_recommends() {
-  // @@protoc_insertion_point(field_mutable_list:ArticleResponse.recommends)
-  return &recommends_;
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Video >*
+VideoResponse::mutable_rec_algo() {
+  // @@protoc_insertion_point(field_mutable_list:VideoResponse.rec_algo)
+  return &rec_algo_;
 }
-inline const ::Article& ArticleResponse::_internal_recommends(int index) const {
-  return recommends_.Get(index);
+inline const ::Video& VideoResponse::_internal_rec_algo(int index) const {
+  return rec_algo_.Get(index);
 }
-inline const ::Article& ArticleResponse::recommends(int index) const {
-  // @@protoc_insertion_point(field_get:ArticleResponse.recommends)
-  return _internal_recommends(index);
+inline const ::Video& VideoResponse::rec_algo(int index) const {
+  // @@protoc_insertion_point(field_get:VideoResponse.rec_algo)
+  return _internal_rec_algo(index);
 }
-inline ::Article* ArticleResponse::_internal_add_recommends() {
-  return recommends_.Add();
+inline ::Video* VideoResponse::_internal_add_rec_algo() {
+  return rec_algo_.Add();
 }
-inline ::Article* ArticleResponse::add_recommends() {
-  // @@protoc_insertion_point(field_add:ArticleResponse.recommends)
-  return _internal_add_recommends();
+inline ::Video* VideoResponse::add_rec_algo() {
+  // @@protoc_insertion_point(field_add:VideoResponse.rec_algo)
+  return _internal_add_rec_algo();
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Article >&
-ArticleResponse::recommends() const {
-  // @@protoc_insertion_point(field_list:ArticleResponse.recommends)
-  return recommends_;
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Video >&
+VideoResponse::rec_algo() const {
+  // @@protoc_insertion_point(field_list:VideoResponse.rec_algo)
+  return rec_algo_;
 }
 
 #ifdef __GNUC__

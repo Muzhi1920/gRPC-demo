@@ -14,77 +14,77 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_proto_2frec_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Article_proto_2frec_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_proto_2frec_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Track_proto_2frec_2eproto;
-class UserRequestDefaultTypeInternal {
+extern PROTOBUF_INTERNAL_EXPORT_proto_2frec_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Meta_proto_2frec_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_proto_2frec_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Video_proto_2frec_2eproto;
+class requestDefaultTypeInternal {
  public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<UserRequest> _instance;
-} _UserRequest_default_instance_;
-class TrackDefaultTypeInternal {
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<request> _instance;
+} _request_default_instance_;
+class MetaDefaultTypeInternal {
  public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Track> _instance;
-} _Track_default_instance_;
-class ArticleDefaultTypeInternal {
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Meta> _instance;
+} _Meta_default_instance_;
+class VideoDefaultTypeInternal {
  public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Article> _instance;
-} _Article_default_instance_;
-class ArticleResponseDefaultTypeInternal {
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Video> _instance;
+} _Video_default_instance_;
+class VideoResponseDefaultTypeInternal {
  public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ArticleResponse> _instance;
-} _ArticleResponse_default_instance_;
-static void InitDefaultsscc_info_Article_proto_2frec_2eproto() {
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<VideoResponse> _instance;
+} _VideoResponse_default_instance_;
+static void InitDefaultsscc_info_Meta_proto_2frec_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::_Article_default_instance_;
-    new (ptr) ::Article();
+    void* ptr = &::_Meta_default_instance_;
+    new (ptr) ::Meta();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Article_proto_2frec_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_Article_proto_2frec_2eproto}, {
-      &scc_info_Track_proto_2frec_2eproto.base,}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Meta_proto_2frec_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Meta_proto_2frec_2eproto}, {}};
 
-static void InitDefaultsscc_info_ArticleResponse_proto_2frec_2eproto() {
+static void InitDefaultsscc_info_Video_proto_2frec_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::_ArticleResponse_default_instance_;
-    new (ptr) ::ArticleResponse();
+    void* ptr = &::_Video_default_instance_;
+    new (ptr) ::Video();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ArticleResponse_proto_2frec_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_ArticleResponse_proto_2frec_2eproto}, {
-      &scc_info_Article_proto_2frec_2eproto.base,}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Video_proto_2frec_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_Video_proto_2frec_2eproto}, {
+      &scc_info_Meta_proto_2frec_2eproto.base,}};
 
-static void InitDefaultsscc_info_Track_proto_2frec_2eproto() {
+static void InitDefaultsscc_info_VideoResponse_proto_2frec_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::_Track_default_instance_;
-    new (ptr) ::Track();
+    void* ptr = &::_VideoResponse_default_instance_;
+    new (ptr) ::VideoResponse();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Track_proto_2frec_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Track_proto_2frec_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_VideoResponse_proto_2frec_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_VideoResponse_proto_2frec_2eproto}, {
+      &scc_info_Video_proto_2frec_2eproto.base,}};
 
-static void InitDefaultsscc_info_UserRequest_proto_2frec_2eproto() {
+static void InitDefaultsscc_info_request_proto_2frec_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::_UserRequest_default_instance_;
-    new (ptr) ::UserRequest();
+    void* ptr = &::_request_default_instance_;
+    new (ptr) ::request();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_UserRequest_proto_2frec_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_UserRequest_proto_2frec_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_request_proto_2frec_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_request_proto_2frec_2eproto}, {}};
 
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_proto_2frec_2eproto[4];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_proto_2frec_2eproto = nullptr;
@@ -92,77 +92,77 @@ static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_s
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_proto_2frec_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::UserRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::request, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::UserRequest, user_id_),
-  PROTOBUF_FIELD_OFFSET(::UserRequest, channel_id_),
-  PROTOBUF_FIELD_OFFSET(::UserRequest, article_num_),
-  PROTOBUF_FIELD_OFFSET(::UserRequest, time_stamp_),
+  PROTOBUF_FIELD_OFFSET(::request, user_id_),
+  PROTOBUF_FIELD_OFFSET(::request, age_),
+  PROTOBUF_FIELD_OFFSET(::request, gender_),
+  PROTOBUF_FIELD_OFFSET(::request, platform_),
+  PROTOBUF_FIELD_OFFSET(::request, video_nums_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::Track, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::Meta, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::Track, click_),
-  PROTOBUF_FIELD_OFFSET(::Track, collect_),
-  PROTOBUF_FIELD_OFFSET(::Track, share_),
-  PROTOBUF_FIELD_OFFSET(::Track, read_),
+  PROTOBUF_FIELD_OFFSET(::Meta, cover_),
+  PROTOBUF_FIELD_OFFSET(::Meta, title_),
+  PROTOBUF_FIELD_OFFSET(::Meta, up_),
+  PROTOBUF_FIELD_OFFSET(::Meta, tag_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::Article, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::Video, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::Article, article_id_),
-  PROTOBUF_FIELD_OFFSET(::Article, track_),
+  PROTOBUF_FIELD_OFFSET(::Video, video_id_),
+  PROTOBUF_FIELD_OFFSET(::Video, meta_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ArticleResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::VideoResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ArticleResponse, exposure_),
-  PROTOBUF_FIELD_OFFSET(::ArticleResponse, time_stamp_),
-  PROTOBUF_FIELD_OFFSET(::ArticleResponse, recommends_),
+  PROTOBUF_FIELD_OFFSET(::VideoResponse, impression_),
+  PROTOBUF_FIELD_OFFSET(::VideoResponse, time_stamp_),
+  PROTOBUF_FIELD_OFFSET(::VideoResponse, rec_algo_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::UserRequest)},
-  { 9, -1, sizeof(::Track)},
-  { 18, -1, sizeof(::Article)},
-  { 25, -1, sizeof(::ArticleResponse)},
+  { 0, -1, sizeof(::request)},
+  { 10, -1, sizeof(::Meta)},
+  { 19, -1, sizeof(::Video)},
+  { 26, -1, sizeof(::VideoResponse)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_UserRequest_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_Track_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_Article_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_ArticleResponse_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_request_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_Meta_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_Video_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_VideoResponse_default_instance_),
 };
 
 const char descriptor_table_protodef_proto_2frec_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\017proto/rec.proto\"[\n\013UserRequest\022\017\n\007user"
-  "_id\030\001 \001(\t\022\022\n\nchannel_id\030\002 \001(\005\022\023\n\013article"
-  "_num\030\003 \001(\005\022\022\n\ntime_stamp\030\004 \001(\003\"D\n\005Track\022"
-  "\r\n\005click\030\001 \001(\t\022\017\n\007collect\030\002 \001(\t\022\r\n\005share"
-  "\030\003 \001(\t\022\014\n\004read\030\004 \001(\t\"4\n\007Article\022\022\n\nartic"
-  "le_id\030\001 \001(\003\022\025\n\005track\030\002 \001(\0132\006.Track\"U\n\017Ar"
-  "ticleResponse\022\020\n\010exposure\030\001 \001(\t\022\022\n\ntime_"
-  "stamp\030\002 \001(\003\022\034\n\nrecommends\030\003 \003(\0132\010.Articl"
-  "e2C\n\rUserRecommend\0222\n\016user_recommend\022\014.U"
-  "serRequest\032\020.ArticleResponse\"\000B\003\220\001\001b\006pro"
-  "to3"
+  "\n\017proto/rec.proto\"]\n\007request\022\017\n\007user_id\030"
+  "\001 \001(\t\022\013\n\003age\030\002 \001(\005\022\016\n\006gender\030\003 \001(\005\022\020\n\010pl"
+  "atform\030\004 \001(\005\022\022\n\nvideo_nums\030\005 \001(\005\"=\n\004Meta"
+  "\022\r\n\005cover\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\022\n\n\002up\030\003 \001"
+  "(\t\022\013\n\003tag\030\004 \001(\t\".\n\005Video\022\020\n\010video_id\030\001 \001"
+  "(\003\022\023\n\004Meta\030\002 \001(\0132\005.Meta\"Q\n\rVideoResponse"
+  "\022\022\n\nimpression\030\001 \001(\t\022\022\n\ntime_stamp\030\002 \001(\003"
+  "\022\030\n\010rec_algo\030\003 \003(\0132\006.Video22\n\tRecSystem\022"
+  "%\n\007rec_sys\022\010.request\032\016.VideoResponse\"\000b\006"
+  "proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_proto_2frec_2eproto_deps[1] = {
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_proto_2frec_2eproto_sccs[4] = {
-  &scc_info_Article_proto_2frec_2eproto.base,
-  &scc_info_ArticleResponse_proto_2frec_2eproto.base,
-  &scc_info_Track_proto_2frec_2eproto.base,
-  &scc_info_UserRequest_proto_2frec_2eproto.base,
+  &scc_info_Meta_proto_2frec_2eproto.base,
+  &scc_info_Video_proto_2frec_2eproto.base,
+  &scc_info_VideoResponse_proto_2frec_2eproto.base,
+  &scc_info_request_proto_2frec_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_proto_2frec_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_proto_2frec_2eproto = {
-  false, false, descriptor_table_protodef_proto_2frec_2eproto, "proto/rec.proto", 403,
+  false, false, descriptor_table_protodef_proto_2frec_2eproto, "proto/rec.proto", 366,
   &descriptor_table_proto_2frec_2eproto_once, descriptor_table_proto_2frec_2eproto_sccs, descriptor_table_proto_2frec_2eproto_deps, 4, 0,
   schemas, file_default_instances, TableStruct_proto_2frec_2eproto::offsets,
   file_level_metadata_proto_2frec_2eproto, 4, file_level_enum_descriptors_proto_2frec_2eproto, file_level_service_descriptors_proto_2frec_2eproto,
@@ -173,17 +173,17 @@ static bool dynamic_init_dummy_proto_2frec_2eproto = (static_cast<void>(::PROTOB
 
 // ===================================================================
 
-class UserRequest::_Internal {
+class request::_Internal {
  public:
 };
 
-UserRequest::UserRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+request::request(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:UserRequest)
+  // @@protoc_insertion_point(arena_constructor:request)
 }
-UserRequest::UserRequest(const UserRequest& from)
+request::request(const request& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   user_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -191,61 +191,61 @@ UserRequest::UserRequest(const UserRequest& from)
     user_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_user_id(), 
       GetArena());
   }
-  ::memcpy(&channel_id_, &from.channel_id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&time_stamp_) -
-    reinterpret_cast<char*>(&channel_id_)) + sizeof(time_stamp_));
-  // @@protoc_insertion_point(copy_constructor:UserRequest)
+  ::memcpy(&age_, &from.age_,
+    static_cast<size_t>(reinterpret_cast<char*>(&video_nums_) -
+    reinterpret_cast<char*>(&age_)) + sizeof(video_nums_));
+  // @@protoc_insertion_point(copy_constructor:request)
 }
 
-void UserRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_UserRequest_proto_2frec_2eproto.base);
+void request::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_request_proto_2frec_2eproto.base);
   user_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&channel_id_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&time_stamp_) -
-      reinterpret_cast<char*>(&channel_id_)) + sizeof(time_stamp_));
+      reinterpret_cast<char*>(&age_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&video_nums_) -
+      reinterpret_cast<char*>(&age_)) + sizeof(video_nums_));
 }
 
-UserRequest::~UserRequest() {
-  // @@protoc_insertion_point(destructor:UserRequest)
+request::~request() {
+  // @@protoc_insertion_point(destructor:request)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void UserRequest::SharedDtor() {
+void request::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
   user_id_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
-void UserRequest::ArenaDtor(void* object) {
-  UserRequest* _this = reinterpret_cast< UserRequest* >(object);
+void request::ArenaDtor(void* object) {
+  request* _this = reinterpret_cast< request* >(object);
   (void)_this;
 }
-void UserRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void request::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void UserRequest::SetCachedSize(int size) const {
+void request::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const UserRequest& UserRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_UserRequest_proto_2frec_2eproto.base);
+const request& request::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_request_proto_2frec_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void UserRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:UserRequest)
+void request::Clear() {
+// @@protoc_insertion_point(message_clear_start:request)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   user_id_.ClearToEmpty();
-  ::memset(&channel_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&time_stamp_) -
-      reinterpret_cast<char*>(&channel_id_)) + sizeof(time_stamp_));
+  ::memset(&age_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&video_nums_) -
+      reinterpret_cast<char*>(&age_)) + sizeof(video_nums_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* UserRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* request::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
@@ -257,28 +257,35 @@ const char* UserRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_user_id();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "UserRequest.user_id"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "request.user_id"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // int32 channel_id = 2;
+      // int32 age = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          channel_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          age_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // int32 article_num = 3;
+      // int32 gender = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
-          article_num_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          gender_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // int64 time_stamp = 4;
+      // int32 platform = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
-          time_stamp_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          platform_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int32 video_nums = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
+          video_nums_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -304,9 +311,9 @@ failure:
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* UserRequest::_InternalSerialize(
+::PROTOBUF_NAMESPACE_ID::uint8* request::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:UserRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:request)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -315,39 +322,45 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_user_id().data(), static_cast<int>(this->_internal_user_id().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "UserRequest.user_id");
+      "request.user_id");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_user_id(), target);
   }
 
-  // int32 channel_id = 2;
-  if (this->channel_id() != 0) {
+  // int32 age = 2;
+  if (this->age() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_channel_id(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_age(), target);
   }
 
-  // int32 article_num = 3;
-  if (this->article_num() != 0) {
+  // int32 gender = 3;
+  if (this->gender() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_article_num(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_gender(), target);
   }
 
-  // int64 time_stamp = 4;
-  if (this->time_stamp() != 0) {
+  // int32 platform = 4;
+  if (this->platform() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(4, this->_internal_time_stamp(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->_internal_platform(), target);
+  }
+
+  // int32 video_nums = 5;
+  if (this->video_nums() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->_internal_video_nums(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:UserRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:request)
   return target;
 }
 
-size_t UserRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:UserRequest)
+size_t request::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:request)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -361,25 +374,32 @@ size_t UserRequest::ByteSizeLong() const {
         this->_internal_user_id());
   }
 
-  // int32 channel_id = 2;
-  if (this->channel_id() != 0) {
+  // int32 age = 2;
+  if (this->age() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_channel_id());
+        this->_internal_age());
   }
 
-  // int32 article_num = 3;
-  if (this->article_num() != 0) {
+  // int32 gender = 3;
+  if (this->gender() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_article_num());
+        this->_internal_gender());
   }
 
-  // int64 time_stamp = 4;
-  if (this->time_stamp() != 0) {
+  // int32 platform = 4;
+  if (this->platform() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_time_stamp());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_platform());
+  }
+
+  // int32 video_nums = 5;
+  if (this->video_nums() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_video_nums());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -391,23 +411,23 @@ size_t UserRequest::ByteSizeLong() const {
   return total_size;
 }
 
-void UserRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:UserRequest)
+void request::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:request)
   GOOGLE_DCHECK_NE(&from, this);
-  const UserRequest* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<UserRequest>(
+  const request* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<request>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:UserRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:request)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:UserRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:request)
     MergeFrom(*source);
   }
 }
 
-void UserRequest::MergeFrom(const UserRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:UserRequest)
+void request::MergeFrom(const request& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:request)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -416,180 +436,183 @@ void UserRequest::MergeFrom(const UserRequest& from) {
   if (from.user_id().size() > 0) {
     _internal_set_user_id(from._internal_user_id());
   }
-  if (from.channel_id() != 0) {
-    _internal_set_channel_id(from._internal_channel_id());
+  if (from.age() != 0) {
+    _internal_set_age(from._internal_age());
   }
-  if (from.article_num() != 0) {
-    _internal_set_article_num(from._internal_article_num());
+  if (from.gender() != 0) {
+    _internal_set_gender(from._internal_gender());
   }
-  if (from.time_stamp() != 0) {
-    _internal_set_time_stamp(from._internal_time_stamp());
+  if (from.platform() != 0) {
+    _internal_set_platform(from._internal_platform());
+  }
+  if (from.video_nums() != 0) {
+    _internal_set_video_nums(from._internal_video_nums());
   }
 }
 
-void UserRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:UserRequest)
+void request::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:request)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void UserRequest::CopyFrom(const UserRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:UserRequest)
+void request::CopyFrom(const request& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:request)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool UserRequest::IsInitialized() const {
+bool request::IsInitialized() const {
   return true;
 }
 
-void UserRequest::InternalSwap(UserRequest* other) {
+void request::InternalSwap(request* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   user_id_.Swap(&other->user_id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(UserRequest, time_stamp_)
-      + sizeof(UserRequest::time_stamp_)
-      - PROTOBUF_FIELD_OFFSET(UserRequest, channel_id_)>(
-          reinterpret_cast<char*>(&channel_id_),
-          reinterpret_cast<char*>(&other->channel_id_));
+      PROTOBUF_FIELD_OFFSET(request, video_nums_)
+      + sizeof(request::video_nums_)
+      - PROTOBUF_FIELD_OFFSET(request, age_)>(
+          reinterpret_cast<char*>(&age_),
+          reinterpret_cast<char*>(&other->age_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata UserRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata request::GetMetadata() const {
   return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-class Track::_Internal {
+class Meta::_Internal {
  public:
 };
 
-Track::Track(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+Meta::Meta(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:Track)
+  // @@protoc_insertion_point(arena_constructor:Meta)
 }
-Track::Track(const Track& from)
+Meta::Meta(const Meta& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  click_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_click().empty()) {
-    click_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_click(), 
+  cover_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_cover().empty()) {
+    cover_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_cover(), 
       GetArena());
   }
-  collect_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_collect().empty()) {
-    collect_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_collect(), 
+  title_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_title().empty()) {
+    title_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_title(), 
       GetArena());
   }
-  share_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_share().empty()) {
-    share_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_share(), 
+  up_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_up().empty()) {
+    up_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_up(), 
       GetArena());
   }
-  read_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_read().empty()) {
-    read_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_read(), 
+  tag_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_tag().empty()) {
+    tag_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_tag(), 
       GetArena());
   }
-  // @@protoc_insertion_point(copy_constructor:Track)
+  // @@protoc_insertion_point(copy_constructor:Meta)
 }
 
-void Track::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Track_proto_2frec_2eproto.base);
-  click_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  collect_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  share_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  read_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+void Meta::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Meta_proto_2frec_2eproto.base);
+  cover_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  title_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  up_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  tag_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
-Track::~Track() {
-  // @@protoc_insertion_point(destructor:Track)
+Meta::~Meta() {
+  // @@protoc_insertion_point(destructor:Meta)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void Track::SharedDtor() {
+void Meta::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
-  click_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  collect_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  share_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  read_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  cover_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  title_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  up_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  tag_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
-void Track::ArenaDtor(void* object) {
-  Track* _this = reinterpret_cast< Track* >(object);
+void Meta::ArenaDtor(void* object) {
+  Meta* _this = reinterpret_cast< Meta* >(object);
   (void)_this;
 }
-void Track::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void Meta::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void Track::SetCachedSize(int size) const {
+void Meta::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const Track& Track::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Track_proto_2frec_2eproto.base);
+const Meta& Meta::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Meta_proto_2frec_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void Track::Clear() {
-// @@protoc_insertion_point(message_clear_start:Track)
+void Meta::Clear() {
+// @@protoc_insertion_point(message_clear_start:Meta)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  click_.ClearToEmpty();
-  collect_.ClearToEmpty();
-  share_.ClearToEmpty();
-  read_.ClearToEmpty();
+  cover_.ClearToEmpty();
+  title_.ClearToEmpty();
+  up_.ClearToEmpty();
+  tag_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* Track::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* Meta::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string click = 1;
+      // string cover = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          auto str = _internal_mutable_click();
+          auto str = _internal_mutable_cover();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Track.click"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Meta.cover"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string collect = 2;
+      // string title = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          auto str = _internal_mutable_collect();
+          auto str = _internal_mutable_title();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Track.collect"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Meta.title"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string share = 3;
+      // string up = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          auto str = _internal_mutable_share();
+          auto str = _internal_mutable_up();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Track.share"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Meta.up"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string read = 4;
+      // string tag = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          auto str = _internal_mutable_read();
+          auto str = _internal_mutable_tag();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Track.read"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Meta.tag"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -615,94 +638,94 @@ failure:
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* Track::_InternalSerialize(
+::PROTOBUF_NAMESPACE_ID::uint8* Meta::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:Track)
+  // @@protoc_insertion_point(serialize_to_array_start:Meta)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string click = 1;
-  if (this->click().size() > 0) {
+  // string cover = 1;
+  if (this->cover().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_click().data(), static_cast<int>(this->_internal_click().length()),
+      this->_internal_cover().data(), static_cast<int>(this->_internal_cover().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "Track.click");
+      "Meta.cover");
     target = stream->WriteStringMaybeAliased(
-        1, this->_internal_click(), target);
+        1, this->_internal_cover(), target);
   }
 
-  // string collect = 2;
-  if (this->collect().size() > 0) {
+  // string title = 2;
+  if (this->title().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_collect().data(), static_cast<int>(this->_internal_collect().length()),
+      this->_internal_title().data(), static_cast<int>(this->_internal_title().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "Track.collect");
+      "Meta.title");
     target = stream->WriteStringMaybeAliased(
-        2, this->_internal_collect(), target);
+        2, this->_internal_title(), target);
   }
 
-  // string share = 3;
-  if (this->share().size() > 0) {
+  // string up = 3;
+  if (this->up().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_share().data(), static_cast<int>(this->_internal_share().length()),
+      this->_internal_up().data(), static_cast<int>(this->_internal_up().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "Track.share");
+      "Meta.up");
     target = stream->WriteStringMaybeAliased(
-        3, this->_internal_share(), target);
+        3, this->_internal_up(), target);
   }
 
-  // string read = 4;
-  if (this->read().size() > 0) {
+  // string tag = 4;
+  if (this->tag().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_read().data(), static_cast<int>(this->_internal_read().length()),
+      this->_internal_tag().data(), static_cast<int>(this->_internal_tag().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "Track.read");
+      "Meta.tag");
     target = stream->WriteStringMaybeAliased(
-        4, this->_internal_read(), target);
+        4, this->_internal_tag(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:Track)
+  // @@protoc_insertion_point(serialize_to_array_end:Meta)
   return target;
 }
 
-size_t Track::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:Track)
+size_t Meta::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Meta)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string click = 1;
-  if (this->click().size() > 0) {
+  // string cover = 1;
+  if (this->cover().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_click());
+        this->_internal_cover());
   }
 
-  // string collect = 2;
-  if (this->collect().size() > 0) {
+  // string title = 2;
+  if (this->title().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_collect());
+        this->_internal_title());
   }
 
-  // string share = 3;
-  if (this->share().size() > 0) {
+  // string up = 3;
+  if (this->up().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_share());
+        this->_internal_up());
   }
 
-  // string read = 4;
-  if (this->read().size() > 0) {
+  // string tag = 4;
+  if (this->tag().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_read());
+        this->_internal_tag());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -714,169 +737,169 @@ size_t Track::ByteSizeLong() const {
   return total_size;
 }
 
-void Track::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:Track)
+void Meta::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Meta)
   GOOGLE_DCHECK_NE(&from, this);
-  const Track* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Track>(
+  const Meta* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Meta>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Track)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Meta)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:Track)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Meta)
     MergeFrom(*source);
   }
 }
 
-void Track::MergeFrom(const Track& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:Track)
+void Meta::MergeFrom(const Meta& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Meta)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.click().size() > 0) {
-    _internal_set_click(from._internal_click());
+  if (from.cover().size() > 0) {
+    _internal_set_cover(from._internal_cover());
   }
-  if (from.collect().size() > 0) {
-    _internal_set_collect(from._internal_collect());
+  if (from.title().size() > 0) {
+    _internal_set_title(from._internal_title());
   }
-  if (from.share().size() > 0) {
-    _internal_set_share(from._internal_share());
+  if (from.up().size() > 0) {
+    _internal_set_up(from._internal_up());
   }
-  if (from.read().size() > 0) {
-    _internal_set_read(from._internal_read());
+  if (from.tag().size() > 0) {
+    _internal_set_tag(from._internal_tag());
   }
 }
 
-void Track::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:Track)
+void Meta::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Meta)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void Track::CopyFrom(const Track& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:Track)
+void Meta::CopyFrom(const Meta& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Meta)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool Track::IsInitialized() const {
+bool Meta::IsInitialized() const {
   return true;
 }
 
-void Track::InternalSwap(Track* other) {
+void Meta::InternalSwap(Meta* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  click_.Swap(&other->click_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  collect_.Swap(&other->collect_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  share_.Swap(&other->share_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  read_.Swap(&other->read_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  cover_.Swap(&other->cover_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  title_.Swap(&other->title_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  up_.Swap(&other->up_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  tag_.Swap(&other->tag_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Track::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata Meta::GetMetadata() const {
   return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-class Article::_Internal {
+class Video::_Internal {
  public:
-  static const ::Track& track(const Article* msg);
+  static const ::Meta& meta(const Video* msg);
 };
 
-const ::Track&
-Article::_Internal::track(const Article* msg) {
-  return *msg->track_;
+const ::Meta&
+Video::_Internal::meta(const Video* msg) {
+  return *msg->meta_;
 }
-Article::Article(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+Video::Video(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:Article)
+  // @@protoc_insertion_point(arena_constructor:Video)
 }
-Article::Article(const Article& from)
+Video::Video(const Video& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_track()) {
-    track_ = new ::Track(*from.track_);
+  if (from._internal_has_meta()) {
+    meta_ = new ::Meta(*from.meta_);
   } else {
-    track_ = nullptr;
+    meta_ = nullptr;
   }
-  article_id_ = from.article_id_;
-  // @@protoc_insertion_point(copy_constructor:Article)
+  video_id_ = from.video_id_;
+  // @@protoc_insertion_point(copy_constructor:Video)
 }
 
-void Article::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Article_proto_2frec_2eproto.base);
+void Video::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Video_proto_2frec_2eproto.base);
   ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&track_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&article_id_) -
-      reinterpret_cast<char*>(&track_)) + sizeof(article_id_));
+      reinterpret_cast<char*>(&meta_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&video_id_) -
+      reinterpret_cast<char*>(&meta_)) + sizeof(video_id_));
 }
 
-Article::~Article() {
-  // @@protoc_insertion_point(destructor:Article)
+Video::~Video() {
+  // @@protoc_insertion_point(destructor:Video)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void Article::SharedDtor() {
+void Video::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete track_;
+  if (this != internal_default_instance()) delete meta_;
 }
 
-void Article::ArenaDtor(void* object) {
-  Article* _this = reinterpret_cast< Article* >(object);
+void Video::ArenaDtor(void* object) {
+  Video* _this = reinterpret_cast< Video* >(object);
   (void)_this;
 }
-void Article::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void Video::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void Article::SetCachedSize(int size) const {
+void Video::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const Article& Article::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Article_proto_2frec_2eproto.base);
+const Video& Video::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Video_proto_2frec_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void Article::Clear() {
-// @@protoc_insertion_point(message_clear_start:Article)
+void Video::Clear() {
+// @@protoc_insertion_point(message_clear_start:Video)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && track_ != nullptr) {
-    delete track_;
+  if (GetArena() == nullptr && meta_ != nullptr) {
+    delete meta_;
   }
-  track_ = nullptr;
-  article_id_ = PROTOBUF_LONGLONG(0);
+  meta_ = nullptr;
+  video_id_ = PROTOBUF_LONGLONG(0);
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* Article::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* Video::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // int64 article_id = 1;
+      // int64 video_id = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          article_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          video_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .Track track = 2;
+      // .Meta Meta = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_track(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_meta(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -902,54 +925,54 @@ failure:
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* Article::_InternalSerialize(
+::PROTOBUF_NAMESPACE_ID::uint8* Video::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:Article)
+  // @@protoc_insertion_point(serialize_to_array_start:Video)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // int64 article_id = 1;
-  if (this->article_id() != 0) {
+  // int64 video_id = 1;
+  if (this->video_id() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(1, this->_internal_article_id(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(1, this->_internal_video_id(), target);
   }
 
-  // .Track track = 2;
-  if (this->has_track()) {
+  // .Meta Meta = 2;
+  if (this->has_meta()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
-        2, _Internal::track(this), target, stream);
+        2, _Internal::meta(this), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:Article)
+  // @@protoc_insertion_point(serialize_to_array_end:Video)
   return target;
 }
 
-size_t Article::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:Article)
+size_t Video::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Video)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .Track track = 2;
-  if (this->has_track()) {
+  // .Meta Meta = 2;
+  if (this->has_meta()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *track_);
+        *meta_);
   }
 
-  // int64 article_id = 1;
-  if (this->article_id() != 0) {
+  // int64 video_id = 1;
+  if (this->video_id() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_article_id());
+        this->_internal_video_id());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -961,153 +984,153 @@ size_t Article::ByteSizeLong() const {
   return total_size;
 }
 
-void Article::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:Article)
+void Video::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Video)
   GOOGLE_DCHECK_NE(&from, this);
-  const Article* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Article>(
+  const Video* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Video>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Article)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Video)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:Article)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Video)
     MergeFrom(*source);
   }
 }
 
-void Article::MergeFrom(const Article& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:Article)
+void Video::MergeFrom(const Video& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Video)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_track()) {
-    _internal_mutable_track()->::Track::MergeFrom(from._internal_track());
+  if (from.has_meta()) {
+    _internal_mutable_meta()->::Meta::MergeFrom(from._internal_meta());
   }
-  if (from.article_id() != 0) {
-    _internal_set_article_id(from._internal_article_id());
+  if (from.video_id() != 0) {
+    _internal_set_video_id(from._internal_video_id());
   }
 }
 
-void Article::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:Article)
+void Video::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Video)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void Article::CopyFrom(const Article& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:Article)
+void Video::CopyFrom(const Video& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Video)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool Article::IsInitialized() const {
+bool Video::IsInitialized() const {
   return true;
 }
 
-void Article::InternalSwap(Article* other) {
+void Video::InternalSwap(Video* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Article, article_id_)
-      + sizeof(Article::article_id_)
-      - PROTOBUF_FIELD_OFFSET(Article, track_)>(
-          reinterpret_cast<char*>(&track_),
-          reinterpret_cast<char*>(&other->track_));
+      PROTOBUF_FIELD_OFFSET(Video, video_id_)
+      + sizeof(Video::video_id_)
+      - PROTOBUF_FIELD_OFFSET(Video, meta_)>(
+          reinterpret_cast<char*>(&meta_),
+          reinterpret_cast<char*>(&other->meta_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Article::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata Video::GetMetadata() const {
   return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-class ArticleResponse::_Internal {
+class VideoResponse::_Internal {
  public:
 };
 
-ArticleResponse::ArticleResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+VideoResponse::VideoResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  recommends_(arena) {
+  rec_algo_(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ArticleResponse)
+  // @@protoc_insertion_point(arena_constructor:VideoResponse)
 }
-ArticleResponse::ArticleResponse(const ArticleResponse& from)
+VideoResponse::VideoResponse(const VideoResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
-      recommends_(from.recommends_) {
+      rec_algo_(from.rec_algo_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  exposure_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_exposure().empty()) {
-    exposure_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_exposure(), 
+  impression_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_impression().empty()) {
+    impression_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_impression(), 
       GetArena());
   }
   time_stamp_ = from.time_stamp_;
-  // @@protoc_insertion_point(copy_constructor:ArticleResponse)
+  // @@protoc_insertion_point(copy_constructor:VideoResponse)
 }
 
-void ArticleResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ArticleResponse_proto_2frec_2eproto.base);
-  exposure_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+void VideoResponse::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_VideoResponse_proto_2frec_2eproto.base);
+  impression_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   time_stamp_ = PROTOBUF_LONGLONG(0);
 }
 
-ArticleResponse::~ArticleResponse() {
-  // @@protoc_insertion_point(destructor:ArticleResponse)
+VideoResponse::~VideoResponse() {
+  // @@protoc_insertion_point(destructor:VideoResponse)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ArticleResponse::SharedDtor() {
+void VideoResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
-  exposure_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  impression_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
-void ArticleResponse::ArenaDtor(void* object) {
-  ArticleResponse* _this = reinterpret_cast< ArticleResponse* >(object);
+void VideoResponse::ArenaDtor(void* object) {
+  VideoResponse* _this = reinterpret_cast< VideoResponse* >(object);
   (void)_this;
 }
-void ArticleResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void VideoResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void ArticleResponse::SetCachedSize(int size) const {
+void VideoResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ArticleResponse& ArticleResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ArticleResponse_proto_2frec_2eproto.base);
+const VideoResponse& VideoResponse::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_VideoResponse_proto_2frec_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void ArticleResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:ArticleResponse)
+void VideoResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:VideoResponse)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  recommends_.Clear();
-  exposure_.ClearToEmpty();
+  rec_algo_.Clear();
+  impression_.ClearToEmpty();
   time_stamp_ = PROTOBUF_LONGLONG(0);
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ArticleResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* VideoResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string exposure = 1;
+      // string impression = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          auto str = _internal_mutable_exposure();
+          auto str = _internal_mutable_impression();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ArticleResponse.exposure"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "VideoResponse.impression"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1118,13 +1141,13 @@ const char* ArticleResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // repeated .Article recommends = 3;
+      // repeated .Video rec_algo = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_recommends(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_rec_algo(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
@@ -1152,20 +1175,20 @@ failure:
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ArticleResponse::_InternalSerialize(
+::PROTOBUF_NAMESPACE_ID::uint8* VideoResponse::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ArticleResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:VideoResponse)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string exposure = 1;
-  if (this->exposure().size() > 0) {
+  // string impression = 1;
+  if (this->impression().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_exposure().data(), static_cast<int>(this->_internal_exposure().length()),
+      this->_internal_impression().data(), static_cast<int>(this->_internal_impression().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ArticleResponse.exposure");
+      "VideoResponse.impression");
     target = stream->WriteStringMaybeAliased(
-        1, this->_internal_exposure(), target);
+        1, this->_internal_impression(), target);
   }
 
   // int64 time_stamp = 2;
@@ -1174,42 +1197,42 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(2, this->_internal_time_stamp(), target);
   }
 
-  // repeated .Article recommends = 3;
+  // repeated .Video rec_algo = 3;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_recommends_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_rec_algo_size()); i < n; i++) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, this->_internal_recommends(i), target, stream);
+      InternalWriteMessage(3, this->_internal_rec_algo(i), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ArticleResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:VideoResponse)
   return target;
 }
 
-size_t ArticleResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ArticleResponse)
+size_t VideoResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:VideoResponse)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .Article recommends = 3;
-  total_size += 1UL * this->_internal_recommends_size();
-  for (const auto& msg : this->recommends_) {
+  // repeated .Video rec_algo = 3;
+  total_size += 1UL * this->_internal_rec_algo_size();
+  for (const auto& msg : this->rec_algo_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // string exposure = 1;
-  if (this->exposure().size() > 0) {
+  // string impression = 1;
+  if (this->impression().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_exposure());
+        this->_internal_impression());
   }
 
   // int64 time_stamp = 2;
@@ -1228,81 +1251,81 @@ size_t ArticleResponse::ByteSizeLong() const {
   return total_size;
 }
 
-void ArticleResponse::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ArticleResponse)
+void VideoResponse::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:VideoResponse)
   GOOGLE_DCHECK_NE(&from, this);
-  const ArticleResponse* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ArticleResponse>(
+  const VideoResponse* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<VideoResponse>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ArticleResponse)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:VideoResponse)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ArticleResponse)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:VideoResponse)
     MergeFrom(*source);
   }
 }
 
-void ArticleResponse::MergeFrom(const ArticleResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ArticleResponse)
+void VideoResponse::MergeFrom(const VideoResponse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:VideoResponse)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  recommends_.MergeFrom(from.recommends_);
-  if (from.exposure().size() > 0) {
-    _internal_set_exposure(from._internal_exposure());
+  rec_algo_.MergeFrom(from.rec_algo_);
+  if (from.impression().size() > 0) {
+    _internal_set_impression(from._internal_impression());
   }
   if (from.time_stamp() != 0) {
     _internal_set_time_stamp(from._internal_time_stamp());
   }
 }
 
-void ArticleResponse::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ArticleResponse)
+void VideoResponse::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:VideoResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void ArticleResponse::CopyFrom(const ArticleResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ArticleResponse)
+void VideoResponse::CopyFrom(const VideoResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:VideoResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool ArticleResponse::IsInitialized() const {
+bool VideoResponse::IsInitialized() const {
   return true;
 }
 
-void ArticleResponse::InternalSwap(ArticleResponse* other) {
+void VideoResponse::InternalSwap(VideoResponse* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  recommends_.InternalSwap(&other->recommends_);
-  exposure_.Swap(&other->exposure_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  rec_algo_.InternalSwap(&other->rec_algo_);
+  impression_.Swap(&other->impression_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   swap(time_stamp_, other->time_stamp_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata ArticleResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata VideoResponse::GetMetadata() const {
   return GetMetadataStatic();
 }
 
 
 // @@protoc_insertion_point(namespace_scope)
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::UserRequest* Arena::CreateMaybeMessage< ::UserRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::UserRequest >(arena);
+template<> PROTOBUF_NOINLINE ::request* Arena::CreateMaybeMessage< ::request >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::request >(arena);
 }
-template<> PROTOBUF_NOINLINE ::Track* Arena::CreateMaybeMessage< ::Track >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::Track >(arena);
+template<> PROTOBUF_NOINLINE ::Meta* Arena::CreateMaybeMessage< ::Meta >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::Meta >(arena);
 }
-template<> PROTOBUF_NOINLINE ::Article* Arena::CreateMaybeMessage< ::Article >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::Article >(arena);
+template<> PROTOBUF_NOINLINE ::Video* Arena::CreateMaybeMessage< ::Video >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::Video >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ArticleResponse* Arena::CreateMaybeMessage< ::ArticleResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ArticleResponse >(arena);
+template<> PROTOBUF_NOINLINE ::VideoResponse* Arena::CreateMaybeMessage< ::VideoResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::VideoResponse >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

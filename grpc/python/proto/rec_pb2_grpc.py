@@ -5,7 +5,7 @@ import grpc
 from proto import rec_pb2 as proto_dot_rec__pb2
 
 
-class UserRecommendStub(object):
+class RecSystemStub(object):
     """
     对request和response建立gRPC服务链接
     """
@@ -16,46 +16,46 @@ class UserRecommendStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.user_recommend = channel.unary_unary(
-                '/UserRecommend/user_recommend',
-                request_serializer=proto_dot_rec__pb2.UserRequest.SerializeToString,
-                response_deserializer=proto_dot_rec__pb2.ArticleResponse.FromString,
+        self.rec_sys = channel.unary_unary(
+                '/RecSystem/rec_sys',
+                request_serializer=proto_dot_rec__pb2.request.SerializeToString,
+                response_deserializer=proto_dot_rec__pb2.VideoResponse.FromString,
                 )
 
 
-class UserRecommendServicer(object):
+class RecSystemServicer(object):
     """
     对request和response建立gRPC服务链接
     """
 
-    def user_recommend(self, request, context):
+    def rec_sys(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
 
-def add_UserRecommendServicer_to_server(servicer, server):
+def add_RecSystemServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'user_recommend': grpc.unary_unary_rpc_method_handler(
-                    servicer.user_recommend,
-                    request_deserializer=proto_dot_rec__pb2.UserRequest.FromString,
-                    response_serializer=proto_dot_rec__pb2.ArticleResponse.SerializeToString,
+            'rec_sys': grpc.unary_unary_rpc_method_handler(
+                    servicer.rec_sys,
+                    request_deserializer=proto_dot_rec__pb2.request.FromString,
+                    response_serializer=proto_dot_rec__pb2.VideoResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'UserRecommend', rpc_method_handlers)
+            'RecSystem', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
  # This class is part of an EXPERIMENTAL API.
-class UserRecommend(object):
+class RecSystem(object):
     """
     对request和response建立gRPC服务链接
     """
 
     @staticmethod
-    def user_recommend(request,
+    def rec_sys(request,
             target,
             options=(),
             channel_credentials=None,
@@ -65,8 +65,8 @@ class UserRecommend(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/UserRecommend/user_recommend',
-            proto_dot_rec__pb2.UserRequest.SerializeToString,
-            proto_dot_rec__pb2.ArticleResponse.FromString,
+        return grpc.experimental.unary_unary(request, target, '/RecSystem/rec_sys',
+            proto_dot_rec__pb2.request.SerializeToString,
+            proto_dot_rec__pb2.VideoResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
