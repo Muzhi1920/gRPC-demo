@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
 
-import reco_pb2
-import reco_pb2_grpc
+from proto import rec_pb2,rec_pb2_grpc
 import grpc
 from concurrent.futures import ThreadPoolExecutor
 import time
 
 
 # define return class
-class UserRecommendService(reco_pb2_grpc.UserRecommendServicer):
+class UserRecommendService(rec_pb2_grpc.UserRecommendServicer):
 
     def user_recommend(self, request, context):
         # request是调用的请求数据对象
@@ -44,10 +43,10 @@ def serve():
     server = grpc.server(ThreadPoolExecutor(max_workers=10))
 
     # 向服务器中添加被调用的服务方法
-    reco_pb2_grpc.add_UserRecommendServicer_to_server(UserRecommendService(), server)
+    rec_pb2_grpc.add_UserRecommendServicer_to_server(UserRecommendService(), server)
 
     # 微服务器绑定ip地址和端口
-    server.add_insecure_port('127.0.0.1:8888')
+    server.add_insecure_port('127.0.0.1:4001')
 
     # 启动rpc服务
     server.start()
