@@ -14,20 +14,20 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0fproto/rec.proto\"]\n\x07request\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x0b\n\x03\x61ge\x18\x02 \x01(\x05\x12\x0e\n\x06gender\x18\x03 \x01(\x05\x12\x10\n\x08platform\x18\x04 \x01(\t\x12\x12\n\nvideo_nums\x18\x05 \x01(\x05\"=\n\x04Meta\x12\r\n\x05\x63over\x18\x01 \x01(\t\x12\r\n\x05title\x18\x02 \x01(\t\x12\n\n\x02up\x18\x03 \x01(\t\x12\x0b\n\x03tag\x18\x04 \x01(\t\".\n\x05Video\x12\x10\n\x08video_id\x18\x01 \x01(\x03\x12\x13\n\x04Meta\x18\x02 \x01(\x0b\x32\x05.Meta\"U\n\rVideoResponse\x12\x12\n\nimpression\x18\x01 \x01(\t\x12\x12\n\ntime_stamp\x18\x02 \x01(\x03\x12\x1c\n\x0cmock_rec_res\x18\x03 \x03(\x0b\x32\x06.Video22\n\tRecSystem\x12%\n\x07rec_sys\x12\x08.request\x1a\x0e.VideoResponse\"\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0fproto/rec.proto\"v\n\x0cuser_request\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x0b\n\x03\x61ge\x18\x02 \x01(\x05\x12\x0e\n\x06gender\x18\x03 \x01(\x05\x12\x12\n\nvideo_nums\x18\x04 \x01(\x05\x12\x12\n\ntime_stamp\x18\x05 \x01(\x03\x12\x10\n\x08platform\x18\x06 \x01(\t\"=\n\x04Meta\x12\r\n\x05\x63over\x18\x01 \x01(\t\x12\r\n\x05title\x18\x02 \x01(\t\x12\n\n\x02up\x18\x03 \x01(\t\x12\x0b\n\x03tag\x18\x04 \x01(\t\".\n\x05Video\x12\x10\n\x08video_id\x18\x01 \x01(\x03\x12\x13\n\x04meta\x18\x02 \x01(\x0b\x32\x05.Meta\"S\n\rVideoResponse\x12\x12\n\nimpression\x18\x01 \x01(\t\x12\x12\n\ntime_stamp\x18\x02 \x01(\x03\x12\x1a\n\nrecsys_res\x18\x03 \x03(\x0b\x32\x06.Video27\n\tRecSystem\x12*\n\x07rec_sys\x12\r.user_request\x1a\x0e.VideoResponse\"\x00\x62\x06proto3')
 
 
 
-_REQUEST = DESCRIPTOR.message_types_by_name['request']
+_USER_REQUEST = DESCRIPTOR.message_types_by_name['user_request']
 _META = DESCRIPTOR.message_types_by_name['Meta']
 _VIDEO = DESCRIPTOR.message_types_by_name['Video']
 _VIDEORESPONSE = DESCRIPTOR.message_types_by_name['VideoResponse']
-request = _reflection.GeneratedProtocolMessageType('request', (_message.Message,), {
-  'DESCRIPTOR' : _REQUEST,
+user_request = _reflection.GeneratedProtocolMessageType('user_request', (_message.Message,), {
+  'DESCRIPTOR' : _USER_REQUEST,
   '__module__' : 'proto.rec_pb2'
-  # @@protoc_insertion_point(class_scope:request)
+  # @@protoc_insertion_point(class_scope:user_request)
   })
-_sym_db.RegisterMessage(request)
+_sym_db.RegisterMessage(user_request)
 
 Meta = _reflection.GeneratedProtocolMessageType('Meta', (_message.Message,), {
   'DESCRIPTOR' : _META,
@@ -54,14 +54,14 @@ _RECSYSTEM = DESCRIPTOR.services_by_name['RecSystem']
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
-  _REQUEST._serialized_start=19
-  _REQUEST._serialized_end=112
-  _META._serialized_start=114
-  _META._serialized_end=175
-  _VIDEO._serialized_start=177
-  _VIDEO._serialized_end=223
-  _VIDEORESPONSE._serialized_start=225
-  _VIDEORESPONSE._serialized_end=310
-  _RECSYSTEM._serialized_start=312
-  _RECSYSTEM._serialized_end=362
+  _USER_REQUEST._serialized_start=19
+  _USER_REQUEST._serialized_end=137
+  _META._serialized_start=139
+  _META._serialized_end=200
+  _VIDEO._serialized_start=202
+  _VIDEO._serialized_end=248
+  _VIDEORESPONSE._serialized_start=250
+  _VIDEORESPONSE._serialized_end=333
+  _RECSYSTEM._serialized_start=335
+  _RECSYSTEM._serialized_end=390
 # @@protoc_insertion_point(module_scope)

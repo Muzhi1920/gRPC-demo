@@ -62,35 +62,35 @@ extern VideoDefaultTypeInternal _Video_default_instance_;
 class VideoResponse;
 class VideoResponseDefaultTypeInternal;
 extern VideoResponseDefaultTypeInternal _VideoResponse_default_instance_;
-class request;
-class requestDefaultTypeInternal;
-extern requestDefaultTypeInternal _request_default_instance_;
+class user_request;
+class user_requestDefaultTypeInternal;
+extern user_requestDefaultTypeInternal _user_request_default_instance_;
 PROTOBUF_NAMESPACE_OPEN
 template<> ::Meta* Arena::CreateMaybeMessage<::Meta>(Arena*);
 template<> ::Video* Arena::CreateMaybeMessage<::Video>(Arena*);
 template<> ::VideoResponse* Arena::CreateMaybeMessage<::VideoResponse>(Arena*);
-template<> ::request* Arena::CreateMaybeMessage<::request>(Arena*);
+template<> ::user_request* Arena::CreateMaybeMessage<::user_request>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 
 // ===================================================================
 
-class request PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:request) */ {
+class user_request PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:user_request) */ {
  public:
-  inline request() : request(nullptr) {}
-  virtual ~request();
+  inline user_request() : user_request(nullptr) {}
+  virtual ~user_request();
 
-  request(const request& from);
-  request(request&& from) noexcept
-    : request() {
+  user_request(const user_request& from);
+  user_request(user_request&& from) noexcept
+    : user_request() {
     *this = ::std::move(from);
   }
 
-  inline request& operator=(const request& from) {
+  inline user_request& operator=(const user_request& from) {
     CopyFrom(from);
     return *this;
   }
-  inline request& operator=(request&& from) noexcept {
+  inline user_request& operator=(user_request&& from) noexcept {
     if (GetArena() == from.GetArena()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -108,19 +108,19 @@ class request PROTOBUF_FINAL :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const request& default_instance();
+  static const user_request& default_instance();
 
-  static inline const request* internal_default_instance() {
-    return reinterpret_cast<const request*>(
-               &_request_default_instance_);
+  static inline const user_request* internal_default_instance() {
+    return reinterpret_cast<const user_request*>(
+               &_user_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     0;
 
-  friend void swap(request& a, request& b) {
+  friend void swap(user_request& a, user_request& b) {
     a.Swap(&b);
   }
-  inline void Swap(request* other) {
+  inline void Swap(user_request* other) {
     if (other == this) return;
     if (GetArena() == other->GetArena()) {
       InternalSwap(other);
@@ -128,7 +128,7 @@ class request PROTOBUF_FINAL :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(request* other) {
+  void UnsafeArenaSwap(user_request* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -136,17 +136,17 @@ class request PROTOBUF_FINAL :
 
   // implements Message ----------------------------------------------
 
-  inline request* New() const final {
-    return CreateMaybeMessage<request>(nullptr);
+  inline user_request* New() const final {
+    return CreateMaybeMessage<user_request>(nullptr);
   }
 
-  request* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<request>(arena);
+  user_request* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<user_request>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const request& from);
-  void MergeFrom(const request& from);
+  void CopyFrom(const user_request& from);
+  void MergeFrom(const user_request& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -160,13 +160,13 @@ class request PROTOBUF_FINAL :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(request* other);
+  void InternalSwap(user_request* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "request";
+    return "user_request";
   }
   protected:
-  explicit request(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  explicit user_request(::PROTOBUF_NAMESPACE_ID::Arena* arena);
   private:
   static void ArenaDtor(void* object);
   inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -187,10 +187,11 @@ class request PROTOBUF_FINAL :
 
   enum : int {
     kUserIdFieldNumber = 1,
+    kPlatformFieldNumber = 6,
     kAgeFieldNumber = 2,
     kGenderFieldNumber = 3,
-    kPlatformFieldNumber = 4,
-    kVideoNumsFieldNumber = 5,
+    kTimeStampFieldNumber = 5,
+    kVideoNumsFieldNumber = 4,
   };
   // string user_id = 1;
   void clear_user_id();
@@ -206,6 +207,22 @@ class request PROTOBUF_FINAL :
   const std::string& _internal_user_id() const;
   void _internal_set_user_id(const std::string& value);
   std::string* _internal_mutable_user_id();
+  public:
+
+  // string platform = 6;
+  void clear_platform();
+  const std::string& platform() const;
+  void set_platform(const std::string& value);
+  void set_platform(std::string&& value);
+  void set_platform(const char* value);
+  void set_platform(const char* value, size_t size);
+  std::string* mutable_platform();
+  std::string* release_platform();
+  void set_allocated_platform(std::string* platform);
+  private:
+  const std::string& _internal_platform() const;
+  void _internal_set_platform(const std::string& value);
+  std::string* _internal_mutable_platform();
   public:
 
   // int32 age = 2;
@@ -226,16 +243,16 @@ class request PROTOBUF_FINAL :
   void _internal_set_gender(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // int32 platform = 4;
-  void clear_platform();
-  ::PROTOBUF_NAMESPACE_ID::int32 platform() const;
-  void set_platform(::PROTOBUF_NAMESPACE_ID::int32 value);
+  // int64 time_stamp = 5;
+  void clear_time_stamp();
+  ::PROTOBUF_NAMESPACE_ID::int64 time_stamp() const;
+  void set_time_stamp(::PROTOBUF_NAMESPACE_ID::int64 value);
   private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_platform() const;
-  void _internal_set_platform(::PROTOBUF_NAMESPACE_ID::int32 value);
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_time_stamp() const;
+  void _internal_set_time_stamp(::PROTOBUF_NAMESPACE_ID::int64 value);
   public:
 
-  // int32 video_nums = 5;
+  // int32 video_nums = 4;
   void clear_video_nums();
   ::PROTOBUF_NAMESPACE_ID::int32 video_nums() const;
   void set_video_nums(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -244,7 +261,7 @@ class request PROTOBUF_FINAL :
   void _internal_set_video_nums(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:request)
+  // @@protoc_insertion_point(class_scope:user_request)
  private:
   class _Internal;
 
@@ -252,9 +269,10 @@ class request PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr user_id_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr platform_;
   ::PROTOBUF_NAMESPACE_ID::int32 age_;
   ::PROTOBUF_NAMESPACE_ID::int32 gender_;
-  ::PROTOBUF_NAMESPACE_ID::int32 platform_;
+  ::PROTOBUF_NAMESPACE_ID::int64 time_stamp_;
   ::PROTOBUF_NAMESPACE_ID::int32 video_nums_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_proto_2frec_2eproto;
@@ -573,7 +591,7 @@ class Video PROTOBUF_FINAL :
     kMetaFieldNumber = 2,
     kVideoIdFieldNumber = 1,
   };
-  // .Meta Meta = 2;
+  // .Meta meta = 2;
   bool has_meta() const;
   private:
   bool _internal_has_meta() const;
@@ -726,27 +744,27 @@ class VideoResponse PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRecAlgoFieldNumber = 3,
+    kRecsysResFieldNumber = 3,
     kImpressionFieldNumber = 1,
     kTimeStampFieldNumber = 2,
   };
-  // repeated .Video rec_algo = 3;
-  int rec_algo_size() const;
+  // repeated .Video recsys_res = 3;
+  int recsys_res_size() const;
   private:
-  int _internal_rec_algo_size() const;
+  int _internal_recsys_res_size() const;
   public:
-  void clear_rec_algo();
-  ::Video* mutable_rec_algo(int index);
+  void clear_recsys_res();
+  ::Video* mutable_recsys_res(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Video >*
-      mutable_rec_algo();
+      mutable_recsys_res();
   private:
-  const ::Video& _internal_rec_algo(int index) const;
-  ::Video* _internal_add_rec_algo();
+  const ::Video& _internal_recsys_res(int index) const;
+  ::Video* _internal_add_recsys_res();
   public:
-  const ::Video& rec_algo(int index) const;
-  ::Video* add_rec_algo();
+  const ::Video& recsys_res(int index) const;
+  ::Video* add_recsys_res();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Video >&
-      rec_algo() const;
+      recsys_res() const;
 
   // string impression = 1;
   void clear_impression();
@@ -780,7 +798,7 @@ class VideoResponse PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Video > rec_algo_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Video > recsys_res_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr impression_;
   ::PROTOBUF_NAMESPACE_ID::int64 time_stamp_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -795,59 +813,59 @@ class VideoResponse PROTOBUF_FINAL :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// request
+// user_request
 
 // string user_id = 1;
-inline void request::clear_user_id() {
+inline void user_request::clear_user_id() {
   user_id_.ClearToEmpty();
 }
-inline const std::string& request::user_id() const {
-  // @@protoc_insertion_point(field_get:request.user_id)
+inline const std::string& user_request::user_id() const {
+  // @@protoc_insertion_point(field_get:user_request.user_id)
   return _internal_user_id();
 }
-inline void request::set_user_id(const std::string& value) {
+inline void user_request::set_user_id(const std::string& value) {
   _internal_set_user_id(value);
-  // @@protoc_insertion_point(field_set:request.user_id)
+  // @@protoc_insertion_point(field_set:user_request.user_id)
 }
-inline std::string* request::mutable_user_id() {
-  // @@protoc_insertion_point(field_mutable:request.user_id)
+inline std::string* user_request::mutable_user_id() {
+  // @@protoc_insertion_point(field_mutable:user_request.user_id)
   return _internal_mutable_user_id();
 }
-inline const std::string& request::_internal_user_id() const {
+inline const std::string& user_request::_internal_user_id() const {
   return user_id_.Get();
 }
-inline void request::_internal_set_user_id(const std::string& value) {
+inline void user_request::_internal_set_user_id(const std::string& value) {
   
   user_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
 }
-inline void request::set_user_id(std::string&& value) {
+inline void user_request::set_user_id(std::string&& value) {
   
   user_id_.Set(
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:request.user_id)
+  // @@protoc_insertion_point(field_set_rvalue:user_request.user_id)
 }
-inline void request::set_user_id(const char* value) {
+inline void user_request::set_user_id(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   user_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:request.user_id)
+  // @@protoc_insertion_point(field_set_char:user_request.user_id)
 }
-inline void request::set_user_id(const char* value,
+inline void user_request::set_user_id(const char* value,
     size_t size) {
   
   user_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:request.user_id)
+  // @@protoc_insertion_point(field_set_pointer:user_request.user_id)
 }
-inline std::string* request::_internal_mutable_user_id() {
+inline std::string* user_request::_internal_mutable_user_id() {
   
   return user_id_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
 }
-inline std::string* request::release_user_id() {
-  // @@protoc_insertion_point(field_release:request.user_id)
+inline std::string* user_request::release_user_id() {
+  // @@protoc_insertion_point(field_release:user_request.user_id)
   return user_id_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline void request::set_allocated_user_id(std::string* user_id) {
+inline void user_request::set_allocated_user_id(std::string* user_id) {
   if (user_id != nullptr) {
     
   } else {
@@ -855,87 +873,148 @@ inline void request::set_allocated_user_id(std::string* user_id) {
   }
   user_id_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), user_id,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:request.user_id)
+  // @@protoc_insertion_point(field_set_allocated:user_request.user_id)
 }
 
 // int32 age = 2;
-inline void request::clear_age() {
+inline void user_request::clear_age() {
   age_ = 0;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 request::_internal_age() const {
+inline ::PROTOBUF_NAMESPACE_ID::int32 user_request::_internal_age() const {
   return age_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 request::age() const {
-  // @@protoc_insertion_point(field_get:request.age)
+inline ::PROTOBUF_NAMESPACE_ID::int32 user_request::age() const {
+  // @@protoc_insertion_point(field_get:user_request.age)
   return _internal_age();
 }
-inline void request::_internal_set_age(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void user_request::_internal_set_age(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
   age_ = value;
 }
-inline void request::set_age(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void user_request::set_age(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_age(value);
-  // @@protoc_insertion_point(field_set:request.age)
+  // @@protoc_insertion_point(field_set:user_request.age)
 }
 
 // int32 gender = 3;
-inline void request::clear_gender() {
+inline void user_request::clear_gender() {
   gender_ = 0;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 request::_internal_gender() const {
+inline ::PROTOBUF_NAMESPACE_ID::int32 user_request::_internal_gender() const {
   return gender_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 request::gender() const {
-  // @@protoc_insertion_point(field_get:request.gender)
+inline ::PROTOBUF_NAMESPACE_ID::int32 user_request::gender() const {
+  // @@protoc_insertion_point(field_get:user_request.gender)
   return _internal_gender();
 }
-inline void request::_internal_set_gender(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void user_request::_internal_set_gender(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
   gender_ = value;
 }
-inline void request::set_gender(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void user_request::set_gender(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_gender(value);
-  // @@protoc_insertion_point(field_set:request.gender)
+  // @@protoc_insertion_point(field_set:user_request.gender)
 }
 
-// int32 platform = 4;
-inline void request::clear_platform() {
-  platform_ = 0;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 request::_internal_platform() const {
-  return platform_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 request::platform() const {
-  // @@protoc_insertion_point(field_get:request.platform)
-  return _internal_platform();
-}
-inline void request::_internal_set_platform(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  
-  platform_ = value;
-}
-inline void request::set_platform(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_platform(value);
-  // @@protoc_insertion_point(field_set:request.platform)
-}
-
-// int32 video_nums = 5;
-inline void request::clear_video_nums() {
+// int32 video_nums = 4;
+inline void user_request::clear_video_nums() {
   video_nums_ = 0;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 request::_internal_video_nums() const {
+inline ::PROTOBUF_NAMESPACE_ID::int32 user_request::_internal_video_nums() const {
   return video_nums_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 request::video_nums() const {
-  // @@protoc_insertion_point(field_get:request.video_nums)
+inline ::PROTOBUF_NAMESPACE_ID::int32 user_request::video_nums() const {
+  // @@protoc_insertion_point(field_get:user_request.video_nums)
   return _internal_video_nums();
 }
-inline void request::_internal_set_video_nums(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void user_request::_internal_set_video_nums(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
   video_nums_ = value;
 }
-inline void request::set_video_nums(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void user_request::set_video_nums(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_video_nums(value);
-  // @@protoc_insertion_point(field_set:request.video_nums)
+  // @@protoc_insertion_point(field_set:user_request.video_nums)
+}
+
+// int64 time_stamp = 5;
+inline void user_request::clear_time_stamp() {
+  time_stamp_ = PROTOBUF_LONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 user_request::_internal_time_stamp() const {
+  return time_stamp_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 user_request::time_stamp() const {
+  // @@protoc_insertion_point(field_get:user_request.time_stamp)
+  return _internal_time_stamp();
+}
+inline void user_request::_internal_set_time_stamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  
+  time_stamp_ = value;
+}
+inline void user_request::set_time_stamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _internal_set_time_stamp(value);
+  // @@protoc_insertion_point(field_set:user_request.time_stamp)
+}
+
+// string platform = 6;
+inline void user_request::clear_platform() {
+  platform_.ClearToEmpty();
+}
+inline const std::string& user_request::platform() const {
+  // @@protoc_insertion_point(field_get:user_request.platform)
+  return _internal_platform();
+}
+inline void user_request::set_platform(const std::string& value) {
+  _internal_set_platform(value);
+  // @@protoc_insertion_point(field_set:user_request.platform)
+}
+inline std::string* user_request::mutable_platform() {
+  // @@protoc_insertion_point(field_mutable:user_request.platform)
+  return _internal_mutable_platform();
+}
+inline const std::string& user_request::_internal_platform() const {
+  return platform_.Get();
+}
+inline void user_request::_internal_set_platform(const std::string& value) {
+  
+  platform_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void user_request::set_platform(std::string&& value) {
+  
+  platform_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:user_request.platform)
+}
+inline void user_request::set_platform(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  platform_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:user_request.platform)
+}
+inline void user_request::set_platform(const char* value,
+    size_t size) {
+  
+  platform_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:user_request.platform)
+}
+inline std::string* user_request::_internal_mutable_platform() {
+  
+  return platform_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* user_request::release_platform() {
+  // @@protoc_insertion_point(field_release:user_request.platform)
+  return platform_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void user_request::set_allocated_platform(std::string* platform) {
+  if (platform != nullptr) {
+    
+  } else {
+    
+  }
+  platform_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), platform,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:user_request.platform)
 }
 
 // -------------------------------------------------------------------
@@ -1210,7 +1289,7 @@ inline void Video::set_video_id(::PROTOBUF_NAMESPACE_ID::int64 value) {
   // @@protoc_insertion_point(field_set:Video.video_id)
 }
 
-// .Meta Meta = 2;
+// .Meta meta = 2;
 inline bool Video::_internal_has_meta() const {
   return this != internal_default_instance() && meta_ != nullptr;
 }
@@ -1229,7 +1308,7 @@ inline const ::Meta& Video::_internal_meta() const {
       ::_Meta_default_instance_);
 }
 inline const ::Meta& Video::meta() const {
-  // @@protoc_insertion_point(field_get:Video.Meta)
+  // @@protoc_insertion_point(field_get:Video.meta)
   return _internal_meta();
 }
 inline void Video::unsafe_arena_set_allocated_meta(
@@ -1243,7 +1322,7 @@ inline void Video::unsafe_arena_set_allocated_meta(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Video.Meta)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Video.meta)
 }
 inline ::Meta* Video::release_meta() {
   
@@ -1255,7 +1334,7 @@ inline ::Meta* Video::release_meta() {
   return temp;
 }
 inline ::Meta* Video::unsafe_arena_release_meta() {
-  // @@protoc_insertion_point(field_release:Video.Meta)
+  // @@protoc_insertion_point(field_release:Video.meta)
   
   ::Meta* temp = meta_;
   meta_ = nullptr;
@@ -1270,7 +1349,7 @@ inline ::Meta* Video::_internal_mutable_meta() {
   return meta_;
 }
 inline ::Meta* Video::mutable_meta() {
-  // @@protoc_insertion_point(field_mutable:Video.Meta)
+  // @@protoc_insertion_point(field_mutable:Video.meta)
   return _internal_mutable_meta();
 }
 inline void Video::set_allocated_meta(::Meta* meta) {
@@ -1290,7 +1369,7 @@ inline void Video::set_allocated_meta(::Meta* meta) {
     
   }
   meta_ = meta;
-  // @@protoc_insertion_point(field_set_allocated:Video.Meta)
+  // @@protoc_insertion_point(field_set_allocated:Video.meta)
 }
 
 // -------------------------------------------------------------------
@@ -1378,43 +1457,43 @@ inline void VideoResponse::set_time_stamp(::PROTOBUF_NAMESPACE_ID::int64 value) 
   // @@protoc_insertion_point(field_set:VideoResponse.time_stamp)
 }
 
-// repeated .Video rec_algo = 3;
-inline int VideoResponse::_internal_rec_algo_size() const {
-  return rec_algo_.size();
+// repeated .Video recsys_res = 3;
+inline int VideoResponse::_internal_recsys_res_size() const {
+  return recsys_res_.size();
 }
-inline int VideoResponse::rec_algo_size() const {
-  return _internal_rec_algo_size();
+inline int VideoResponse::recsys_res_size() const {
+  return _internal_recsys_res_size();
 }
-inline void VideoResponse::clear_rec_algo() {
-  rec_algo_.Clear();
+inline void VideoResponse::clear_recsys_res() {
+  recsys_res_.Clear();
 }
-inline ::Video* VideoResponse::mutable_rec_algo(int index) {
-  // @@protoc_insertion_point(field_mutable:VideoResponse.rec_algo)
-  return rec_algo_.Mutable(index);
+inline ::Video* VideoResponse::mutable_recsys_res(int index) {
+  // @@protoc_insertion_point(field_mutable:VideoResponse.recsys_res)
+  return recsys_res_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Video >*
-VideoResponse::mutable_rec_algo() {
-  // @@protoc_insertion_point(field_mutable_list:VideoResponse.rec_algo)
-  return &rec_algo_;
+VideoResponse::mutable_recsys_res() {
+  // @@protoc_insertion_point(field_mutable_list:VideoResponse.recsys_res)
+  return &recsys_res_;
 }
-inline const ::Video& VideoResponse::_internal_rec_algo(int index) const {
-  return rec_algo_.Get(index);
+inline const ::Video& VideoResponse::_internal_recsys_res(int index) const {
+  return recsys_res_.Get(index);
 }
-inline const ::Video& VideoResponse::rec_algo(int index) const {
-  // @@protoc_insertion_point(field_get:VideoResponse.rec_algo)
-  return _internal_rec_algo(index);
+inline const ::Video& VideoResponse::recsys_res(int index) const {
+  // @@protoc_insertion_point(field_get:VideoResponse.recsys_res)
+  return _internal_recsys_res(index);
 }
-inline ::Video* VideoResponse::_internal_add_rec_algo() {
-  return rec_algo_.Add();
+inline ::Video* VideoResponse::_internal_add_recsys_res() {
+  return recsys_res_.Add();
 }
-inline ::Video* VideoResponse::add_rec_algo() {
-  // @@protoc_insertion_point(field_add:VideoResponse.rec_algo)
-  return _internal_add_rec_algo();
+inline ::Video* VideoResponse::add_recsys_res() {
+  // @@protoc_insertion_point(field_add:VideoResponse.recsys_res)
+  return _internal_add_recsys_res();
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Video >&
-VideoResponse::rec_algo() const {
-  // @@protoc_insertion_point(field_list:VideoResponse.rec_algo)
-  return rec_algo_;
+VideoResponse::recsys_res() const {
+  // @@protoc_insertion_point(field_list:VideoResponse.recsys_res)
+  return recsys_res_;
 }
 
 #ifdef __GNUC__

@@ -11,42 +11,43 @@ class RecSystemService(rec_pb2_grpc.RecSystemServicer):
 
     def rec_sys(self, request, context):
         # request是调用的请求数据对象
+
         user_id = request.user_id
-        user_age = request.age
-        user_gender = request.gender
-        user_platform = request.platform
+        age = request.age
         video_nums = request.video_nums
+        time_stamp = request.time_stamp
 
-        print('log context :{}, cur info is : {}'.format(context, ','.join([user_id,user_age,user_gender,user_platform])))
-
+        print("rpc log : cur info is {}, ctx is {}".format(request, context))
         response = rec_pb2.VideoResponse()
-        # 手动构造推荐结果，后续对接真实推荐代码
-        response.impression = 'impression param' # 填充response上下文信息
+        response.impression = 'impression'
         response.time_stamp = round(time.time() * 1000)
-        mock_rec_res = []
+        recsys_res = []
         for i in range(video_nums):
             video = rec_pb2.Video()
-            video.Meta.cover = 'video meta info cover : {}'.format(i + 1)
-            video.Meta.title = 'video meta info title : {}'.format(i + 1)
-            video.Meta.up = 'video meta info up : {}'.format(i + 1)
-            video.Meta.tag = 'video meta info tag : {}'.format(i + 1)
-            video.video_id = i + 10000
-            mock_rec_res.append(video)
-        response.mock_rec_res.extend(mock_rec_res)
+            video.meta.cover = 'cover param {}'.format(i + 1)
+            video.meta.title = 'title param {}'.format(i + 1)
+            video.meta.up = 'up param {}'.format(i + 1)
+            video.meta.tag = 'tag param {}'.format(i + 1)
+            video.video_id = i + 1
+            recsys_res.append(video)
+        response.recsys_res.extend(recsys_res)
         ## 返回响应
         return response
 
 
-def run():
+def serve():
     server = grpc.server(ThreadPoolExecutor(max_workers=10))
+
     rec_pb2_grpc.add_RecSystemServicer_to_server(RecSystemService(), server)
-    server.add_insecure_port('127.0.0.1:4001')
-    print("start server...")
+
+    server.add_insecure_port('127.0.0.1:8888')
+
     server.start()
+    print('start ok')
     while True:
+        print('running')
         time.sleep(10)
 
 
 if __name__ == '__main__':
-    run()
-
+    serve()

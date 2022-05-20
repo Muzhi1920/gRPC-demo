@@ -18,7 +18,7 @@ class RecSystemStub(object):
         """
         self.rec_sys = channel.unary_unary(
                 '/RecSystem/rec_sys',
-                request_serializer=proto_dot_rec__pb2.request.SerializeToString,
+                request_serializer=proto_dot_rec__pb2.user_request.SerializeToString,
                 response_deserializer=proto_dot_rec__pb2.VideoResponse.FromString,
                 )
 
@@ -39,7 +39,7 @@ def add_RecSystemServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'rec_sys': grpc.unary_unary_rpc_method_handler(
                     servicer.rec_sys,
-                    request_deserializer=proto_dot_rec__pb2.request.FromString,
+                    request_deserializer=proto_dot_rec__pb2.user_request.FromString,
                     response_serializer=proto_dot_rec__pb2.VideoResponse.SerializeToString,
             ),
     }
@@ -66,7 +66,7 @@ class RecSystem(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/RecSystem/rec_sys',
-            proto_dot_rec__pb2.request.SerializeToString,
+            proto_dot_rec__pb2.user_request.SerializeToString,
             proto_dot_rec__pb2.VideoResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

@@ -5,16 +5,17 @@ syntax = "proto3";
 /*
 定义传入的request字段
 */
-message request {
+message user_request {
     string user_id=1;
     int32 age=2;
     int32 gender=3;
-    int32 platform=4;
-    int32 video_nums=5;
+    int32 video_nums=4;
+    int64 time_stamp=5;
+    string platform=6;
 }
 
 /*
-定义返回的video reponse字段
+定义返回的reponse字段
 */
 message Meta {
     string cover=1;
@@ -24,20 +25,19 @@ message Meta {
 }
 message Video {
     int64 video_id=1;
-    Meta Meta=2;
+    Meta meta=2;
 }
 message VideoResponse {
     string impression=1;
     int64 time_stamp=2;
-    repeated Video rec_algo=3;
+    repeated Video recsys_res=3;
 }
 
 /*
 对request和response建立gRPC服务链接
 */
 service RecSystem {
-    rpc rec_sys(request) returns(VideoResponse) {
-    }
+    rpc rec_sys(user_request) returns(VideoResponse) {}
 }
 
 //end
