@@ -6,15 +6,18 @@ import time
 
 
 def feed_articles(stub):
-    user_request = rec_pb2.UserRequest()
-    user_request.user_id = '1'
-    user_request.channel_id = 1
-    user_request.article_num = 10
-    user_request.time_stamp = round(time.time() * 1000)
+    user_request = rec_pb2.user_request()
+    user_request.user_id = "123"
+    user_request.age = 32
+    user_request.gender = 1
+    user_request.video_nums = 8
+    user_request.time_stamp = int(time.time() * 1000)
+    user_request.platform = "android"
 
     # stub call
-    ret = stub.user_recommend(user_request)
-    print('ret={}'.format(ret))
+    res = stub.rec_sys(user_request)
+    print('res is {}'.format(res))
+    return res
 
 
 def run():
@@ -22,9 +25,9 @@ def run():
     client rpc run
     """
     # connect rpc server
-    with grpc.insecure_channel('127.0.0.1:4001') as channel:
+    with grpc.insecure_channel('127.0.0.1:8888') as channel:
         # create rpc stub and request
-        stub = rec_pb2_grpc.UserRecommendStub(channel)
+        stub = rec_pb2_grpc.RecSystemStub(channel)
         feed_articles(stub)
 
 if __name__ == '__main__':

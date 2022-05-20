@@ -7,55 +7,47 @@ import time
 
 
 # define return class
-class UserRecommendService(rec_pb2_grpc.UserRecommendServicer):
+class RecSystemService(rec_pb2_grpc.RecSystemServicer):
 
-    def user_recommend(self, request, context):
+    def rec_sys(self, request, context):
         # request是调用的请求数据对象
+
         user_id = request.user_id
-        channel_id = request.channel_id
-        article_num = request.article_num
+        age = request.age
+        video_nums = request.video_nums
         time_stamp = request.time_stamp
 
-        response = rec_pb2.ArticleResponse()
-
-        # 手动构造推荐结果，后续对接真实推荐代码
-        response.exposure = 'exposure param'
+        print("rpc log : cur info is {}, ctx is {}".format(request, context))
+        response = rec_pb2.VideoResponse()
+        response.impression = 'impression'
         response.time_stamp = round(time.time() * 1000)
-        recommends = []
-        for i in range(article_num):
-            article = rec_pb2.Article()
-            article.track.click = 'click param {}'.format(i + 1)
-            article.track.collect = 'collect param {}'.format(i + 1)
-            article.track.share = 'share param {}'.format(i + 1)
-            article.track.read = 'read param {}'.format(i + 1)
-            article.article_id = i + 1
-            recommends.append(article)
-        response.recommends.extend(recommends)
+        recsys_res = []
+        for i in range(video_nums):
+            video = rec_pb2.Video()
+            video.meta.cover = 'cover param {}'.format(i + 1)
+            video.meta.title = 'title param {}'.format(i + 1)
+            video.meta.up = 'up param {}'.format(i + 1)
+            video.meta.tag = 'tag param {}'.format(i + 1)
+            video.video_id = i + 1
+            recsys_res.append(video)
+        response.recsys_res.extend(recsys_res)
         ## 返回响应
         return response
 
 
 def serve():
-    """
-    rpc服务端启动方法
-    """
-    # 创建一个rpc服务器
     server = grpc.server(ThreadPoolExecutor(max_workers=10))
 
-    # 向服务器中添加被调用的服务方法
-    rec_pb2_grpc.add_UserRecommendServicer_to_server(UserRecommendService(), server)
+    rec_pb2_grpc.add_RecSystemServicer_to_server(RecSystemService(), server)
 
-    # 微服务器绑定ip地址和端口
-    server.add_insecure_port('127.0.0.1:4001')
+    server.add_insecure_port('127.0.0.1:8888')
 
-    # 启动rpc服务
     server.start()
-
-    # start()不会阻塞，此处需要加上循环睡眠 防止程序退出
+    print('start ok')
     while True:
+        print('running')
         time.sleep(10)
 
 
 if __name__ == '__main__':
     serve()
-

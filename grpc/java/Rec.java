@@ -12,8 +12,8 @@ public final class Rec {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface UserRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:UserRequest)
+  public interface user_requestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:user_request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -29,48 +29,67 @@ public final class Rec {
         getUserIdBytes();
 
     /**
-     * <code>int32 channel_id = 2;</code>
-     * @return The channelId.
+     * <code>int32 age = 2;</code>
+     * @return The age.
      */
-    int getChannelId();
+    int getAge();
 
     /**
-     * <code>int32 article_num = 3;</code>
-     * @return The articleNum.
+     * <code>int32 gender = 3;</code>
+     * @return The gender.
      */
-    int getArticleNum();
+    int getGender();
 
     /**
-     * <code>int64 time_stamp = 4;</code>
+     * <code>int32 video_nums = 4;</code>
+     * @return The videoNums.
+     */
+    int getVideoNums();
+
+    /**
+     * <code>int64 time_stamp = 5;</code>
      * @return The timeStamp.
      */
     long getTimeStamp();
+
+    /**
+     * <code>string platform = 6;</code>
+     * @return The platform.
+     */
+    java.lang.String getPlatform();
+    /**
+     * <code>string platform = 6;</code>
+     * @return The bytes for platform.
+     */
+    com.google.protobuf.ByteString
+        getPlatformBytes();
   }
   /**
    * <pre>
    *定义传入的request字段
    * </pre>
    *
-   * Protobuf type {@code UserRequest}
+   * Protobuf type {@code user_request}
    */
-  public static final class UserRequest extends
+  public static final class user_request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:UserRequest)
-      UserRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:user_request)
+      user_requestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use UserRequest.newBuilder() to construct.
-    private UserRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use user_request.newBuilder() to construct.
+    private user_request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private UserRequest() {
+    private user_request() {
       userId_ = "";
+      platform_ = "";
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new UserRequest();
+      return new user_request();
     }
 
     @java.lang.Override
@@ -78,7 +97,7 @@ public final class Rec {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private UserRequest(
+    private user_request(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -104,17 +123,28 @@ public final class Rec {
             }
             case 16: {
 
-              channelId_ = input.readInt32();
+              age_ = input.readInt32();
               break;
             }
             case 24: {
 
-              articleNum_ = input.readInt32();
+              gender_ = input.readInt32();
               break;
             }
             case 32: {
 
+              videoNums_ = input.readInt32();
+              break;
+            }
+            case 40: {
+
               timeStamp_ = input.readInt64();
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              platform_ = s;
               break;
             }
             default: {
@@ -138,15 +168,15 @@ public final class Rec {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return Rec.internal_static_UserRequest_descriptor;
+      return Rec.internal_static_user_request_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Rec.internal_static_UserRequest_fieldAccessorTable
+      return Rec.internal_static_user_request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              Rec.UserRequest.class, Rec.UserRequest.Builder.class);
+              Rec.user_request.class, Rec.user_request.Builder.class);
     }
 
     public static final int USER_ID_FIELD_NUMBER = 1;
@@ -187,37 +217,86 @@ public final class Rec {
       }
     }
 
-    public static final int CHANNEL_ID_FIELD_NUMBER = 2;
-    private int channelId_;
+    public static final int AGE_FIELD_NUMBER = 2;
+    private int age_;
     /**
-     * <code>int32 channel_id = 2;</code>
-     * @return The channelId.
+     * <code>int32 age = 2;</code>
+     * @return The age.
      */
     @java.lang.Override
-    public int getChannelId() {
-      return channelId_;
+    public int getAge() {
+      return age_;
     }
 
-    public static final int ARTICLE_NUM_FIELD_NUMBER = 3;
-    private int articleNum_;
+    public static final int GENDER_FIELD_NUMBER = 3;
+    private int gender_;
     /**
-     * <code>int32 article_num = 3;</code>
-     * @return The articleNum.
+     * <code>int32 gender = 3;</code>
+     * @return The gender.
      */
     @java.lang.Override
-    public int getArticleNum() {
-      return articleNum_;
+    public int getGender() {
+      return gender_;
     }
 
-    public static final int TIME_STAMP_FIELD_NUMBER = 4;
+    public static final int VIDEO_NUMS_FIELD_NUMBER = 4;
+    private int videoNums_;
+    /**
+     * <code>int32 video_nums = 4;</code>
+     * @return The videoNums.
+     */
+    @java.lang.Override
+    public int getVideoNums() {
+      return videoNums_;
+    }
+
+    public static final int TIME_STAMP_FIELD_NUMBER = 5;
     private long timeStamp_;
     /**
-     * <code>int64 time_stamp = 4;</code>
+     * <code>int64 time_stamp = 5;</code>
      * @return The timeStamp.
      */
     @java.lang.Override
     public long getTimeStamp() {
       return timeStamp_;
+    }
+
+    public static final int PLATFORM_FIELD_NUMBER = 6;
+    private volatile java.lang.Object platform_;
+    /**
+     * <code>string platform = 6;</code>
+     * @return The platform.
+     */
+    @java.lang.Override
+    public java.lang.String getPlatform() {
+      java.lang.Object ref = platform_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        platform_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string platform = 6;</code>
+     * @return The bytes for platform.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPlatformBytes() {
+      java.lang.Object ref = platform_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        platform_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -237,14 +316,20 @@ public final class Rec {
       if (!getUserIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userId_);
       }
-      if (channelId_ != 0) {
-        output.writeInt32(2, channelId_);
+      if (age_ != 0) {
+        output.writeInt32(2, age_);
       }
-      if (articleNum_ != 0) {
-        output.writeInt32(3, articleNum_);
+      if (gender_ != 0) {
+        output.writeInt32(3, gender_);
+      }
+      if (videoNums_ != 0) {
+        output.writeInt32(4, videoNums_);
       }
       if (timeStamp_ != 0L) {
-        output.writeInt64(4, timeStamp_);
+        output.writeInt64(5, timeStamp_);
+      }
+      if (!getPlatformBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, platform_);
       }
       unknownFields.writeTo(output);
     }
@@ -258,17 +343,24 @@ public final class Rec {
       if (!getUserIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userId_);
       }
-      if (channelId_ != 0) {
+      if (age_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, channelId_);
+          .computeInt32Size(2, age_);
       }
-      if (articleNum_ != 0) {
+      if (gender_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, articleNum_);
+          .computeInt32Size(3, gender_);
+      }
+      if (videoNums_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, videoNums_);
       }
       if (timeStamp_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(4, timeStamp_);
+          .computeInt64Size(5, timeStamp_);
+      }
+      if (!getPlatformBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, platform_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -280,19 +372,23 @@ public final class Rec {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof Rec.UserRequest)) {
+      if (!(obj instanceof Rec.user_request)) {
         return super.equals(obj);
       }
-      Rec.UserRequest other = (Rec.UserRequest) obj;
+      Rec.user_request other = (Rec.user_request) obj;
 
       if (!getUserId()
           .equals(other.getUserId())) return false;
-      if (getChannelId()
-          != other.getChannelId()) return false;
-      if (getArticleNum()
-          != other.getArticleNum()) return false;
+      if (getAge()
+          != other.getAge()) return false;
+      if (getGender()
+          != other.getGender()) return false;
+      if (getVideoNums()
+          != other.getVideoNums()) return false;
       if (getTimeStamp()
           != other.getTimeStamp()) return false;
+      if (!getPlatform()
+          .equals(other.getPlatform())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -306,81 +402,85 @@ public final class Rec {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + USER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getUserId().hashCode();
-      hash = (37 * hash) + CHANNEL_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getChannelId();
-      hash = (37 * hash) + ARTICLE_NUM_FIELD_NUMBER;
-      hash = (53 * hash) + getArticleNum();
+      hash = (37 * hash) + AGE_FIELD_NUMBER;
+      hash = (53 * hash) + getAge();
+      hash = (37 * hash) + GENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getGender();
+      hash = (37 * hash) + VIDEO_NUMS_FIELD_NUMBER;
+      hash = (53 * hash) + getVideoNums();
       hash = (37 * hash) + TIME_STAMP_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getTimeStamp());
+      hash = (37 * hash) + PLATFORM_FIELD_NUMBER;
+      hash = (53 * hash) + getPlatform().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static Rec.UserRequest parseFrom(
+    public static Rec.user_request parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Rec.UserRequest parseFrom(
+    public static Rec.user_request parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Rec.UserRequest parseFrom(
+    public static Rec.user_request parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Rec.UserRequest parseFrom(
+    public static Rec.user_request parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Rec.UserRequest parseFrom(byte[] data)
+    public static Rec.user_request parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Rec.UserRequest parseFrom(
+    public static Rec.user_request parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Rec.UserRequest parseFrom(java.io.InputStream input)
+    public static Rec.user_request parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Rec.UserRequest parseFrom(
+    public static Rec.user_request parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Rec.UserRequest parseDelimitedFrom(java.io.InputStream input)
+    public static Rec.user_request parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static Rec.UserRequest parseDelimitedFrom(
+    public static Rec.user_request parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Rec.UserRequest parseFrom(
+    public static Rec.user_request parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Rec.UserRequest parseFrom(
+    public static Rec.user_request parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -393,7 +493,7 @@ public final class Rec {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(Rec.UserRequest prototype) {
+    public static Builder newBuilder(Rec.user_request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -413,26 +513,26 @@ public final class Rec {
      *定义传入的request字段
      * </pre>
      *
-     * Protobuf type {@code UserRequest}
+     * Protobuf type {@code user_request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:UserRequest)
-        Rec.UserRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:user_request)
+        Rec.user_requestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return Rec.internal_static_UserRequest_descriptor;
+        return Rec.internal_static_user_request_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Rec.internal_static_UserRequest_fieldAccessorTable
+        return Rec.internal_static_user_request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                Rec.UserRequest.class, Rec.UserRequest.Builder.class);
+                Rec.user_request.class, Rec.user_request.Builder.class);
       }
 
-      // Construct using Rec.UserRequest.newBuilder()
+      // Construct using Rec.user_request.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -452,11 +552,15 @@ public final class Rec {
         super.clear();
         userId_ = "";
 
-        channelId_ = 0;
+        age_ = 0;
 
-        articleNum_ = 0;
+        gender_ = 0;
+
+        videoNums_ = 0;
 
         timeStamp_ = 0L;
+
+        platform_ = "";
 
         return this;
       }
@@ -464,17 +568,17 @@ public final class Rec {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Rec.internal_static_UserRequest_descriptor;
+        return Rec.internal_static_user_request_descriptor;
       }
 
       @java.lang.Override
-      public Rec.UserRequest getDefaultInstanceForType() {
-        return Rec.UserRequest.getDefaultInstance();
+      public Rec.user_request getDefaultInstanceForType() {
+        return Rec.user_request.getDefaultInstance();
       }
 
       @java.lang.Override
-      public Rec.UserRequest build() {
-        Rec.UserRequest result = buildPartial();
+      public Rec.user_request build() {
+        Rec.user_request result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -482,12 +586,14 @@ public final class Rec {
       }
 
       @java.lang.Override
-      public Rec.UserRequest buildPartial() {
-        Rec.UserRequest result = new Rec.UserRequest(this);
+      public Rec.user_request buildPartial() {
+        Rec.user_request result = new Rec.user_request(this);
         result.userId_ = userId_;
-        result.channelId_ = channelId_;
-        result.articleNum_ = articleNum_;
+        result.age_ = age_;
+        result.gender_ = gender_;
+        result.videoNums_ = videoNums_;
         result.timeStamp_ = timeStamp_;
+        result.platform_ = platform_;
         onBuilt();
         return result;
       }
@@ -526,28 +632,35 @@ public final class Rec {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Rec.UserRequest) {
-          return mergeFrom((Rec.UserRequest)other);
+        if (other instanceof Rec.user_request) {
+          return mergeFrom((Rec.user_request)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(Rec.UserRequest other) {
-        if (other == Rec.UserRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(Rec.user_request other) {
+        if (other == Rec.user_request.getDefaultInstance()) return this;
         if (!other.getUserId().isEmpty()) {
           userId_ = other.userId_;
           onChanged();
         }
-        if (other.getChannelId() != 0) {
-          setChannelId(other.getChannelId());
+        if (other.getAge() != 0) {
+          setAge(other.getAge());
         }
-        if (other.getArticleNum() != 0) {
-          setArticleNum(other.getArticleNum());
+        if (other.getGender() != 0) {
+          setGender(other.getGender());
+        }
+        if (other.getVideoNums() != 0) {
+          setVideoNums(other.getVideoNums());
         }
         if (other.getTimeStamp() != 0L) {
           setTimeStamp(other.getTimeStamp());
+        }
+        if (!other.getPlatform().isEmpty()) {
+          platform_ = other.platform_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -564,11 +677,11 @@ public final class Rec {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        Rec.UserRequest parsedMessage = null;
+        Rec.user_request parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Rec.UserRequest) e.getUnfinishedMessage();
+          parsedMessage = (Rec.user_request) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -654,71 +767,102 @@ public final class Rec {
         return this;
       }
 
-      private int channelId_ ;
+      private int age_ ;
       /**
-       * <code>int32 channel_id = 2;</code>
-       * @return The channelId.
+       * <code>int32 age = 2;</code>
+       * @return The age.
        */
       @java.lang.Override
-      public int getChannelId() {
-        return channelId_;
+      public int getAge() {
+        return age_;
       }
       /**
-       * <code>int32 channel_id = 2;</code>
-       * @param value The channelId to set.
+       * <code>int32 age = 2;</code>
+       * @param value The age to set.
        * @return This builder for chaining.
        */
-      public Builder setChannelId(int value) {
+      public Builder setAge(int value) {
         
-        channelId_ = value;
+        age_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int32 channel_id = 2;</code>
+       * <code>int32 age = 2;</code>
        * @return This builder for chaining.
        */
-      public Builder clearChannelId() {
+      public Builder clearAge() {
         
-        channelId_ = 0;
+        age_ = 0;
         onChanged();
         return this;
       }
 
-      private int articleNum_ ;
+      private int gender_ ;
       /**
-       * <code>int32 article_num = 3;</code>
-       * @return The articleNum.
+       * <code>int32 gender = 3;</code>
+       * @return The gender.
        */
       @java.lang.Override
-      public int getArticleNum() {
-        return articleNum_;
+      public int getGender() {
+        return gender_;
       }
       /**
-       * <code>int32 article_num = 3;</code>
-       * @param value The articleNum to set.
+       * <code>int32 gender = 3;</code>
+       * @param value The gender to set.
        * @return This builder for chaining.
        */
-      public Builder setArticleNum(int value) {
+      public Builder setGender(int value) {
         
-        articleNum_ = value;
+        gender_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int32 article_num = 3;</code>
+       * <code>int32 gender = 3;</code>
        * @return This builder for chaining.
        */
-      public Builder clearArticleNum() {
+      public Builder clearGender() {
         
-        articleNum_ = 0;
+        gender_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int videoNums_ ;
+      /**
+       * <code>int32 video_nums = 4;</code>
+       * @return The videoNums.
+       */
+      @java.lang.Override
+      public int getVideoNums() {
+        return videoNums_;
+      }
+      /**
+       * <code>int32 video_nums = 4;</code>
+       * @param value The videoNums to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVideoNums(int value) {
+        
+        videoNums_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 video_nums = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVideoNums() {
+        
+        videoNums_ = 0;
         onChanged();
         return this;
       }
 
       private long timeStamp_ ;
       /**
-       * <code>int64 time_stamp = 4;</code>
+       * <code>int64 time_stamp = 5;</code>
        * @return The timeStamp.
        */
       @java.lang.Override
@@ -726,7 +870,7 @@ public final class Rec {
         return timeStamp_;
       }
       /**
-       * <code>int64 time_stamp = 4;</code>
+       * <code>int64 time_stamp = 5;</code>
        * @param value The timeStamp to set.
        * @return This builder for chaining.
        */
@@ -737,12 +881,88 @@ public final class Rec {
         return this;
       }
       /**
-       * <code>int64 time_stamp = 4;</code>
+       * <code>int64 time_stamp = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearTimeStamp() {
         
         timeStamp_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object platform_ = "";
+      /**
+       * <code>string platform = 6;</code>
+       * @return The platform.
+       */
+      public java.lang.String getPlatform() {
+        java.lang.Object ref = platform_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          platform_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string platform = 6;</code>
+       * @return The bytes for platform.
+       */
+      public com.google.protobuf.ByteString
+          getPlatformBytes() {
+        java.lang.Object ref = platform_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          platform_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string platform = 6;</code>
+       * @param value The platform to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlatform(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        platform_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string platform = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPlatform() {
+        
+        platform_ = getDefaultInstance().getPlatform();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string platform = 6;</code>
+       * @param value The bytes for platform to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlatformBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        platform_ = value;
         onChanged();
         return this;
       }
@@ -759,126 +979,126 @@ public final class Rec {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:UserRequest)
+      // @@protoc_insertion_point(builder_scope:user_request)
     }
 
-    // @@protoc_insertion_point(class_scope:UserRequest)
-    private static final Rec.UserRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:user_request)
+    private static final Rec.user_request DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new Rec.UserRequest();
+      DEFAULT_INSTANCE = new Rec.user_request();
     }
 
-    public static Rec.UserRequest getDefaultInstance() {
+    public static Rec.user_request getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<UserRequest>
-        PARSER = new com.google.protobuf.AbstractParser<UserRequest>() {
+    private static final com.google.protobuf.Parser<user_request>
+        PARSER = new com.google.protobuf.AbstractParser<user_request>() {
       @java.lang.Override
-      public UserRequest parsePartialFrom(
+      public user_request parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new UserRequest(input, extensionRegistry);
+        return new user_request(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<UserRequest> parser() {
+    public static com.google.protobuf.Parser<user_request> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<UserRequest> getParserForType() {
+    public com.google.protobuf.Parser<user_request> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public Rec.UserRequest getDefaultInstanceForType() {
+    public Rec.user_request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface TrackOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Track)
+  public interface MetaOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Meta)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string click = 1;</code>
-     * @return The click.
+     * <code>string cover = 1;</code>
+     * @return The cover.
      */
-    java.lang.String getClick();
+    java.lang.String getCover();
     /**
-     * <code>string click = 1;</code>
-     * @return The bytes for click.
+     * <code>string cover = 1;</code>
+     * @return The bytes for cover.
      */
     com.google.protobuf.ByteString
-        getClickBytes();
+        getCoverBytes();
 
     /**
-     * <code>string collect = 2;</code>
-     * @return The collect.
+     * <code>string title = 2;</code>
+     * @return The title.
      */
-    java.lang.String getCollect();
+    java.lang.String getTitle();
     /**
-     * <code>string collect = 2;</code>
-     * @return The bytes for collect.
+     * <code>string title = 2;</code>
+     * @return The bytes for title.
      */
     com.google.protobuf.ByteString
-        getCollectBytes();
+        getTitleBytes();
 
     /**
-     * <code>string share = 3;</code>
-     * @return The share.
+     * <code>string up = 3;</code>
+     * @return The up.
      */
-    java.lang.String getShare();
+    java.lang.String getUp();
     /**
-     * <code>string share = 3;</code>
-     * @return The bytes for share.
+     * <code>string up = 3;</code>
+     * @return The bytes for up.
      */
     com.google.protobuf.ByteString
-        getShareBytes();
+        getUpBytes();
 
     /**
-     * <code>string read = 4;</code>
-     * @return The read.
+     * <code>string tag = 4;</code>
+     * @return The tag.
      */
-    java.lang.String getRead();
+    java.lang.String getTag();
     /**
-     * <code>string read = 4;</code>
-     * @return The bytes for read.
+     * <code>string tag = 4;</code>
+     * @return The bytes for tag.
      */
     com.google.protobuf.ByteString
-        getReadBytes();
+        getTagBytes();
   }
   /**
    * <pre>
    *定义返回的reponse字段
    * </pre>
    *
-   * Protobuf type {@code Track}
+   * Protobuf type {@code Meta}
    */
-  public static final class Track extends
+  public static final class Meta extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Track)
-      TrackOrBuilder {
+      // @@protoc_insertion_point(message_implements:Meta)
+      MetaOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use Track.newBuilder() to construct.
-    private Track(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Meta.newBuilder() to construct.
+    private Meta(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private Track() {
-      click_ = "";
-      collect_ = "";
-      share_ = "";
-      read_ = "";
+    private Meta() {
+      cover_ = "";
+      title_ = "";
+      up_ = "";
+      tag_ = "";
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new Track();
+      return new Meta();
     }
 
     @java.lang.Override
@@ -886,7 +1106,7 @@ public final class Rec {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Track(
+    private Meta(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -907,25 +1127,25 @@ public final class Rec {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              click_ = s;
+              cover_ = s;
               break;
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              collect_ = s;
+              title_ = s;
               break;
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              share_ = s;
+              up_ = s;
               break;
             }
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              read_ = s;
+              tag_ = s;
               break;
             }
             default: {
@@ -949,163 +1169,163 @@ public final class Rec {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return Rec.internal_static_Track_descriptor;
+      return Rec.internal_static_Meta_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Rec.internal_static_Track_fieldAccessorTable
+      return Rec.internal_static_Meta_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              Rec.Track.class, Rec.Track.Builder.class);
+              Rec.Meta.class, Rec.Meta.Builder.class);
     }
 
-    public static final int CLICK_FIELD_NUMBER = 1;
-    private volatile java.lang.Object click_;
+    public static final int COVER_FIELD_NUMBER = 1;
+    private volatile java.lang.Object cover_;
     /**
-     * <code>string click = 1;</code>
-     * @return The click.
+     * <code>string cover = 1;</code>
+     * @return The cover.
      */
     @java.lang.Override
-    public java.lang.String getClick() {
-      java.lang.Object ref = click_;
+    public java.lang.String getCover() {
+      java.lang.Object ref = cover_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        click_ = s;
+        cover_ = s;
         return s;
       }
     }
     /**
-     * <code>string click = 1;</code>
-     * @return The bytes for click.
+     * <code>string cover = 1;</code>
+     * @return The bytes for cover.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getClickBytes() {
-      java.lang.Object ref = click_;
+        getCoverBytes() {
+      java.lang.Object ref = cover_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        click_ = b;
+        cover_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int COLLECT_FIELD_NUMBER = 2;
-    private volatile java.lang.Object collect_;
+    public static final int TITLE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object title_;
     /**
-     * <code>string collect = 2;</code>
-     * @return The collect.
+     * <code>string title = 2;</code>
+     * @return The title.
      */
     @java.lang.Override
-    public java.lang.String getCollect() {
-      java.lang.Object ref = collect_;
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        collect_ = s;
+        title_ = s;
         return s;
       }
     }
     /**
-     * <code>string collect = 2;</code>
-     * @return The bytes for collect.
+     * <code>string title = 2;</code>
+     * @return The bytes for title.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getCollectBytes() {
-      java.lang.Object ref = collect_;
+        getTitleBytes() {
+      java.lang.Object ref = title_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        collect_ = b;
+        title_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int SHARE_FIELD_NUMBER = 3;
-    private volatile java.lang.Object share_;
+    public static final int UP_FIELD_NUMBER = 3;
+    private volatile java.lang.Object up_;
     /**
-     * <code>string share = 3;</code>
-     * @return The share.
+     * <code>string up = 3;</code>
+     * @return The up.
      */
     @java.lang.Override
-    public java.lang.String getShare() {
-      java.lang.Object ref = share_;
+    public java.lang.String getUp() {
+      java.lang.Object ref = up_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        share_ = s;
+        up_ = s;
         return s;
       }
     }
     /**
-     * <code>string share = 3;</code>
-     * @return The bytes for share.
+     * <code>string up = 3;</code>
+     * @return The bytes for up.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getShareBytes() {
-      java.lang.Object ref = share_;
+        getUpBytes() {
+      java.lang.Object ref = up_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        share_ = b;
+        up_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int READ_FIELD_NUMBER = 4;
-    private volatile java.lang.Object read_;
+    public static final int TAG_FIELD_NUMBER = 4;
+    private volatile java.lang.Object tag_;
     /**
-     * <code>string read = 4;</code>
-     * @return The read.
+     * <code>string tag = 4;</code>
+     * @return The tag.
      */
     @java.lang.Override
-    public java.lang.String getRead() {
-      java.lang.Object ref = read_;
+    public java.lang.String getTag() {
+      java.lang.Object ref = tag_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        read_ = s;
+        tag_ = s;
         return s;
       }
     }
     /**
-     * <code>string read = 4;</code>
-     * @return The bytes for read.
+     * <code>string tag = 4;</code>
+     * @return The bytes for tag.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getReadBytes() {
-      java.lang.Object ref = read_;
+        getTagBytes() {
+      java.lang.Object ref = tag_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        read_ = b;
+        tag_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1126,17 +1346,17 @@ public final class Rec {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClickBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, click_);
+      if (!getCoverBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, cover_);
       }
-      if (!getCollectBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, collect_);
+      if (!getTitleBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, title_);
       }
-      if (!getShareBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, share_);
+      if (!getUpBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, up_);
       }
-      if (!getReadBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, read_);
+      if (!getTagBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, tag_);
       }
       unknownFields.writeTo(output);
     }
@@ -1147,17 +1367,17 @@ public final class Rec {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClickBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, click_);
+      if (!getCoverBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, cover_);
       }
-      if (!getCollectBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, collect_);
+      if (!getTitleBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, title_);
       }
-      if (!getShareBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, share_);
+      if (!getUpBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, up_);
       }
-      if (!getReadBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, read_);
+      if (!getTagBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, tag_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1169,19 +1389,19 @@ public final class Rec {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof Rec.Track)) {
+      if (!(obj instanceof Rec.Meta)) {
         return super.equals(obj);
       }
-      Rec.Track other = (Rec.Track) obj;
+      Rec.Meta other = (Rec.Meta) obj;
 
-      if (!getClick()
-          .equals(other.getClick())) return false;
-      if (!getCollect()
-          .equals(other.getCollect())) return false;
-      if (!getShare()
-          .equals(other.getShare())) return false;
-      if (!getRead()
-          .equals(other.getRead())) return false;
+      if (!getCover()
+          .equals(other.getCover())) return false;
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getUp()
+          .equals(other.getUp())) return false;
+      if (!getTag()
+          .equals(other.getTag())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1193,82 +1413,82 @@ public final class Rec {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CLICK_FIELD_NUMBER;
-      hash = (53 * hash) + getClick().hashCode();
-      hash = (37 * hash) + COLLECT_FIELD_NUMBER;
-      hash = (53 * hash) + getCollect().hashCode();
-      hash = (37 * hash) + SHARE_FIELD_NUMBER;
-      hash = (53 * hash) + getShare().hashCode();
-      hash = (37 * hash) + READ_FIELD_NUMBER;
-      hash = (53 * hash) + getRead().hashCode();
+      hash = (37 * hash) + COVER_FIELD_NUMBER;
+      hash = (53 * hash) + getCover().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + UP_FIELD_NUMBER;
+      hash = (53 * hash) + getUp().hashCode();
+      hash = (37 * hash) + TAG_FIELD_NUMBER;
+      hash = (53 * hash) + getTag().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static Rec.Track parseFrom(
+    public static Rec.Meta parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Rec.Track parseFrom(
+    public static Rec.Meta parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Rec.Track parseFrom(
+    public static Rec.Meta parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Rec.Track parseFrom(
+    public static Rec.Meta parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Rec.Track parseFrom(byte[] data)
+    public static Rec.Meta parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Rec.Track parseFrom(
+    public static Rec.Meta parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Rec.Track parseFrom(java.io.InputStream input)
+    public static Rec.Meta parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Rec.Track parseFrom(
+    public static Rec.Meta parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Rec.Track parseDelimitedFrom(java.io.InputStream input)
+    public static Rec.Meta parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static Rec.Track parseDelimitedFrom(
+    public static Rec.Meta parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Rec.Track parseFrom(
+    public static Rec.Meta parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Rec.Track parseFrom(
+    public static Rec.Meta parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1281,7 +1501,7 @@ public final class Rec {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(Rec.Track prototype) {
+    public static Builder newBuilder(Rec.Meta prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1301,26 +1521,26 @@ public final class Rec {
      *定义返回的reponse字段
      * </pre>
      *
-     * Protobuf type {@code Track}
+     * Protobuf type {@code Meta}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Track)
-        Rec.TrackOrBuilder {
+        // @@protoc_insertion_point(builder_implements:Meta)
+        Rec.MetaOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return Rec.internal_static_Track_descriptor;
+        return Rec.internal_static_Meta_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Rec.internal_static_Track_fieldAccessorTable
+        return Rec.internal_static_Meta_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                Rec.Track.class, Rec.Track.Builder.class);
+                Rec.Meta.class, Rec.Meta.Builder.class);
       }
 
-      // Construct using Rec.Track.newBuilder()
+      // Construct using Rec.Meta.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1338,13 +1558,13 @@ public final class Rec {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        click_ = "";
+        cover_ = "";
 
-        collect_ = "";
+        title_ = "";
 
-        share_ = "";
+        up_ = "";
 
-        read_ = "";
+        tag_ = "";
 
         return this;
       }
@@ -1352,17 +1572,17 @@ public final class Rec {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Rec.internal_static_Track_descriptor;
+        return Rec.internal_static_Meta_descriptor;
       }
 
       @java.lang.Override
-      public Rec.Track getDefaultInstanceForType() {
-        return Rec.Track.getDefaultInstance();
+      public Rec.Meta getDefaultInstanceForType() {
+        return Rec.Meta.getDefaultInstance();
       }
 
       @java.lang.Override
-      public Rec.Track build() {
-        Rec.Track result = buildPartial();
+      public Rec.Meta build() {
+        Rec.Meta result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1370,12 +1590,12 @@ public final class Rec {
       }
 
       @java.lang.Override
-      public Rec.Track buildPartial() {
-        Rec.Track result = new Rec.Track(this);
-        result.click_ = click_;
-        result.collect_ = collect_;
-        result.share_ = share_;
-        result.read_ = read_;
+      public Rec.Meta buildPartial() {
+        Rec.Meta result = new Rec.Meta(this);
+        result.cover_ = cover_;
+        result.title_ = title_;
+        result.up_ = up_;
+        result.tag_ = tag_;
         onBuilt();
         return result;
       }
@@ -1414,30 +1634,30 @@ public final class Rec {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Rec.Track) {
-          return mergeFrom((Rec.Track)other);
+        if (other instanceof Rec.Meta) {
+          return mergeFrom((Rec.Meta)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(Rec.Track other) {
-        if (other == Rec.Track.getDefaultInstance()) return this;
-        if (!other.getClick().isEmpty()) {
-          click_ = other.click_;
+      public Builder mergeFrom(Rec.Meta other) {
+        if (other == Rec.Meta.getDefaultInstance()) return this;
+        if (!other.getCover().isEmpty()) {
+          cover_ = other.cover_;
           onChanged();
         }
-        if (!other.getCollect().isEmpty()) {
-          collect_ = other.collect_;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
           onChanged();
         }
-        if (!other.getShare().isEmpty()) {
-          share_ = other.share_;
+        if (!other.getUp().isEmpty()) {
+          up_ = other.up_;
           onChanged();
         }
-        if (!other.getRead().isEmpty()) {
-          read_ = other.read_;
+        if (!other.getTag().isEmpty()) {
+          tag_ = other.tag_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -1455,11 +1675,11 @@ public final class Rec {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        Rec.Track parsedMessage = null;
+        Rec.Meta parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Rec.Track) e.getUnfinishedMessage();
+          parsedMessage = (Rec.Meta) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1469,306 +1689,306 @@ public final class Rec {
         return this;
       }
 
-      private java.lang.Object click_ = "";
+      private java.lang.Object cover_ = "";
       /**
-       * <code>string click = 1;</code>
-       * @return The click.
+       * <code>string cover = 1;</code>
+       * @return The cover.
        */
-      public java.lang.String getClick() {
-        java.lang.Object ref = click_;
+      public java.lang.String getCover() {
+        java.lang.Object ref = cover_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          click_ = s;
+          cover_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string click = 1;</code>
-       * @return The bytes for click.
+       * <code>string cover = 1;</code>
+       * @return The bytes for cover.
        */
       public com.google.protobuf.ByteString
-          getClickBytes() {
-        java.lang.Object ref = click_;
+          getCoverBytes() {
+        java.lang.Object ref = cover_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          click_ = b;
+          cover_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string click = 1;</code>
-       * @param value The click to set.
+       * <code>string cover = 1;</code>
+       * @param value The cover to set.
        * @return This builder for chaining.
        */
-      public Builder setClick(
+      public Builder setCover(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        click_ = value;
+        cover_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string click = 1;</code>
+       * <code>string cover = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearClick() {
+      public Builder clearCover() {
         
-        click_ = getDefaultInstance().getClick();
+        cover_ = getDefaultInstance().getCover();
         onChanged();
         return this;
       }
       /**
-       * <code>string click = 1;</code>
-       * @param value The bytes for click to set.
+       * <code>string cover = 1;</code>
+       * @param value The bytes for cover to set.
        * @return This builder for chaining.
        */
-      public Builder setClickBytes(
+      public Builder setCoverBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        click_ = value;
+        cover_ = value;
         onChanged();
         return this;
       }
 
-      private java.lang.Object collect_ = "";
+      private java.lang.Object title_ = "";
       /**
-       * <code>string collect = 2;</code>
-       * @return The collect.
+       * <code>string title = 2;</code>
+       * @return The title.
        */
-      public java.lang.String getCollect() {
-        java.lang.Object ref = collect_;
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          collect_ = s;
+          title_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string collect = 2;</code>
-       * @return The bytes for collect.
+       * <code>string title = 2;</code>
+       * @return The bytes for title.
        */
       public com.google.protobuf.ByteString
-          getCollectBytes() {
-        java.lang.Object ref = collect_;
+          getTitleBytes() {
+        java.lang.Object ref = title_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          collect_ = b;
+          title_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string collect = 2;</code>
-       * @param value The collect to set.
+       * <code>string title = 2;</code>
+       * @param value The title to set.
        * @return This builder for chaining.
        */
-      public Builder setCollect(
+      public Builder setTitle(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        collect_ = value;
+        title_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string collect = 2;</code>
+       * <code>string title = 2;</code>
        * @return This builder for chaining.
        */
-      public Builder clearCollect() {
+      public Builder clearTitle() {
         
-        collect_ = getDefaultInstance().getCollect();
+        title_ = getDefaultInstance().getTitle();
         onChanged();
         return this;
       }
       /**
-       * <code>string collect = 2;</code>
-       * @param value The bytes for collect to set.
+       * <code>string title = 2;</code>
+       * @param value The bytes for title to set.
        * @return This builder for chaining.
        */
-      public Builder setCollectBytes(
+      public Builder setTitleBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        collect_ = value;
+        title_ = value;
         onChanged();
         return this;
       }
 
-      private java.lang.Object share_ = "";
+      private java.lang.Object up_ = "";
       /**
-       * <code>string share = 3;</code>
-       * @return The share.
+       * <code>string up = 3;</code>
+       * @return The up.
        */
-      public java.lang.String getShare() {
-        java.lang.Object ref = share_;
+      public java.lang.String getUp() {
+        java.lang.Object ref = up_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          share_ = s;
+          up_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string share = 3;</code>
-       * @return The bytes for share.
+       * <code>string up = 3;</code>
+       * @return The bytes for up.
        */
       public com.google.protobuf.ByteString
-          getShareBytes() {
-        java.lang.Object ref = share_;
+          getUpBytes() {
+        java.lang.Object ref = up_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          share_ = b;
+          up_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string share = 3;</code>
-       * @param value The share to set.
+       * <code>string up = 3;</code>
+       * @param value The up to set.
        * @return This builder for chaining.
        */
-      public Builder setShare(
+      public Builder setUp(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        share_ = value;
+        up_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string share = 3;</code>
+       * <code>string up = 3;</code>
        * @return This builder for chaining.
        */
-      public Builder clearShare() {
+      public Builder clearUp() {
         
-        share_ = getDefaultInstance().getShare();
+        up_ = getDefaultInstance().getUp();
         onChanged();
         return this;
       }
       /**
-       * <code>string share = 3;</code>
-       * @param value The bytes for share to set.
+       * <code>string up = 3;</code>
+       * @param value The bytes for up to set.
        * @return This builder for chaining.
        */
-      public Builder setShareBytes(
+      public Builder setUpBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        share_ = value;
+        up_ = value;
         onChanged();
         return this;
       }
 
-      private java.lang.Object read_ = "";
+      private java.lang.Object tag_ = "";
       /**
-       * <code>string read = 4;</code>
-       * @return The read.
+       * <code>string tag = 4;</code>
+       * @return The tag.
        */
-      public java.lang.String getRead() {
-        java.lang.Object ref = read_;
+      public java.lang.String getTag() {
+        java.lang.Object ref = tag_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          read_ = s;
+          tag_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string read = 4;</code>
-       * @return The bytes for read.
+       * <code>string tag = 4;</code>
+       * @return The bytes for tag.
        */
       public com.google.protobuf.ByteString
-          getReadBytes() {
-        java.lang.Object ref = read_;
+          getTagBytes() {
+        java.lang.Object ref = tag_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          read_ = b;
+          tag_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string read = 4;</code>
-       * @param value The read to set.
+       * <code>string tag = 4;</code>
+       * @param value The tag to set.
        * @return This builder for chaining.
        */
-      public Builder setRead(
+      public Builder setTag(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        read_ = value;
+        tag_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string read = 4;</code>
+       * <code>string tag = 4;</code>
        * @return This builder for chaining.
        */
-      public Builder clearRead() {
+      public Builder clearTag() {
         
-        read_ = getDefaultInstance().getRead();
+        tag_ = getDefaultInstance().getTag();
         onChanged();
         return this;
       }
       /**
-       * <code>string read = 4;</code>
-       * @param value The bytes for read to set.
+       * <code>string tag = 4;</code>
+       * @param value The bytes for tag to set.
        * @return This builder for chaining.
        */
-      public Builder setReadBytes(
+      public Builder setTagBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        read_ = value;
+        tag_ = value;
         onChanged();
         return this;
       }
@@ -1785,91 +2005,91 @@ public final class Rec {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:Track)
+      // @@protoc_insertion_point(builder_scope:Meta)
     }
 
-    // @@protoc_insertion_point(class_scope:Track)
-    private static final Rec.Track DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:Meta)
+    private static final Rec.Meta DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new Rec.Track();
+      DEFAULT_INSTANCE = new Rec.Meta();
     }
 
-    public static Rec.Track getDefaultInstance() {
+    public static Rec.Meta getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Track>
-        PARSER = new com.google.protobuf.AbstractParser<Track>() {
+    private static final com.google.protobuf.Parser<Meta>
+        PARSER = new com.google.protobuf.AbstractParser<Meta>() {
       @java.lang.Override
-      public Track parsePartialFrom(
+      public Meta parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Track(input, extensionRegistry);
+        return new Meta(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<Track> parser() {
+    public static com.google.protobuf.Parser<Meta> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Track> getParserForType() {
+    public com.google.protobuf.Parser<Meta> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public Rec.Track getDefaultInstanceForType() {
+    public Rec.Meta getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface ArticleOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Article)
+  public interface VideoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Video)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 article_id = 1;</code>
-     * @return The articleId.
+     * <code>int64 video_id = 1;</code>
+     * @return The videoId.
      */
-    long getArticleId();
+    long getVideoId();
 
     /**
-     * <code>.Track track = 2;</code>
-     * @return Whether the track field is set.
+     * <code>.Meta meta = 2;</code>
+     * @return Whether the meta field is set.
      */
-    boolean hasTrack();
+    boolean hasMeta();
     /**
-     * <code>.Track track = 2;</code>
-     * @return The track.
+     * <code>.Meta meta = 2;</code>
+     * @return The meta.
      */
-    Rec.Track getTrack();
+    Rec.Meta getMeta();
     /**
-     * <code>.Track track = 2;</code>
+     * <code>.Meta meta = 2;</code>
      */
-    Rec.TrackOrBuilder getTrackOrBuilder();
+    Rec.MetaOrBuilder getMetaOrBuilder();
   }
   /**
-   * Protobuf type {@code Article}
+   * Protobuf type {@code Video}
    */
-  public static final class Article extends
+  public static final class Video extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Article)
-      ArticleOrBuilder {
+      // @@protoc_insertion_point(message_implements:Video)
+      VideoOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use Article.newBuilder() to construct.
-    private Article(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Video.newBuilder() to construct.
+    private Video(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private Article() {
+    private Video() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new Article();
+      return new Video();
     }
 
     @java.lang.Override
@@ -1877,7 +2097,7 @@ public final class Rec {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Article(
+    private Video(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1897,18 +2117,18 @@ public final class Rec {
               break;
             case 8: {
 
-              articleId_ = input.readInt64();
+              videoId_ = input.readInt64();
               break;
             }
             case 18: {
-              Rec.Track.Builder subBuilder = null;
-              if (track_ != null) {
-                subBuilder = track_.toBuilder();
+              Rec.Meta.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
               }
-              track_ = input.readMessage(Rec.Track.parser(), extensionRegistry);
+              meta_ = input.readMessage(Rec.Meta.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(track_);
-                track_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
               }
 
               break;
@@ -1934,52 +2154,52 @@ public final class Rec {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return Rec.internal_static_Article_descriptor;
+      return Rec.internal_static_Video_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Rec.internal_static_Article_fieldAccessorTable
+      return Rec.internal_static_Video_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              Rec.Article.class, Rec.Article.Builder.class);
+              Rec.Video.class, Rec.Video.Builder.class);
     }
 
-    public static final int ARTICLE_ID_FIELD_NUMBER = 1;
-    private long articleId_;
+    public static final int VIDEO_ID_FIELD_NUMBER = 1;
+    private long videoId_;
     /**
-     * <code>int64 article_id = 1;</code>
-     * @return The articleId.
+     * <code>int64 video_id = 1;</code>
+     * @return The videoId.
      */
     @java.lang.Override
-    public long getArticleId() {
-      return articleId_;
+    public long getVideoId() {
+      return videoId_;
     }
 
-    public static final int TRACK_FIELD_NUMBER = 2;
-    private Rec.Track track_;
+    public static final int META_FIELD_NUMBER = 2;
+    private Rec.Meta meta_;
     /**
-     * <code>.Track track = 2;</code>
-     * @return Whether the track field is set.
+     * <code>.Meta meta = 2;</code>
+     * @return Whether the meta field is set.
      */
     @java.lang.Override
-    public boolean hasTrack() {
-      return track_ != null;
+    public boolean hasMeta() {
+      return meta_ != null;
     }
     /**
-     * <code>.Track track = 2;</code>
-     * @return The track.
+     * <code>.Meta meta = 2;</code>
+     * @return The meta.
      */
     @java.lang.Override
-    public Rec.Track getTrack() {
-      return track_ == null ? Rec.Track.getDefaultInstance() : track_;
+    public Rec.Meta getMeta() {
+      return meta_ == null ? Rec.Meta.getDefaultInstance() : meta_;
     }
     /**
-     * <code>.Track track = 2;</code>
+     * <code>.Meta meta = 2;</code>
      */
     @java.lang.Override
-    public Rec.TrackOrBuilder getTrackOrBuilder() {
-      return getTrack();
+    public Rec.MetaOrBuilder getMetaOrBuilder() {
+      return getMeta();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1996,11 +2216,11 @@ public final class Rec {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (articleId_ != 0L) {
-        output.writeInt64(1, articleId_);
+      if (videoId_ != 0L) {
+        output.writeInt64(1, videoId_);
       }
-      if (track_ != null) {
-        output.writeMessage(2, getTrack());
+      if (meta_ != null) {
+        output.writeMessage(2, getMeta());
       }
       unknownFields.writeTo(output);
     }
@@ -2011,13 +2231,13 @@ public final class Rec {
       if (size != -1) return size;
 
       size = 0;
-      if (articleId_ != 0L) {
+      if (videoId_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, articleId_);
+          .computeInt64Size(1, videoId_);
       }
-      if (track_ != null) {
+      if (meta_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getTrack());
+          .computeMessageSize(2, getMeta());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2029,17 +2249,17 @@ public final class Rec {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof Rec.Article)) {
+      if (!(obj instanceof Rec.Video)) {
         return super.equals(obj);
       }
-      Rec.Article other = (Rec.Article) obj;
+      Rec.Video other = (Rec.Video) obj;
 
-      if (getArticleId()
-          != other.getArticleId()) return false;
-      if (hasTrack() != other.hasTrack()) return false;
-      if (hasTrack()) {
-        if (!getTrack()
-            .equals(other.getTrack())) return false;
+      if (getVideoId()
+          != other.getVideoId()) return false;
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -2052,81 +2272,81 @@ public final class Rec {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ARTICLE_ID_FIELD_NUMBER;
+      hash = (37 * hash) + VIDEO_ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getArticleId());
-      if (hasTrack()) {
-        hash = (37 * hash) + TRACK_FIELD_NUMBER;
-        hash = (53 * hash) + getTrack().hashCode();
+          getVideoId());
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static Rec.Article parseFrom(
+    public static Rec.Video parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Rec.Article parseFrom(
+    public static Rec.Video parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Rec.Article parseFrom(
+    public static Rec.Video parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Rec.Article parseFrom(
+    public static Rec.Video parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Rec.Article parseFrom(byte[] data)
+    public static Rec.Video parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Rec.Article parseFrom(
+    public static Rec.Video parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Rec.Article parseFrom(java.io.InputStream input)
+    public static Rec.Video parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Rec.Article parseFrom(
+    public static Rec.Video parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Rec.Article parseDelimitedFrom(java.io.InputStream input)
+    public static Rec.Video parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static Rec.Article parseDelimitedFrom(
+    public static Rec.Video parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Rec.Article parseFrom(
+    public static Rec.Video parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Rec.Article parseFrom(
+    public static Rec.Video parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2139,7 +2359,7 @@ public final class Rec {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(Rec.Article prototype) {
+    public static Builder newBuilder(Rec.Video prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2155,26 +2375,26 @@ public final class Rec {
       return builder;
     }
     /**
-     * Protobuf type {@code Article}
+     * Protobuf type {@code Video}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Article)
-        Rec.ArticleOrBuilder {
+        // @@protoc_insertion_point(builder_implements:Video)
+        Rec.VideoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return Rec.internal_static_Article_descriptor;
+        return Rec.internal_static_Video_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Rec.internal_static_Article_fieldAccessorTable
+        return Rec.internal_static_Video_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                Rec.Article.class, Rec.Article.Builder.class);
+                Rec.Video.class, Rec.Video.Builder.class);
       }
 
-      // Construct using Rec.Article.newBuilder()
+      // Construct using Rec.Video.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2192,13 +2412,13 @@ public final class Rec {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        articleId_ = 0L;
+        videoId_ = 0L;
 
-        if (trackBuilder_ == null) {
-          track_ = null;
+        if (metaBuilder_ == null) {
+          meta_ = null;
         } else {
-          track_ = null;
-          trackBuilder_ = null;
+          meta_ = null;
+          metaBuilder_ = null;
         }
         return this;
       }
@@ -2206,17 +2426,17 @@ public final class Rec {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Rec.internal_static_Article_descriptor;
+        return Rec.internal_static_Video_descriptor;
       }
 
       @java.lang.Override
-      public Rec.Article getDefaultInstanceForType() {
-        return Rec.Article.getDefaultInstance();
+      public Rec.Video getDefaultInstanceForType() {
+        return Rec.Video.getDefaultInstance();
       }
 
       @java.lang.Override
-      public Rec.Article build() {
-        Rec.Article result = buildPartial();
+      public Rec.Video build() {
+        Rec.Video result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2224,13 +2444,13 @@ public final class Rec {
       }
 
       @java.lang.Override
-      public Rec.Article buildPartial() {
-        Rec.Article result = new Rec.Article(this);
-        result.articleId_ = articleId_;
-        if (trackBuilder_ == null) {
-          result.track_ = track_;
+      public Rec.Video buildPartial() {
+        Rec.Video result = new Rec.Video(this);
+        result.videoId_ = videoId_;
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
         } else {
-          result.track_ = trackBuilder_.build();
+          result.meta_ = metaBuilder_.build();
         }
         onBuilt();
         return result;
@@ -2270,21 +2490,21 @@ public final class Rec {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Rec.Article) {
-          return mergeFrom((Rec.Article)other);
+        if (other instanceof Rec.Video) {
+          return mergeFrom((Rec.Video)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(Rec.Article other) {
-        if (other == Rec.Article.getDefaultInstance()) return this;
-        if (other.getArticleId() != 0L) {
-          setArticleId(other.getArticleId());
+      public Builder mergeFrom(Rec.Video other) {
+        if (other == Rec.Video.getDefaultInstance()) return this;
+        if (other.getVideoId() != 0L) {
+          setVideoId(other.getVideoId());
         }
-        if (other.hasTrack()) {
-          mergeTrack(other.getTrack());
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2301,11 +2521,11 @@ public final class Rec {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        Rec.Article parsedMessage = null;
+        Rec.Video parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Rec.Article) e.getUnfinishedMessage();
+          parsedMessage = (Rec.Video) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2315,154 +2535,154 @@ public final class Rec {
         return this;
       }
 
-      private long articleId_ ;
+      private long videoId_ ;
       /**
-       * <code>int64 article_id = 1;</code>
-       * @return The articleId.
+       * <code>int64 video_id = 1;</code>
+       * @return The videoId.
        */
       @java.lang.Override
-      public long getArticleId() {
-        return articleId_;
+      public long getVideoId() {
+        return videoId_;
       }
       /**
-       * <code>int64 article_id = 1;</code>
-       * @param value The articleId to set.
+       * <code>int64 video_id = 1;</code>
+       * @param value The videoId to set.
        * @return This builder for chaining.
        */
-      public Builder setArticleId(long value) {
+      public Builder setVideoId(long value) {
         
-        articleId_ = value;
+        videoId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int64 article_id = 1;</code>
+       * <code>int64 video_id = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearArticleId() {
+      public Builder clearVideoId() {
         
-        articleId_ = 0L;
+        videoId_ = 0L;
         onChanged();
         return this;
       }
 
-      private Rec.Track track_;
+      private Rec.Meta meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          Rec.Track, Rec.Track.Builder, Rec.TrackOrBuilder> trackBuilder_;
+          Rec.Meta, Rec.Meta.Builder, Rec.MetaOrBuilder> metaBuilder_;
       /**
-       * <code>.Track track = 2;</code>
-       * @return Whether the track field is set.
+       * <code>.Meta meta = 2;</code>
+       * @return Whether the meta field is set.
        */
-      public boolean hasTrack() {
-        return trackBuilder_ != null || track_ != null;
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
       }
       /**
-       * <code>.Track track = 2;</code>
-       * @return The track.
+       * <code>.Meta meta = 2;</code>
+       * @return The meta.
        */
-      public Rec.Track getTrack() {
-        if (trackBuilder_ == null) {
-          return track_ == null ? Rec.Track.getDefaultInstance() : track_;
+      public Rec.Meta getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? Rec.Meta.getDefaultInstance() : meta_;
         } else {
-          return trackBuilder_.getMessage();
+          return metaBuilder_.getMessage();
         }
       }
       /**
-       * <code>.Track track = 2;</code>
+       * <code>.Meta meta = 2;</code>
        */
-      public Builder setTrack(Rec.Track value) {
-        if (trackBuilder_ == null) {
+      public Builder setMeta(Rec.Meta value) {
+        if (metaBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          track_ = value;
+          meta_ = value;
           onChanged();
         } else {
-          trackBuilder_.setMessage(value);
+          metaBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>.Track track = 2;</code>
+       * <code>.Meta meta = 2;</code>
        */
-      public Builder setTrack(
-          Rec.Track.Builder builderForValue) {
-        if (trackBuilder_ == null) {
-          track_ = builderForValue.build();
+      public Builder setMeta(
+          Rec.Meta.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
           onChanged();
         } else {
-          trackBuilder_.setMessage(builderForValue.build());
+          metaBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>.Track track = 2;</code>
+       * <code>.Meta meta = 2;</code>
        */
-      public Builder mergeTrack(Rec.Track value) {
-        if (trackBuilder_ == null) {
-          if (track_ != null) {
-            track_ =
-              Rec.Track.newBuilder(track_).mergeFrom(value).buildPartial();
+      public Builder mergeMeta(Rec.Meta value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              Rec.Meta.newBuilder(meta_).mergeFrom(value).buildPartial();
           } else {
-            track_ = value;
+            meta_ = value;
           }
           onChanged();
         } else {
-          trackBuilder_.mergeFrom(value);
+          metaBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>.Track track = 2;</code>
+       * <code>.Meta meta = 2;</code>
        */
-      public Builder clearTrack() {
-        if (trackBuilder_ == null) {
-          track_ = null;
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
           onChanged();
         } else {
-          track_ = null;
-          trackBuilder_ = null;
+          meta_ = null;
+          metaBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>.Track track = 2;</code>
+       * <code>.Meta meta = 2;</code>
        */
-      public Rec.Track.Builder getTrackBuilder() {
+      public Rec.Meta.Builder getMetaBuilder() {
         
         onChanged();
-        return getTrackFieldBuilder().getBuilder();
+        return getMetaFieldBuilder().getBuilder();
       }
       /**
-       * <code>.Track track = 2;</code>
+       * <code>.Meta meta = 2;</code>
        */
-      public Rec.TrackOrBuilder getTrackOrBuilder() {
-        if (trackBuilder_ != null) {
-          return trackBuilder_.getMessageOrBuilder();
+      public Rec.MetaOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
         } else {
-          return track_ == null ?
-              Rec.Track.getDefaultInstance() : track_;
+          return meta_ == null ?
+              Rec.Meta.getDefaultInstance() : meta_;
         }
       }
       /**
-       * <code>.Track track = 2;</code>
+       * <code>.Meta meta = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          Rec.Track, Rec.Track.Builder, Rec.TrackOrBuilder> 
-          getTrackFieldBuilder() {
-        if (trackBuilder_ == null) {
-          trackBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              Rec.Track, Rec.Track.Builder, Rec.TrackOrBuilder>(
-                  getTrack(),
+          Rec.Meta, Rec.Meta.Builder, Rec.MetaOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              Rec.Meta, Rec.Meta.Builder, Rec.MetaOrBuilder>(
+                  getMeta(),
                   getParentForChildren(),
                   isClean());
-          track_ = null;
+          meta_ = null;
         }
-        return trackBuilder_;
+        return metaBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -2477,61 +2697,61 @@ public final class Rec {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:Article)
+      // @@protoc_insertion_point(builder_scope:Video)
     }
 
-    // @@protoc_insertion_point(class_scope:Article)
-    private static final Rec.Article DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:Video)
+    private static final Rec.Video DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new Rec.Article();
+      DEFAULT_INSTANCE = new Rec.Video();
     }
 
-    public static Rec.Article getDefaultInstance() {
+    public static Rec.Video getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Article>
-        PARSER = new com.google.protobuf.AbstractParser<Article>() {
+    private static final com.google.protobuf.Parser<Video>
+        PARSER = new com.google.protobuf.AbstractParser<Video>() {
       @java.lang.Override
-      public Article parsePartialFrom(
+      public Video parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Article(input, extensionRegistry);
+        return new Video(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<Article> parser() {
+    public static com.google.protobuf.Parser<Video> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Article> getParserForType() {
+    public com.google.protobuf.Parser<Video> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public Rec.Article getDefaultInstanceForType() {
+    public Rec.Video getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface ArticleResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ArticleResponse)
+  public interface VideoResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:VideoResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string exposure = 1;</code>
-     * @return The exposure.
+     * <code>string impression = 1;</code>
+     * @return The impression.
      */
-    java.lang.String getExposure();
+    java.lang.String getImpression();
     /**
-     * <code>string exposure = 1;</code>
-     * @return The bytes for exposure.
+     * <code>string impression = 1;</code>
+     * @return The bytes for impression.
      */
     com.google.protobuf.ByteString
-        getExposureBytes();
+        getImpressionBytes();
 
     /**
      * <code>int64 time_stamp = 2;</code>
@@ -2540,51 +2760,51 @@ public final class Rec {
     long getTimeStamp();
 
     /**
-     * <code>repeated .Article recommends = 3;</code>
+     * <code>repeated .Video recsys_res = 3;</code>
      */
-    java.util.List<Rec.Article> 
-        getRecommendsList();
+    java.util.List<Rec.Video> 
+        getRecsysResList();
     /**
-     * <code>repeated .Article recommends = 3;</code>
+     * <code>repeated .Video recsys_res = 3;</code>
      */
-    Rec.Article getRecommends(int index);
+    Rec.Video getRecsysRes(int index);
     /**
-     * <code>repeated .Article recommends = 3;</code>
+     * <code>repeated .Video recsys_res = 3;</code>
      */
-    int getRecommendsCount();
+    int getRecsysResCount();
     /**
-     * <code>repeated .Article recommends = 3;</code>
+     * <code>repeated .Video recsys_res = 3;</code>
      */
-    java.util.List<? extends Rec.ArticleOrBuilder> 
-        getRecommendsOrBuilderList();
+    java.util.List<? extends Rec.VideoOrBuilder> 
+        getRecsysResOrBuilderList();
     /**
-     * <code>repeated .Article recommends = 3;</code>
+     * <code>repeated .Video recsys_res = 3;</code>
      */
-    Rec.ArticleOrBuilder getRecommendsOrBuilder(
+    Rec.VideoOrBuilder getRecsysResOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code ArticleResponse}
+   * Protobuf type {@code VideoResponse}
    */
-  public static final class ArticleResponse extends
+  public static final class VideoResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:ArticleResponse)
-      ArticleResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:VideoResponse)
+      VideoResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use ArticleResponse.newBuilder() to construct.
-    private ArticleResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use VideoResponse.newBuilder() to construct.
+    private VideoResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private ArticleResponse() {
-      exposure_ = "";
-      recommends_ = java.util.Collections.emptyList();
+    private VideoResponse() {
+      impression_ = "";
+      recsysRes_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new ArticleResponse();
+      return new VideoResponse();
     }
 
     @java.lang.Override
@@ -2592,7 +2812,7 @@ public final class Rec {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ArticleResponse(
+    private VideoResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2614,7 +2834,7 @@ public final class Rec {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              exposure_ = s;
+              impression_ = s;
               break;
             }
             case 16: {
@@ -2624,11 +2844,11 @@ public final class Rec {
             }
             case 26: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                recommends_ = new java.util.ArrayList<Rec.Article>();
+                recsysRes_ = new java.util.ArrayList<Rec.Video>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              recommends_.add(
-                  input.readMessage(Rec.Article.parser(), extensionRegistry));
+              recsysRes_.add(
+                  input.readMessage(Rec.Video.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -2647,7 +2867,7 @@ public final class Rec {
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          recommends_ = java.util.Collections.unmodifiableList(recommends_);
+          recsysRes_ = java.util.Collections.unmodifiableList(recsysRes_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -2655,49 +2875,49 @@ public final class Rec {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return Rec.internal_static_ArticleResponse_descriptor;
+      return Rec.internal_static_VideoResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Rec.internal_static_ArticleResponse_fieldAccessorTable
+      return Rec.internal_static_VideoResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              Rec.ArticleResponse.class, Rec.ArticleResponse.Builder.class);
+              Rec.VideoResponse.class, Rec.VideoResponse.Builder.class);
     }
 
-    public static final int EXPOSURE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object exposure_;
+    public static final int IMPRESSION_FIELD_NUMBER = 1;
+    private volatile java.lang.Object impression_;
     /**
-     * <code>string exposure = 1;</code>
-     * @return The exposure.
+     * <code>string impression = 1;</code>
+     * @return The impression.
      */
     @java.lang.Override
-    public java.lang.String getExposure() {
-      java.lang.Object ref = exposure_;
+    public java.lang.String getImpression() {
+      java.lang.Object ref = impression_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        exposure_ = s;
+        impression_ = s;
         return s;
       }
     }
     /**
-     * <code>string exposure = 1;</code>
-     * @return The bytes for exposure.
+     * <code>string impression = 1;</code>
+     * @return The bytes for impression.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getExposureBytes() {
-      java.lang.Object ref = exposure_;
+        getImpressionBytes() {
+      java.lang.Object ref = impression_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        exposure_ = b;
+        impression_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -2715,44 +2935,44 @@ public final class Rec {
       return timeStamp_;
     }
 
-    public static final int RECOMMENDS_FIELD_NUMBER = 3;
-    private java.util.List<Rec.Article> recommends_;
+    public static final int RECSYS_RES_FIELD_NUMBER = 3;
+    private java.util.List<Rec.Video> recsysRes_;
     /**
-     * <code>repeated .Article recommends = 3;</code>
+     * <code>repeated .Video recsys_res = 3;</code>
      */
     @java.lang.Override
-    public java.util.List<Rec.Article> getRecommendsList() {
-      return recommends_;
+    public java.util.List<Rec.Video> getRecsysResList() {
+      return recsysRes_;
     }
     /**
-     * <code>repeated .Article recommends = 3;</code>
+     * <code>repeated .Video recsys_res = 3;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends Rec.ArticleOrBuilder> 
-        getRecommendsOrBuilderList() {
-      return recommends_;
+    public java.util.List<? extends Rec.VideoOrBuilder> 
+        getRecsysResOrBuilderList() {
+      return recsysRes_;
     }
     /**
-     * <code>repeated .Article recommends = 3;</code>
+     * <code>repeated .Video recsys_res = 3;</code>
      */
     @java.lang.Override
-    public int getRecommendsCount() {
-      return recommends_.size();
+    public int getRecsysResCount() {
+      return recsysRes_.size();
     }
     /**
-     * <code>repeated .Article recommends = 3;</code>
+     * <code>repeated .Video recsys_res = 3;</code>
      */
     @java.lang.Override
-    public Rec.Article getRecommends(int index) {
-      return recommends_.get(index);
+    public Rec.Video getRecsysRes(int index) {
+      return recsysRes_.get(index);
     }
     /**
-     * <code>repeated .Article recommends = 3;</code>
+     * <code>repeated .Video recsys_res = 3;</code>
      */
     @java.lang.Override
-    public Rec.ArticleOrBuilder getRecommendsOrBuilder(
+    public Rec.VideoOrBuilder getRecsysResOrBuilder(
         int index) {
-      return recommends_.get(index);
+      return recsysRes_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2769,14 +2989,14 @@ public final class Rec {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getExposureBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, exposure_);
+      if (!getImpressionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, impression_);
       }
       if (timeStamp_ != 0L) {
         output.writeInt64(2, timeStamp_);
       }
-      for (int i = 0; i < recommends_.size(); i++) {
-        output.writeMessage(3, recommends_.get(i));
+      for (int i = 0; i < recsysRes_.size(); i++) {
+        output.writeMessage(3, recsysRes_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -2787,16 +3007,16 @@ public final class Rec {
       if (size != -1) return size;
 
       size = 0;
-      if (!getExposureBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, exposure_);
+      if (!getImpressionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, impression_);
       }
       if (timeStamp_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, timeStamp_);
       }
-      for (int i = 0; i < recommends_.size(); i++) {
+      for (int i = 0; i < recsysRes_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, recommends_.get(i));
+          .computeMessageSize(3, recsysRes_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2808,17 +3028,17 @@ public final class Rec {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof Rec.ArticleResponse)) {
+      if (!(obj instanceof Rec.VideoResponse)) {
         return super.equals(obj);
       }
-      Rec.ArticleResponse other = (Rec.ArticleResponse) obj;
+      Rec.VideoResponse other = (Rec.VideoResponse) obj;
 
-      if (!getExposure()
-          .equals(other.getExposure())) return false;
+      if (!getImpression()
+          .equals(other.getImpression())) return false;
       if (getTimeStamp()
           != other.getTimeStamp()) return false;
-      if (!getRecommendsList()
-          .equals(other.getRecommendsList())) return false;
+      if (!getRecsysResList()
+          .equals(other.getRecsysResList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2830,83 +3050,83 @@ public final class Rec {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + EXPOSURE_FIELD_NUMBER;
-      hash = (53 * hash) + getExposure().hashCode();
+      hash = (37 * hash) + IMPRESSION_FIELD_NUMBER;
+      hash = (53 * hash) + getImpression().hashCode();
       hash = (37 * hash) + TIME_STAMP_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getTimeStamp());
-      if (getRecommendsCount() > 0) {
-        hash = (37 * hash) + RECOMMENDS_FIELD_NUMBER;
-        hash = (53 * hash) + getRecommendsList().hashCode();
+      if (getRecsysResCount() > 0) {
+        hash = (37 * hash) + RECSYS_RES_FIELD_NUMBER;
+        hash = (53 * hash) + getRecsysResList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static Rec.ArticleResponse parseFrom(
+    public static Rec.VideoResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Rec.ArticleResponse parseFrom(
+    public static Rec.VideoResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Rec.ArticleResponse parseFrom(
+    public static Rec.VideoResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Rec.ArticleResponse parseFrom(
+    public static Rec.VideoResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Rec.ArticleResponse parseFrom(byte[] data)
+    public static Rec.VideoResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Rec.ArticleResponse parseFrom(
+    public static Rec.VideoResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Rec.ArticleResponse parseFrom(java.io.InputStream input)
+    public static Rec.VideoResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Rec.ArticleResponse parseFrom(
+    public static Rec.VideoResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Rec.ArticleResponse parseDelimitedFrom(java.io.InputStream input)
+    public static Rec.VideoResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static Rec.ArticleResponse parseDelimitedFrom(
+    public static Rec.VideoResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Rec.ArticleResponse parseFrom(
+    public static Rec.VideoResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Rec.ArticleResponse parseFrom(
+    public static Rec.VideoResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2919,7 +3139,7 @@ public final class Rec {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(Rec.ArticleResponse prototype) {
+    public static Builder newBuilder(Rec.VideoResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2935,26 +3155,26 @@ public final class Rec {
       return builder;
     }
     /**
-     * Protobuf type {@code ArticleResponse}
+     * Protobuf type {@code VideoResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ArticleResponse)
-        Rec.ArticleResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:VideoResponse)
+        Rec.VideoResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return Rec.internal_static_ArticleResponse_descriptor;
+        return Rec.internal_static_VideoResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Rec.internal_static_ArticleResponse_fieldAccessorTable
+        return Rec.internal_static_VideoResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                Rec.ArticleResponse.class, Rec.ArticleResponse.Builder.class);
+                Rec.VideoResponse.class, Rec.VideoResponse.Builder.class);
       }
 
-      // Construct using Rec.ArticleResponse.newBuilder()
+      // Construct using Rec.VideoResponse.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2967,21 +3187,21 @@ public final class Rec {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getRecommendsFieldBuilder();
+          getRecsysResFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        exposure_ = "";
+        impression_ = "";
 
         timeStamp_ = 0L;
 
-        if (recommendsBuilder_ == null) {
-          recommends_ = java.util.Collections.emptyList();
+        if (recsysResBuilder_ == null) {
+          recsysRes_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          recommendsBuilder_.clear();
+          recsysResBuilder_.clear();
         }
         return this;
       }
@@ -2989,17 +3209,17 @@ public final class Rec {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Rec.internal_static_ArticleResponse_descriptor;
+        return Rec.internal_static_VideoResponse_descriptor;
       }
 
       @java.lang.Override
-      public Rec.ArticleResponse getDefaultInstanceForType() {
-        return Rec.ArticleResponse.getDefaultInstance();
+      public Rec.VideoResponse getDefaultInstanceForType() {
+        return Rec.VideoResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public Rec.ArticleResponse build() {
-        Rec.ArticleResponse result = buildPartial();
+      public Rec.VideoResponse build() {
+        Rec.VideoResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -3007,19 +3227,19 @@ public final class Rec {
       }
 
       @java.lang.Override
-      public Rec.ArticleResponse buildPartial() {
-        Rec.ArticleResponse result = new Rec.ArticleResponse(this);
+      public Rec.VideoResponse buildPartial() {
+        Rec.VideoResponse result = new Rec.VideoResponse(this);
         int from_bitField0_ = bitField0_;
-        result.exposure_ = exposure_;
+        result.impression_ = impression_;
         result.timeStamp_ = timeStamp_;
-        if (recommendsBuilder_ == null) {
+        if (recsysResBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
-            recommends_ = java.util.Collections.unmodifiableList(recommends_);
+            recsysRes_ = java.util.Collections.unmodifiableList(recsysRes_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
-          result.recommends_ = recommends_;
+          result.recsysRes_ = recsysRes_;
         } else {
-          result.recommends_ = recommendsBuilder_.build();
+          result.recsysRes_ = recsysResBuilder_.build();
         }
         onBuilt();
         return result;
@@ -3059,46 +3279,46 @@ public final class Rec {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Rec.ArticleResponse) {
-          return mergeFrom((Rec.ArticleResponse)other);
+        if (other instanceof Rec.VideoResponse) {
+          return mergeFrom((Rec.VideoResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(Rec.ArticleResponse other) {
-        if (other == Rec.ArticleResponse.getDefaultInstance()) return this;
-        if (!other.getExposure().isEmpty()) {
-          exposure_ = other.exposure_;
+      public Builder mergeFrom(Rec.VideoResponse other) {
+        if (other == Rec.VideoResponse.getDefaultInstance()) return this;
+        if (!other.getImpression().isEmpty()) {
+          impression_ = other.impression_;
           onChanged();
         }
         if (other.getTimeStamp() != 0L) {
           setTimeStamp(other.getTimeStamp());
         }
-        if (recommendsBuilder_ == null) {
-          if (!other.recommends_.isEmpty()) {
-            if (recommends_.isEmpty()) {
-              recommends_ = other.recommends_;
+        if (recsysResBuilder_ == null) {
+          if (!other.recsysRes_.isEmpty()) {
+            if (recsysRes_.isEmpty()) {
+              recsysRes_ = other.recsysRes_;
               bitField0_ = (bitField0_ & ~0x00000001);
             } else {
-              ensureRecommendsIsMutable();
-              recommends_.addAll(other.recommends_);
+              ensureRecsysResIsMutable();
+              recsysRes_.addAll(other.recsysRes_);
             }
             onChanged();
           }
         } else {
-          if (!other.recommends_.isEmpty()) {
-            if (recommendsBuilder_.isEmpty()) {
-              recommendsBuilder_.dispose();
-              recommendsBuilder_ = null;
-              recommends_ = other.recommends_;
+          if (!other.recsysRes_.isEmpty()) {
+            if (recsysResBuilder_.isEmpty()) {
+              recsysResBuilder_.dispose();
+              recsysResBuilder_ = null;
+              recsysRes_ = other.recsysRes_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              recommendsBuilder_ = 
+              recsysResBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getRecommendsFieldBuilder() : null;
+                   getRecsysResFieldBuilder() : null;
             } else {
-              recommendsBuilder_.addAllMessages(other.recommends_);
+              recsysResBuilder_.addAllMessages(other.recsysRes_);
             }
           }
         }
@@ -3117,11 +3337,11 @@ public final class Rec {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        Rec.ArticleResponse parsedMessage = null;
+        Rec.VideoResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Rec.ArticleResponse) e.getUnfinishedMessage();
+          parsedMessage = (Rec.VideoResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -3132,78 +3352,78 @@ public final class Rec {
       }
       private int bitField0_;
 
-      private java.lang.Object exposure_ = "";
+      private java.lang.Object impression_ = "";
       /**
-       * <code>string exposure = 1;</code>
-       * @return The exposure.
+       * <code>string impression = 1;</code>
+       * @return The impression.
        */
-      public java.lang.String getExposure() {
-        java.lang.Object ref = exposure_;
+      public java.lang.String getImpression() {
+        java.lang.Object ref = impression_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          exposure_ = s;
+          impression_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string exposure = 1;</code>
-       * @return The bytes for exposure.
+       * <code>string impression = 1;</code>
+       * @return The bytes for impression.
        */
       public com.google.protobuf.ByteString
-          getExposureBytes() {
-        java.lang.Object ref = exposure_;
+          getImpressionBytes() {
+        java.lang.Object ref = impression_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          exposure_ = b;
+          impression_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string exposure = 1;</code>
-       * @param value The exposure to set.
+       * <code>string impression = 1;</code>
+       * @param value The impression to set.
        * @return This builder for chaining.
        */
-      public Builder setExposure(
+      public Builder setImpression(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        exposure_ = value;
+        impression_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string exposure = 1;</code>
+       * <code>string impression = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearExposure() {
+      public Builder clearImpression() {
         
-        exposure_ = getDefaultInstance().getExposure();
+        impression_ = getDefaultInstance().getImpression();
         onChanged();
         return this;
       }
       /**
-       * <code>string exposure = 1;</code>
-       * @param value The bytes for exposure to set.
+       * <code>string impression = 1;</code>
+       * @param value The bytes for impression to set.
        * @return This builder for chaining.
        */
-      public Builder setExposureBytes(
+      public Builder setImpressionBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        exposure_ = value;
+        impression_ = value;
         onChanged();
         return this;
       }
@@ -3239,244 +3459,244 @@ public final class Rec {
         return this;
       }
 
-      private java.util.List<Rec.Article> recommends_ =
+      private java.util.List<Rec.Video> recsysRes_ =
         java.util.Collections.emptyList();
-      private void ensureRecommendsIsMutable() {
+      private void ensureRecsysResIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          recommends_ = new java.util.ArrayList<Rec.Article>(recommends_);
+          recsysRes_ = new java.util.ArrayList<Rec.Video>(recsysRes_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          Rec.Article, Rec.Article.Builder, Rec.ArticleOrBuilder> recommendsBuilder_;
+          Rec.Video, Rec.Video.Builder, Rec.VideoOrBuilder> recsysResBuilder_;
 
       /**
-       * <code>repeated .Article recommends = 3;</code>
+       * <code>repeated .Video recsys_res = 3;</code>
        */
-      public java.util.List<Rec.Article> getRecommendsList() {
-        if (recommendsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(recommends_);
+      public java.util.List<Rec.Video> getRecsysResList() {
+        if (recsysResBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(recsysRes_);
         } else {
-          return recommendsBuilder_.getMessageList();
+          return recsysResBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .Article recommends = 3;</code>
+       * <code>repeated .Video recsys_res = 3;</code>
        */
-      public int getRecommendsCount() {
-        if (recommendsBuilder_ == null) {
-          return recommends_.size();
+      public int getRecsysResCount() {
+        if (recsysResBuilder_ == null) {
+          return recsysRes_.size();
         } else {
-          return recommendsBuilder_.getCount();
+          return recsysResBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .Article recommends = 3;</code>
+       * <code>repeated .Video recsys_res = 3;</code>
        */
-      public Rec.Article getRecommends(int index) {
-        if (recommendsBuilder_ == null) {
-          return recommends_.get(index);
+      public Rec.Video getRecsysRes(int index) {
+        if (recsysResBuilder_ == null) {
+          return recsysRes_.get(index);
         } else {
-          return recommendsBuilder_.getMessage(index);
+          return recsysResBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .Article recommends = 3;</code>
+       * <code>repeated .Video recsys_res = 3;</code>
        */
-      public Builder setRecommends(
-          int index, Rec.Article value) {
-        if (recommendsBuilder_ == null) {
+      public Builder setRecsysRes(
+          int index, Rec.Video value) {
+        if (recsysResBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureRecommendsIsMutable();
-          recommends_.set(index, value);
+          ensureRecsysResIsMutable();
+          recsysRes_.set(index, value);
           onChanged();
         } else {
-          recommendsBuilder_.setMessage(index, value);
+          recsysResBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .Article recommends = 3;</code>
+       * <code>repeated .Video recsys_res = 3;</code>
        */
-      public Builder setRecommends(
-          int index, Rec.Article.Builder builderForValue) {
-        if (recommendsBuilder_ == null) {
-          ensureRecommendsIsMutable();
-          recommends_.set(index, builderForValue.build());
+      public Builder setRecsysRes(
+          int index, Rec.Video.Builder builderForValue) {
+        if (recsysResBuilder_ == null) {
+          ensureRecsysResIsMutable();
+          recsysRes_.set(index, builderForValue.build());
           onChanged();
         } else {
-          recommendsBuilder_.setMessage(index, builderForValue.build());
+          recsysResBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Article recommends = 3;</code>
+       * <code>repeated .Video recsys_res = 3;</code>
        */
-      public Builder addRecommends(Rec.Article value) {
-        if (recommendsBuilder_ == null) {
+      public Builder addRecsysRes(Rec.Video value) {
+        if (recsysResBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureRecommendsIsMutable();
-          recommends_.add(value);
+          ensureRecsysResIsMutable();
+          recsysRes_.add(value);
           onChanged();
         } else {
-          recommendsBuilder_.addMessage(value);
+          recsysResBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .Article recommends = 3;</code>
+       * <code>repeated .Video recsys_res = 3;</code>
        */
-      public Builder addRecommends(
-          int index, Rec.Article value) {
-        if (recommendsBuilder_ == null) {
+      public Builder addRecsysRes(
+          int index, Rec.Video value) {
+        if (recsysResBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureRecommendsIsMutable();
-          recommends_.add(index, value);
+          ensureRecsysResIsMutable();
+          recsysRes_.add(index, value);
           onChanged();
         } else {
-          recommendsBuilder_.addMessage(index, value);
+          recsysResBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .Article recommends = 3;</code>
+       * <code>repeated .Video recsys_res = 3;</code>
        */
-      public Builder addRecommends(
-          Rec.Article.Builder builderForValue) {
-        if (recommendsBuilder_ == null) {
-          ensureRecommendsIsMutable();
-          recommends_.add(builderForValue.build());
+      public Builder addRecsysRes(
+          Rec.Video.Builder builderForValue) {
+        if (recsysResBuilder_ == null) {
+          ensureRecsysResIsMutable();
+          recsysRes_.add(builderForValue.build());
           onChanged();
         } else {
-          recommendsBuilder_.addMessage(builderForValue.build());
+          recsysResBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Article recommends = 3;</code>
+       * <code>repeated .Video recsys_res = 3;</code>
        */
-      public Builder addRecommends(
-          int index, Rec.Article.Builder builderForValue) {
-        if (recommendsBuilder_ == null) {
-          ensureRecommendsIsMutable();
-          recommends_.add(index, builderForValue.build());
+      public Builder addRecsysRes(
+          int index, Rec.Video.Builder builderForValue) {
+        if (recsysResBuilder_ == null) {
+          ensureRecsysResIsMutable();
+          recsysRes_.add(index, builderForValue.build());
           onChanged();
         } else {
-          recommendsBuilder_.addMessage(index, builderForValue.build());
+          recsysResBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Article recommends = 3;</code>
+       * <code>repeated .Video recsys_res = 3;</code>
        */
-      public Builder addAllRecommends(
-          java.lang.Iterable<? extends Rec.Article> values) {
-        if (recommendsBuilder_ == null) {
-          ensureRecommendsIsMutable();
+      public Builder addAllRecsysRes(
+          java.lang.Iterable<? extends Rec.Video> values) {
+        if (recsysResBuilder_ == null) {
+          ensureRecsysResIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, recommends_);
+              values, recsysRes_);
           onChanged();
         } else {
-          recommendsBuilder_.addAllMessages(values);
+          recsysResBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .Article recommends = 3;</code>
+       * <code>repeated .Video recsys_res = 3;</code>
        */
-      public Builder clearRecommends() {
-        if (recommendsBuilder_ == null) {
-          recommends_ = java.util.Collections.emptyList();
+      public Builder clearRecsysRes() {
+        if (recsysResBuilder_ == null) {
+          recsysRes_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
-          recommendsBuilder_.clear();
+          recsysResBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .Article recommends = 3;</code>
+       * <code>repeated .Video recsys_res = 3;</code>
        */
-      public Builder removeRecommends(int index) {
-        if (recommendsBuilder_ == null) {
-          ensureRecommendsIsMutable();
-          recommends_.remove(index);
+      public Builder removeRecsysRes(int index) {
+        if (recsysResBuilder_ == null) {
+          ensureRecsysResIsMutable();
+          recsysRes_.remove(index);
           onChanged();
         } else {
-          recommendsBuilder_.remove(index);
+          recsysResBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .Article recommends = 3;</code>
+       * <code>repeated .Video recsys_res = 3;</code>
        */
-      public Rec.Article.Builder getRecommendsBuilder(
+      public Rec.Video.Builder getRecsysResBuilder(
           int index) {
-        return getRecommendsFieldBuilder().getBuilder(index);
+        return getRecsysResFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .Article recommends = 3;</code>
+       * <code>repeated .Video recsys_res = 3;</code>
        */
-      public Rec.ArticleOrBuilder getRecommendsOrBuilder(
+      public Rec.VideoOrBuilder getRecsysResOrBuilder(
           int index) {
-        if (recommendsBuilder_ == null) {
-          return recommends_.get(index);  } else {
-          return recommendsBuilder_.getMessageOrBuilder(index);
+        if (recsysResBuilder_ == null) {
+          return recsysRes_.get(index);  } else {
+          return recsysResBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .Article recommends = 3;</code>
+       * <code>repeated .Video recsys_res = 3;</code>
        */
-      public java.util.List<? extends Rec.ArticleOrBuilder> 
-           getRecommendsOrBuilderList() {
-        if (recommendsBuilder_ != null) {
-          return recommendsBuilder_.getMessageOrBuilderList();
+      public java.util.List<? extends Rec.VideoOrBuilder> 
+           getRecsysResOrBuilderList() {
+        if (recsysResBuilder_ != null) {
+          return recsysResBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(recommends_);
+          return java.util.Collections.unmodifiableList(recsysRes_);
         }
       }
       /**
-       * <code>repeated .Article recommends = 3;</code>
+       * <code>repeated .Video recsys_res = 3;</code>
        */
-      public Rec.Article.Builder addRecommendsBuilder() {
-        return getRecommendsFieldBuilder().addBuilder(
-            Rec.Article.getDefaultInstance());
+      public Rec.Video.Builder addRecsysResBuilder() {
+        return getRecsysResFieldBuilder().addBuilder(
+            Rec.Video.getDefaultInstance());
       }
       /**
-       * <code>repeated .Article recommends = 3;</code>
+       * <code>repeated .Video recsys_res = 3;</code>
        */
-      public Rec.Article.Builder addRecommendsBuilder(
+      public Rec.Video.Builder addRecsysResBuilder(
           int index) {
-        return getRecommendsFieldBuilder().addBuilder(
-            index, Rec.Article.getDefaultInstance());
+        return getRecsysResFieldBuilder().addBuilder(
+            index, Rec.Video.getDefaultInstance());
       }
       /**
-       * <code>repeated .Article recommends = 3;</code>
+       * <code>repeated .Video recsys_res = 3;</code>
        */
-      public java.util.List<Rec.Article.Builder> 
-           getRecommendsBuilderList() {
-        return getRecommendsFieldBuilder().getBuilderList();
+      public java.util.List<Rec.Video.Builder> 
+           getRecsysResBuilderList() {
+        return getRecsysResFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          Rec.Article, Rec.Article.Builder, Rec.ArticleOrBuilder> 
-          getRecommendsFieldBuilder() {
-        if (recommendsBuilder_ == null) {
-          recommendsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              Rec.Article, Rec.Article.Builder, Rec.ArticleOrBuilder>(
-                  recommends_,
+          Rec.Video, Rec.Video.Builder, Rec.VideoOrBuilder> 
+          getRecsysResFieldBuilder() {
+        if (recsysResBuilder_ == null) {
+          recsysResBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              Rec.Video, Rec.Video.Builder, Rec.VideoOrBuilder>(
+                  recsysRes_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
-          recommends_ = null;
+          recsysRes_ = null;
         }
-        return recommendsBuilder_;
+        return recsysResBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -3491,66 +3711,66 @@ public final class Rec {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:ArticleResponse)
+      // @@protoc_insertion_point(builder_scope:VideoResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:ArticleResponse)
-    private static final Rec.ArticleResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:VideoResponse)
+    private static final Rec.VideoResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new Rec.ArticleResponse();
+      DEFAULT_INSTANCE = new Rec.VideoResponse();
     }
 
-    public static Rec.ArticleResponse getDefaultInstance() {
+    public static Rec.VideoResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ArticleResponse>
-        PARSER = new com.google.protobuf.AbstractParser<ArticleResponse>() {
+    private static final com.google.protobuf.Parser<VideoResponse>
+        PARSER = new com.google.protobuf.AbstractParser<VideoResponse>() {
       @java.lang.Override
-      public ArticleResponse parsePartialFrom(
+      public VideoResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ArticleResponse(input, extensionRegistry);
+        return new VideoResponse(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<ArticleResponse> parser() {
+    public static com.google.protobuf.Parser<VideoResponse> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<ArticleResponse> getParserForType() {
+    public com.google.protobuf.Parser<VideoResponse> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public Rec.ArticleResponse getDefaultInstanceForType() {
+    public Rec.VideoResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_UserRequest_descriptor;
+    internal_static_user_request_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_UserRequest_fieldAccessorTable;
+      internal_static_user_request_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Track_descriptor;
+    internal_static_Meta_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Track_fieldAccessorTable;
+      internal_static_Meta_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Article_descriptor;
+    internal_static_Video_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Article_fieldAccessorTable;
+      internal_static_Video_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ArticleResponse_descriptor;
+    internal_static_VideoResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ArticleResponse_fieldAccessorTable;
+      internal_static_VideoResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3560,46 +3780,45 @@ public final class Rec {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\017proto/rec.proto\"[\n\013UserRequest\022\017\n\007user" +
-      "_id\030\001 \001(\t\022\022\n\nchannel_id\030\002 \001(\005\022\023\n\013article" +
-      "_num\030\003 \001(\005\022\022\n\ntime_stamp\030\004 \001(\003\"D\n\005Track\022" +
-      "\r\n\005click\030\001 \001(\t\022\017\n\007collect\030\002 \001(\t\022\r\n\005share" +
-      "\030\003 \001(\t\022\014\n\004read\030\004 \001(\t\"4\n\007Article\022\022\n\nartic" +
-      "le_id\030\001 \001(\003\022\025\n\005track\030\002 \001(\0132\006.Track\"U\n\017Ar" +
-      "ticleResponse\022\020\n\010exposure\030\001 \001(\t\022\022\n\ntime_" +
-      "stamp\030\002 \001(\003\022\034\n\nrecommends\030\003 \003(\0132\010.Articl" +
-      "e2C\n\rUserRecommend\0222\n\016user_recommend\022\014.U" +
-      "serRequest\032\020.ArticleResponse\"\000B\003\220\001\001b\006pro" +
-      "to3"
+      "\n\017proto/rec.proto\"v\n\014user_request\022\017\n\007use" +
+      "r_id\030\001 \001(\t\022\013\n\003age\030\002 \001(\005\022\016\n\006gender\030\003 \001(\005\022" +
+      "\022\n\nvideo_nums\030\004 \001(\005\022\022\n\ntime_stamp\030\005 \001(\003\022" +
+      "\020\n\010platform\030\006 \001(\t\"=\n\004Meta\022\r\n\005cover\030\001 \001(\t" +
+      "\022\r\n\005title\030\002 \001(\t\022\n\n\002up\030\003 \001(\t\022\013\n\003tag\030\004 \001(\t" +
+      "\".\n\005Video\022\020\n\010video_id\030\001 \001(\003\022\023\n\004meta\030\002 \001(" +
+      "\0132\005.Meta\"S\n\rVideoResponse\022\022\n\nimpression\030" +
+      "\001 \001(\t\022\022\n\ntime_stamp\030\002 \001(\003\022\032\n\nrecsys_res\030" +
+      "\003 \003(\0132\006.Video27\n\tRecSystem\022*\n\007rec_sys\022\r." +
+      "user_request\032\016.VideoResponse\"\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_UserRequest_descriptor =
+    internal_static_user_request_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_UserRequest_fieldAccessorTable = new
+    internal_static_user_request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_UserRequest_descriptor,
-        new java.lang.String[] { "UserId", "ChannelId", "ArticleNum", "TimeStamp", });
-    internal_static_Track_descriptor =
+        internal_static_user_request_descriptor,
+        new java.lang.String[] { "UserId", "Age", "Gender", "VideoNums", "TimeStamp", "Platform", });
+    internal_static_Meta_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_Track_fieldAccessorTable = new
+    internal_static_Meta_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Track_descriptor,
-        new java.lang.String[] { "Click", "Collect", "Share", "Read", });
-    internal_static_Article_descriptor =
+        internal_static_Meta_descriptor,
+        new java.lang.String[] { "Cover", "Title", "Up", "Tag", });
+    internal_static_Video_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_Article_fieldAccessorTable = new
+    internal_static_Video_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Article_descriptor,
-        new java.lang.String[] { "ArticleId", "Track", });
-    internal_static_ArticleResponse_descriptor =
+        internal_static_Video_descriptor,
+        new java.lang.String[] { "VideoId", "Meta", });
+    internal_static_VideoResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_ArticleResponse_fieldAccessorTable = new
+    internal_static_VideoResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ArticleResponse_descriptor,
-        new java.lang.String[] { "Exposure", "TimeStamp", "Recommends", });
+        internal_static_VideoResponse_descriptor,
+        new java.lang.String[] { "Impression", "TimeStamp", "RecsysRes", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

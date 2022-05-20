@@ -14,54 +14,54 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0fproto/rec.proto\"[\n\x0bUserRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x12\n\nchannel_id\x18\x02 \x01(\x05\x12\x13\n\x0b\x61rticle_num\x18\x03 \x01(\x05\x12\x12\n\ntime_stamp\x18\x04 \x01(\x03\"D\n\x05Track\x12\r\n\x05\x63lick\x18\x01 \x01(\t\x12\x0f\n\x07\x63ollect\x18\x02 \x01(\t\x12\r\n\x05share\x18\x03 \x01(\t\x12\x0c\n\x04read\x18\x04 \x01(\t\"4\n\x07\x41rticle\x12\x12\n\narticle_id\x18\x01 \x01(\x03\x12\x15\n\x05track\x18\x02 \x01(\x0b\x32\x06.Track\"U\n\x0f\x41rticleResponse\x12\x10\n\x08\x65xposure\x18\x01 \x01(\t\x12\x12\n\ntime_stamp\x18\x02 \x01(\x03\x12\x1c\n\nrecommends\x18\x03 \x03(\x0b\x32\x08.Article2C\n\rUserRecommend\x12\x32\n\x0euser_recommend\x12\x0c.UserRequest\x1a\x10.ArticleResponse\"\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0fproto/rec.proto\"v\n\x0cuser_request\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x0b\n\x03\x61ge\x18\x02 \x01(\x05\x12\x0e\n\x06gender\x18\x03 \x01(\x05\x12\x12\n\nvideo_nums\x18\x04 \x01(\x05\x12\x12\n\ntime_stamp\x18\x05 \x01(\x03\x12\x10\n\x08platform\x18\x06 \x01(\t\"=\n\x04Meta\x12\r\n\x05\x63over\x18\x01 \x01(\t\x12\r\n\x05title\x18\x02 \x01(\t\x12\n\n\x02up\x18\x03 \x01(\t\x12\x0b\n\x03tag\x18\x04 \x01(\t\".\n\x05Video\x12\x10\n\x08video_id\x18\x01 \x01(\x03\x12\x13\n\x04meta\x18\x02 \x01(\x0b\x32\x05.Meta\"S\n\rVideoResponse\x12\x12\n\nimpression\x18\x01 \x01(\t\x12\x12\n\ntime_stamp\x18\x02 \x01(\x03\x12\x1a\n\nrecsys_res\x18\x03 \x03(\x0b\x32\x06.Video27\n\tRecSystem\x12*\n\x07rec_sys\x12\r.user_request\x1a\x0e.VideoResponse\"\x00\x62\x06proto3')
 
 
 
-_USERREQUEST = DESCRIPTOR.message_types_by_name['UserRequest']
-_TRACK = DESCRIPTOR.message_types_by_name['Track']
-_ARTICLE = DESCRIPTOR.message_types_by_name['Article']
-_ARTICLERESPONSE = DESCRIPTOR.message_types_by_name['ArticleResponse']
-UserRequest = _reflection.GeneratedProtocolMessageType('UserRequest', (_message.Message,), {
-  'DESCRIPTOR' : _USERREQUEST,
+_USER_REQUEST = DESCRIPTOR.message_types_by_name['user_request']
+_META = DESCRIPTOR.message_types_by_name['Meta']
+_VIDEO = DESCRIPTOR.message_types_by_name['Video']
+_VIDEORESPONSE = DESCRIPTOR.message_types_by_name['VideoResponse']
+user_request = _reflection.GeneratedProtocolMessageType('user_request', (_message.Message,), {
+  'DESCRIPTOR' : _USER_REQUEST,
   '__module__' : 'proto.rec_pb2'
-  # @@protoc_insertion_point(class_scope:UserRequest)
+  # @@protoc_insertion_point(class_scope:user_request)
   })
-_sym_db.RegisterMessage(UserRequest)
+_sym_db.RegisterMessage(user_request)
 
-Track = _reflection.GeneratedProtocolMessageType('Track', (_message.Message,), {
-  'DESCRIPTOR' : _TRACK,
+Meta = _reflection.GeneratedProtocolMessageType('Meta', (_message.Message,), {
+  'DESCRIPTOR' : _META,
   '__module__' : 'proto.rec_pb2'
-  # @@protoc_insertion_point(class_scope:Track)
+  # @@protoc_insertion_point(class_scope:Meta)
   })
-_sym_db.RegisterMessage(Track)
+_sym_db.RegisterMessage(Meta)
 
-Article = _reflection.GeneratedProtocolMessageType('Article', (_message.Message,), {
-  'DESCRIPTOR' : _ARTICLE,
+Video = _reflection.GeneratedProtocolMessageType('Video', (_message.Message,), {
+  'DESCRIPTOR' : _VIDEO,
   '__module__' : 'proto.rec_pb2'
-  # @@protoc_insertion_point(class_scope:Article)
+  # @@protoc_insertion_point(class_scope:Video)
   })
-_sym_db.RegisterMessage(Article)
+_sym_db.RegisterMessage(Video)
 
-ArticleResponse = _reflection.GeneratedProtocolMessageType('ArticleResponse', (_message.Message,), {
-  'DESCRIPTOR' : _ARTICLERESPONSE,
+VideoResponse = _reflection.GeneratedProtocolMessageType('VideoResponse', (_message.Message,), {
+  'DESCRIPTOR' : _VIDEORESPONSE,
   '__module__' : 'proto.rec_pb2'
-  # @@protoc_insertion_point(class_scope:ArticleResponse)
+  # @@protoc_insertion_point(class_scope:VideoResponse)
   })
-_sym_db.RegisterMessage(ArticleResponse)
+_sym_db.RegisterMessage(VideoResponse)
 
-_USERRECOMMEND = DESCRIPTOR.services_by_name['UserRecommend']
+_RECSYSTEM = DESCRIPTOR.services_by_name['RecSystem']
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
-  _USERREQUEST._serialized_start=19
-  _USERREQUEST._serialized_end=110
-  _TRACK._serialized_start=112
-  _TRACK._serialized_end=180
-  _ARTICLE._serialized_start=182
-  _ARTICLE._serialized_end=234
-  _ARTICLERESPONSE._serialized_start=236
-  _ARTICLERESPONSE._serialized_end=321
-  _USERRECOMMEND._serialized_start=323
-  _USERRECOMMEND._serialized_end=390
+  _USER_REQUEST._serialized_start=19
+  _USER_REQUEST._serialized_end=137
+  _META._serialized_start=139
+  _META._serialized_end=200
+  _VIDEO._serialized_start=202
+  _VIDEO._serialized_end=248
+  _VIDEORESPONSE._serialized_start=250
+  _VIDEORESPONSE._serialized_end=333
+  _RECSYSTEM._serialized_start=335
+  _RECSYSTEM._serialized_end=390
 # @@protoc_insertion_point(module_scope)
