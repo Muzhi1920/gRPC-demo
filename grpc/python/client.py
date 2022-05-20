@@ -5,27 +5,25 @@ from proto import rec_pb2,rec_pb2_grpc
 import time
 
 
-def feed_articles(stub):
-    user_request = rec_pb2.UserRequest()
-    user_request.user_id = '1'
-    user_request.channel_id = 1
-    user_request.article_num = 10
-    user_request.time_stamp = round(time.time() * 1000)
+def request_video(stub):
+    user_request = rec_pb2.request()
+    user_request.user_id = 'zhang san'
+    user_request.age = 32
+    user_request.gender = 1
+    user_request.platform = "android"
+    user_request.video_nums = 8
+
+    context = 'test port 4001'
 
     # stub call
-    ret = stub.user_recommend(user_request)
-    print('ret={}'.format(ret))
+    res = stub.rec_sys(user_request, context)
+    print('rec res is {}'.format(res))
 
 
 def run():
-    """
-    client rpc run
-    """
-    # connect rpc server
     with grpc.insecure_channel('127.0.0.1:4001') as channel:
-        # create rpc stub and request
-        stub = rec_pb2_grpc.UserRecommendStub(channel)
-        feed_articles(stub)
+        stub = rec_pb2_grpc.RecSystemStub(channel)
+        request_video(stub)
 
 if __name__ == '__main__':
     run()

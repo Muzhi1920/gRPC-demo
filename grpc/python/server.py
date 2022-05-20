@@ -7,55 +7,46 @@ import time
 
 
 # define return class
-class UserRecommendService(rec_pb2_grpc.UserRecommendServicer):
+class RecSystemService(rec_pb2_grpc.RecSystemServicer):
 
-    def user_recommend(self, request, context):
+    def rec_sys(self, request, context):
         # request是调用的请求数据对象
         user_id = request.user_id
-        channel_id = request.channel_id
-        article_num = request.article_num
-        time_stamp = request.time_stamp
+        user_age = request.age
+        user_gender = request.gender
+        user_platform = request.platform
+        video_nums = request.video_nums
 
-        response = rec_pb2.ArticleResponse()
+        print('log context :{}, cur info is : {}'.format(context, ','.join([user_id,user_age,user_gender,user_platform])))
 
+        response = rec_pb2.VideoResponse()
         # 手动构造推荐结果，后续对接真实推荐代码
-        response.exposure = 'exposure param'
+        response.impression = 'impression param' # 填充response上下文信息
         response.time_stamp = round(time.time() * 1000)
-        recommends = []
-        for i in range(article_num):
-            article = rec_pb2.Article()
-            article.track.click = 'click param {}'.format(i + 1)
-            article.track.collect = 'collect param {}'.format(i + 1)
-            article.track.share = 'share param {}'.format(i + 1)
-            article.track.read = 'read param {}'.format(i + 1)
-            article.article_id = i + 1
-            recommends.append(article)
-        response.recommends.extend(recommends)
+        mock_rec_res = []
+        for i in range(video_nums):
+            video = rec_pb2.Video()
+            video.Meta.cover = 'video meta info cover : {}'.format(i + 1)
+            video.Meta.title = 'video meta info title : {}'.format(i + 1)
+            video.Meta.up = 'video meta info up : {}'.format(i + 1)
+            video.Meta.tag = 'video meta info tag : {}'.format(i + 1)
+            video.video_id = i + 10000
+            mock_rec_res.append(video)
+        response.mock_rec_res.extend(mock_rec_res)
         ## 返回响应
         return response
 
 
-def serve():
-    """
-    rpc服务端启动方法
-    """
-    # 创建一个rpc服务器
+def run():
     server = grpc.server(ThreadPoolExecutor(max_workers=10))
-
-    # 向服务器中添加被调用的服务方法
-    rec_pb2_grpc.add_UserRecommendServicer_to_server(UserRecommendService(), server)
-
-    # 微服务器绑定ip地址和端口
+    rec_pb2_grpc.add_RecSystemServicer_to_server(RecSystemService(), server)
     server.add_insecure_port('127.0.0.1:4001')
-
-    # 启动rpc服务
+    print("start server...")
     server.start()
-
-    # start()不会阻塞，此处需要加上循环睡眠 防止程序退出
     while True:
         time.sleep(10)
 
 
 if __name__ == '__main__':
-    serve()
+    run()
 

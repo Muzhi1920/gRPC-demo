@@ -9,7 +9,7 @@ message request {
     string user_id=1;
     int32 age=2;
     int32 gender=3;
-    int32 platform=4;
+    string platform=4;
     int32 video_nums=5;
 }
 
@@ -29,7 +29,7 @@ message Video {
 message VideoResponse {
     string impression=1;
     int64 time_stamp=2;
-    repeated Video rec_algo=3;
+    repeated Video mock_rec_res=3;
 }
 
 /*
