@@ -1,4 +1,4 @@
-./grpc/__pycache__/*
 ./vscode
 ./vscode/*
-
+./python/proto/__pycache__/*
+./python/proto/__pycache__
