@@ -1,4 +1,4 @@
 ./vscode
 ./vscode/*
-./python/proto/__pycache__/*
-./python/proto/__pycache__
+./grpc/python/proto/__psycache__/*
+./grpc/python/proto/__pycache__

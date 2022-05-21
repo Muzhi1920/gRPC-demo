@@ -19,7 +19,7 @@ class RecSystemService(rec_pb2_grpc.RecSystemServicer):
         response.impression = 'impression'
         response.time_stamp = round(time.time() * 1000)
         recsys_res = []
-        for i in range(video_nums):
+        for i in range(1, video_nums + 1):
             video = rec_pb2.Video()
             video.meta.cover = 'cover_{}'.format(i)
             video.meta.title = 'title_{}'.format(i)
