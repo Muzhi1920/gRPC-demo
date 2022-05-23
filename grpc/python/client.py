@@ -14,14 +14,14 @@ def get_videos(stub):
     user_request.platform = "android"
 
     # call stub service func
-    res = stub.rec_sys(user_request)
+    res = stub.rec_sys(user_request) # 在client中调用server中实现的`rec_sys`方法
     print('rec res is {}'.format(res))
     return res
 
 
 def run():
     with grpc.insecure_channel('127.0.0.1:8888') as channel:
-        stub = rec_pb2_grpc.RecSystemStub(channel)
+        stub = rec_pb2_grpc.RecSystemStub(channel) # 使用协议的pkg，通过pb定义得到该stub对象
         get_videos(stub)
 
 
