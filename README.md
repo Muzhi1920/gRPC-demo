@@ -4,7 +4,6 @@
 
 ## protobuf
 github：https://github.com/protocolbuffers/protobuf
-针对特定语言的protobuf，下载后编译使用。下载`all`版本适合多种语言编译时间较长
 
 - protobuf-all-v
 - protobuf-cpp-v
