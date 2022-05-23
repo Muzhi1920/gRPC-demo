@@ -35,7 +35,7 @@ github：https://github.com/protocolbuffers/protobuf
 ```shell
 protoc -I./ --java_out=./ ./proto/rec.proto
 
-javac -cp ./protobuf-java-x.jar ./Rec.java # 指定该java类需要protobuf的java版本否则报错
+javac -cp ./protobuf-java-x.jar ./Rec.java # 指定该java类需要protobuf
 
 jar cvf rec.jar ./*.class # 打压缩包：javac -cvf xxx.jar xxx
 
